@@ -4,9 +4,9 @@ import { useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { ClientShell } from "../components/ClientShell";
-import { PageHeader } from "../components/PageHeader";
 import { FooterSection } from "../sections/Footer";
 import { FadeInUp } from "../components/FramerAnimations";
+import { SparkleIcon } from "../components/Icons";
 
 interface FAQ {
   question: string;
@@ -107,19 +107,33 @@ function FAQItem({ faq }: { faq: FAQ }) {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="bg-white rounded-2xl shadow-md shadow-pink-200/20 overflow-hidden">
+    <div className="border border-pink-100 rounded-2xl bg-white overflow-hidden transition-all duration-300 hover:shadow-sm">
       <button
         onClick={() => setOpen(!open)}
-        className="w-full text-left p-6 flex items-center justify-between gap-4 hover:bg-pink-50/50 transition-colors"
+        className="w-full text-left p-5 md:p-6 flex items-center justify-between gap-4 hover:bg-pink-50/30 transition-colors"
       >
-        <h3 className="text-lg font-bold text-pink-900">{faq.question}</h3>
-        <motion.span
-          animate={{ rotate: open ? 45 : 0 }}
-          transition={{ duration: 0.2 }}
-          className="text-pink-400 text-2xl flex-shrink-0 font-light"
+        <h3 className="text-base md:text-lg font-bold text-pink-900">
+          {faq.question}
+        </h3>
+        <motion.div
+          animate={{ rotate: open ? 180 : 0 }}
+          transition={{ duration: 0.25, ease: [0.23, 1, 0.32, 1] }}
+          className="flex-shrink-0 w-8 h-8 rounded-full bg-pink-50 border border-pink-100 flex items-center justify-center"
         >
-          +
-        </motion.span>
+          <svg
+            className="w-4 h-4 text-pink-400"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M19 9l-7 7-7-7"
+            />
+          </svg>
+        </motion.div>
       </button>
       <AnimatePresence>
         {open && (
@@ -129,8 +143,10 @@ function FAQItem({ faq }: { faq: FAQ }) {
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3, ease: [0.23, 1, 0.32, 1] }}
           >
-            <div className="px-6 pb-6">
-              <p className="text-pink-700/65 leading-relaxed">{faq.answer}</p>
+            <div className="px-5 md:px-6 pb-5 md:pb-6 border-t border-pink-50">
+              <p className="text-pink-700/60 leading-relaxed pt-4 font-body">
+                {faq.answer}
+              </p>
             </div>
           </motion.div>
         )}
@@ -140,50 +156,130 @@ function FAQItem({ faq }: { faq: FAQ }) {
 }
 
 export function FAQPageClient() {
+  const [activeCategory, setActiveCategory] = useState<string | null>(null);
+
+  const filteredFaqs = activeCategory
+    ? faqs.filter((f) => f.category === activeCategory)
+    : faqs;
+
   return (
     <ClientShell>
-      <PageHeader
-        badge="Questions?"
-        title="Frequently"
-        titleAccent="Asked"
-        subtitle="Everything you need to know about the podcast, our faith, alternative hair, and how to get involved."
-      />
+      {/* Inline Section Header */}
+      <section className="relative py-24 md:py-32 bg-white overflow-hidden">
+        {/* Decorative blobs */}
+        <div className="absolute top-20 -right-32 w-96 h-96 bg-pink-100/40 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute bottom-10 -left-32 w-80 h-80 bg-fuchsia-100/30 rounded-full blur-3xl pointer-events-none" />
 
-      <section className="py-20 bg-pink-50">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          {categories.map((category, ci) => (
-            <div key={category} className="mb-12 last:mb-0">
-              <FadeInUp delay={ci * 0.05}>
-                <h2 className="text-2xl font-black text-pink-900 mb-5">
-                  {category}
-                </h2>
-              </FadeInUp>
-              <div className="space-y-3">
-                {faqs
-                  .filter((f) => f.category === category)
-                  .map((faq, i) => (
-                    <FadeInUp key={faq.question} delay={ci * 0.05 + i * 0.03}>
-                      <FAQItem faq={faq} />
-                    </FadeInUp>
-                  ))}
-              </div>
-            </div>
-          ))}
+        <div className="max-w-[1280px] mx-auto px-6 md:px-12 relative">
+          <FadeInUp>
+            <span className="inline-flex items-center gap-2 bg-pink-50 text-pink-500 font-semibold uppercase tracking-[0.2em] text-xs px-5 py-2 rounded-full border border-pink-100 font-body mb-6">
+              <SparkleIcon className="w-3 h-3 text-gold" />
+              Questions?
+            </span>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-pink-900 tracking-tight mt-4">
+              Frequently{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-fuchsia-500">
+                Asked
+              </span>
+            </h1>
+            <p className="text-pink-600/60 mt-4 max-w-2xl text-lg font-body">
+              Everything you need to know about the podcast, our faith,
+              alternative hair, and how to get involved.
+            </p>
+          </FadeInUp>
+        </div>
+      </section>
 
-          <FadeInUp delay={0.3}>
-            <div className="mt-16 text-center bg-white rounded-3xl p-10 shadow-lg shadow-pink-200/30">
-              <h3 className="text-2xl font-black text-pink-900 mb-3">
-                Still have questions?
-              </h3>
-              <p className="text-pink-700/60 mb-6">
-                We&apos;re always happy to help. Reach out and we&apos;ll get back to you.
-              </p>
-              <Link
-                href="/contact"
-                className="inline-block gradient-pink text-white px-8 py-3 rounded-full font-bold shadow-lg shadow-pink-300/40"
+      {/* FAQ Content */}
+      <section className="py-20 md:py-24 bg-pink-50/50 relative">
+        <div className="absolute top-1/3 right-0 w-72 h-72 bg-pink-100/20 rounded-full blur-3xl pointer-events-none" />
+        <div className="max-w-3xl mx-auto px-6 md:px-12 relative">
+          {/* Category Filter Pills */}
+          <FadeInUp>
+            <div className="flex flex-wrap gap-2 mb-10 md:mb-14">
+              <button
+                onClick={() => setActiveCategory(null)}
+                className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-200 border font-body ${
+                  activeCategory === null
+                    ? "bg-gradient-to-r from-pink-500 to-fuchsia-500 text-white border-transparent"
+                    : "bg-pink-50 text-pink-500 border-pink-100 hover:bg-pink-100"
+                }`}
               >
-                Contact Us
-              </Link>
+                All
+              </button>
+              {categories.map((category) => (
+                <button
+                  key={category}
+                  onClick={() =>
+                    setActiveCategory(
+                      activeCategory === category ? null : category
+                    )
+                  }
+                  className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-200 border font-body ${
+                    activeCategory === category
+                      ? "bg-gradient-to-r from-pink-500 to-fuchsia-500 text-white border-transparent"
+                      : "bg-pink-50 text-pink-500 border-pink-100 hover:bg-pink-100"
+                  }`}
+                >
+                  {category}
+                </button>
+              ))}
+            </div>
+          </FadeInUp>
+
+          {/* FAQ Items */}
+          <div className="space-y-3">
+            <AnimatePresence mode="popLayout">
+              {filteredFaqs.map((faq, i) => (
+                <motion.div
+                  key={faq.question}
+                  layout
+                  initial={{ opacity: 0, y: 12 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -12 }}
+                  transition={{ duration: 0.3, delay: i * 0.03 }}
+                >
+                  <FAQItem faq={faq} />
+                </motion.div>
+              ))}
+            </AnimatePresence>
+          </div>
+
+          {/* Still have questions — Final CTA */}
+          <FadeInUp delay={0.2}>
+            <div className="mt-16 md:mt-20 border border-pink-100 rounded-3xl bg-white p-10 md:p-14 text-center">
+              <SparkleIcon className="w-8 h-8 text-gold mx-auto mb-6" />
+              <h3 className="text-2xl md:text-3xl font-black text-pink-900 tracking-tight">
+                Still have{" "}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-fuchsia-500">
+                  questions?
+                </span>
+              </h3>
+              <p className="text-pink-600/60 mt-3 max-w-md mx-auto font-body">
+                We&apos;re always happy to help. Reach out and we&apos;ll get
+                back to you.
+              </p>
+              <div className="mt-8">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center gap-2 bg-gradient-to-r from-pink-500 to-fuchsia-500 text-white px-8 py-3.5 rounded-full font-bold hover:from-pink-600 hover:to-fuchsia-600 transition-all"
+                >
+                  Contact Us
+                  <svg
+                    className="w-4 h-4"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M17 8l4 4m0 0l-4 4m4-4H3"
+                    />
+                  </svg>
+                </Link>
+              </div>
             </div>
           </FadeInUp>
         </div>

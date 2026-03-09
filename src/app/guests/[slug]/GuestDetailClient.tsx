@@ -19,24 +19,28 @@ export function GuestDetailClient({
     <ClientShell>
     <main className="bg-pink-50 min-h-screen">
       {/* Hero */}
-      <section
-        className={`relative bg-gradient-to-br ${guest.gradient} pt-28 pb-20 overflow-hidden`}
-      >
-        <div className="absolute inset-0 bg-black/10" />
+      <section className="relative bg-white pt-28 pb-20 overflow-hidden">
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "radial-gradient(ellipse at 30% 20%, rgba(212, 175, 55, 0.06) 0%, transparent 50%), radial-gradient(ellipse at 70% 80%, rgba(251, 182, 206, 0.08) 0%, transparent 50%)",
+          }}
+        />
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
           <motion.div
-            className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full mb-6"
+            className="inline-flex items-center gap-2 bg-cream border border-gold-light/60 px-4 py-2 rounded-full mb-6"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <span className="text-white/90 text-xs font-medium tracking-wide uppercase">
+            <span className="text-gray-500 text-xs font-medium tracking-wide uppercase">
               Podcast Guest
             </span>
           </motion.div>
 
           <motion.h1
-            className="text-4xl sm:text-5xl md:text-6xl font-black text-white mb-3 leading-tight"
+            className="text-4xl sm:text-5xl md:text-6xl font-black text-gray-900 mb-3 leading-tight"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
@@ -45,7 +49,7 @@ export function GuestDetailClient({
           </motion.h1>
 
           <motion.p
-            className="text-xl text-white/80 font-medium"
+            className="text-xl text-gray-500 font-medium"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
@@ -58,7 +62,7 @@ export function GuestDetailClient({
           <svg viewBox="0 0 1440 80" fill="none" className="w-full">
             <path
               d="M0 40C360 80 720 0 1080 40C1260 60 1380 50 1440 40V80H0V40Z"
-              fill="#FFF0F5"
+              fill="#FDF2F8"
             />
           </svg>
         </div>

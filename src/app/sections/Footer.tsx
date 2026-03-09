@@ -7,8 +7,26 @@ import Image from "next/image";
 
 export function FooterSection() {
   return (
-    <footer className="bg-pink-900 text-white py-16 relative overflow-hidden">
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[2px] bg-gradient-to-r from-transparent via-pink-400/50 to-transparent" />
+    <footer className="relative text-white py-16 overflow-hidden">
+      {/* Dark pink gradient background */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(160deg, #6B1040 0%, #831843 25%, #9D174D 50%, #831843 75%, #5B0E36 100%)",
+        }}
+      />
+
+      {/* Subtle mesh overlay for depth */}
+      <div
+        className="absolute inset-0 opacity-30"
+        style={{
+          background:
+            "radial-gradient(ellipse at 20% 30%, rgba(212, 175, 55, 0.1) 0%, transparent 50%), radial-gradient(ellipse at 80% 70%, rgba(244, 114, 182, 0.15) 0%, transparent 50%)",
+        }}
+      />
+
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[2px] bg-gradient-to-r from-transparent via-gold/30 to-transparent" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <FadeInUp>
@@ -23,16 +41,19 @@ export function FooterSection() {
                   className="h-8 w-auto brightness-0 invert opacity-80"
                 />
               </Link>
-              <p className="text-pink-300/60 text-sm leading-relaxed">
+              <p className="text-pink-200/70 text-sm leading-relaxed italic">
+                &ldquo;God wants to heal us to such a degree that multitudes are won.&rdquo;
+              </p>
+              <p className="text-pink-300/40 text-xs mt-3">
                 Faith, hair, and becoming who God made you to be.
               </p>
             </div>
 
             <div>
-              <h3 className="font-bold text-pink-200 mb-4 tracking-wide">
+              <h3 className="font-bold text-pink-100 mb-4 tracking-wide">
                 Explore
               </h3>
-              <ul className="space-y-2.5 text-pink-300/60 text-sm">
+              <ul className="space-y-2.5 text-pink-200/50 text-sm">
                 {[
                   { label: "Episodes", href: "/episodes" },
                   { label: "Guests", href: "/guests" },
@@ -45,7 +66,7 @@ export function FooterSection() {
                     <motion.div whileHover={{ x: 4 }}>
                       <Link
                         href={link.href}
-                        className="hover:text-pink-200 transition-colors inline-block"
+                        className="hover:text-white transition-colors inline-block"
                       >
                         {link.label}
                       </Link>
@@ -56,10 +77,10 @@ export function FooterSection() {
             </div>
 
             <div>
-              <h3 className="font-bold text-pink-200 mb-4 tracking-wide">
+              <h3 className="font-bold text-pink-100 mb-4 tracking-wide">
                 Shop & Partner
               </h3>
-              <ul className="space-y-2.5 text-pink-300/60 text-sm">
+              <ul className="space-y-2.5 text-pink-200/50 text-sm">
                 {[
                   { label: "Merch Store", href: "/merch" },
                   { label: "Sponsors & Partners", href: "/sponsors" },
@@ -68,7 +89,7 @@ export function FooterSection() {
                     <motion.div whileHover={{ x: 4 }}>
                       <Link
                         href={link.href}
-                        className="hover:text-pink-200 transition-colors inline-block"
+                        className="hover:text-white transition-colors inline-block"
                       >
                         {link.label}
                       </Link>
@@ -76,16 +97,16 @@ export function FooterSection() {
                   </li>
                 ))}
               </ul>
-              <h3 className="font-bold text-pink-200 mb-4 mt-6 tracking-wide">
+              <h3 className="font-bold text-pink-100 mb-4 mt-6 tracking-wide">
                 Listen On
               </h3>
-              <ul className="space-y-2.5 text-pink-300/60 text-sm">
+              <ul className="space-y-2.5 text-pink-200/50 text-sm">
                 {["Spotify", "Apple Podcasts", "YouTube", "Amazon Music"].map(
                   (platform) => (
                     <li key={platform}>
                       <motion.a
                         href="#"
-                        className="hover:text-pink-200 transition-colors inline-block"
+                        className="hover:text-white transition-colors inline-block"
                         whileHover={{ x: 4 }}
                       >
                         {platform}
@@ -97,10 +118,10 @@ export function FooterSection() {
             </div>
 
             <div>
-              <h3 className="font-bold text-pink-200 mb-4 tracking-wide">
+              <h3 className="font-bold text-pink-100 mb-4 tracking-wide">
                 Connect
               </h3>
-              <ul className="space-y-2.5 text-pink-300/60 text-sm">
+              <ul className="space-y-2.5 text-pink-200/50 text-sm">
                 {[
                   { name: "Instagram", href: "https://instagram.com/curliegirlie" },
                   { name: "TikTok", href: "https://tiktok.com/@curliegirlie" },
@@ -114,7 +135,7 @@ export function FooterSection() {
                   <li key={link.name}>
                     <motion.a
                       href={link.href}
-                      className="hover:text-pink-200 transition-colors inline-block"
+                      className="hover:text-white transition-colors inline-block"
                       whileHover={{ x: 4 }}
                     >
                       {link.name}
@@ -126,23 +147,23 @@ export function FooterSection() {
           </div>
         </FadeInUp>
 
-        <div className="mt-14 pt-8 border-t border-pink-800/50 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-pink-400/50 text-sm">
+        <div className="mt-14 pt-8 border-t border-pink-700/30 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-pink-300/40 text-sm">
             &copy; {new Date().getFullYear()} Curlie Girlie Collective. All rights
             reserved.
           </p>
-          <div className="flex items-center gap-4 text-pink-400/50 text-sm">
-            <Link href="/privacy" className="hover:text-pink-300 transition-colors">
+          <div className="flex items-center gap-4 text-pink-300/40 text-sm">
+            <Link href="/privacy" className="hover:text-pink-100 transition-colors">
               Privacy
             </Link>
-            <Link href="/terms" className="hover:text-pink-300 transition-colors">
+            <Link href="/terms" className="hover:text-pink-100 transition-colors">
               Terms
             </Link>
             <motion.span
               className="flex items-center gap-1"
               whileHover={{ scale: 1.05 }}
             >
-              Made with <span className="text-pink-400 mx-1">&hearts;</span> for
+              Made with <span className="text-gold mx-1">&hearts;</span> for
               every curl
             </motion.span>
           </div>

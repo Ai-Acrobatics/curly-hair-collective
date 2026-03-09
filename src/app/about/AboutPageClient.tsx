@@ -3,7 +3,6 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { ClientShell } from "../components/ClientShell";
-import { PageHeader } from "../components/PageHeader";
 import { FooterSection } from "../sections/Footer";
 import { FadeInUp, ScaleOnScroll } from "../components/FramerAnimations";
 import { SparkleIcon } from "../components/Icons";
@@ -56,22 +55,130 @@ const timeline = [
   },
 ];
 
+const expertiseTags = [
+  "Curly Hair Care",
+  "Natural Texture",
+  "Alternative Hair",
+  "Hair Loss Support",
+  "Faith & Identity",
+  "Community Building",
+  "Product Education",
+  "Curl Science",
+];
+
+const stats = [
+  { label: "Episodes Planned", value: "24+" },
+  { label: "Community Members", value: "2K+" },
+  { label: "Expert Guests", value: "15+" },
+  { label: "Cities Represented", value: "30+" },
+];
+
 export function AboutPageClient() {
   return (
     <ClientShell>
-      <PageHeader
-        badge="Our Story"
-        title="Every Curl"
-        titleAccent="Has a Story"
-        subtitle="Including ours. Learn about the mission, the team, and the movement behind Curlie Girlie Collective."
-      />
+      {/* Hero / About Header — 2-column layout */}
+      <section className="relative bg-white pt-28 pb-20 overflow-hidden">
+        {/* Background blobs */}
+        <div className="absolute top-20 left-[10%] w-72 h-72 bg-pink-200/30 rounded-full blur-3xl" />
+        <div className="absolute bottom-10 right-[5%] w-96 h-96 bg-amber-100/25 rounded-full blur-3xl" />
 
-      <section className="py-20 bg-pink-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+            {/* Left column — title + description */}
+            <div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+              >
+                <span className="inline-flex items-center gap-2 bg-pink-50 text-pink-500 border border-pink-100 rounded-full px-4 py-1.5 text-xs font-medium uppercase tracking-wider mb-6">
+                  <SparkleIcon className="w-3.5 h-3.5" />
+                  Our Story
+                </span>
+              </motion.div>
+
+              <motion.h1
+                className="text-4xl sm:text-5xl md:text-6xl font-black text-pink-900 mb-6 leading-tight"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.1, ease: [0.23, 1, 0.32, 1] }}
+              >
+                Every Curl
+                <br />
+                <span className="bg-gradient-to-r from-pink-500 to-amber-400 bg-clip-text text-transparent">
+                  Has a Story
+                </span>
+              </motion.h1>
+
+              <motion.p
+                className="text-lg text-pink-700/70 max-w-lg leading-relaxed"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: 0.3 }}
+              >
+                Including ours. Learn about the mission, the team, and the
+                movement behind Curlie Girlie Collective.
+              </motion.p>
+            </div>
+
+            {/* Right column — expertise tags + stats */}
+            <div className="space-y-10">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: 0.3 }}
+              >
+                <h3 className="text-sm font-semibold uppercase tracking-wider text-pink-400 mb-4">
+                  What We Cover
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  {expertiseTags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="bg-pink-50 text-pink-500 border border-pink-100 rounded-full px-3.5 py-1.5 text-sm font-medium"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </motion.div>
+
+              <motion.div
+                className="grid grid-cols-2 gap-4"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: 0.45 }}
+              >
+                {stats.map((stat) => (
+                  <div
+                    key={stat.label}
+                    className="bg-white border border-pink-100 rounded-2xl p-5 text-center"
+                  >
+                    <div className="text-2xl font-black text-pink-900">
+                      {stat.value}
+                    </div>
+                    <div className="text-xs text-pink-400 font-medium uppercase tracking-wide mt-1">
+                      {stat.label}
+                    </div>
+                  </div>
+                ))}
+              </motion.div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Mission + Host Bios */}
+      <section className="py-20 bg-pink-50/50 relative overflow-hidden">
+        {/* Background blobs */}
+        <div className="absolute top-40 right-[15%] w-80 h-80 bg-pink-200/20 rounded-full blur-3xl" />
+        <div className="absolute bottom-20 left-[10%] w-64 h-64 bg-amber-100/20 rounded-full blur-3xl" />
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
           {/* Mission */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
             <ScaleOnScroll>
-              <div className="w-full aspect-[3/4] max-w-lg mx-auto rounded-3xl overflow-hidden relative gradient-border shadow-2xl shadow-pink-300/30">
+              <div className="w-full aspect-[3/4] max-w-lg mx-auto rounded-3xl overflow-hidden relative border-2 border-pink-100">
                 <Image
                   src="/hosts/img_0815.jpg"
                   alt="Sabrina Anderson and Chanelle — hosts of Curlie Girlie Collective"
@@ -83,22 +190,25 @@ export function AboutPageClient() {
                 <div className="absolute inset-0 bg-gradient-to-t from-pink-900/50 via-transparent to-transparent" />
                 <div className="absolute bottom-6 left-6">
                   <p className="text-white font-black text-xl">Sabrina & Chanelle</p>
-                  <p className="text-white/80 text-sm">Jon Renau Educators · San Diego, CA</p>
+                  <p className="text-white/80 text-sm">Jon Renau Educators - San Diego, CA</p>
                 </div>
               </div>
             </ScaleOnScroll>
 
             <div>
               <FadeInUp>
-                <span className="text-pink-400 font-semibold uppercase tracking-[0.25em] text-sm">
+                <span className="inline-flex items-center gap-2 bg-pink-50 text-pink-500 border border-pink-100 rounded-full px-4 py-1.5 text-xs font-medium uppercase tracking-wider mb-4">
                   The Mission
                 </span>
                 <h2 className="text-3xl md:text-5xl font-black text-pink-900 mt-3 mb-6">
-                  More Than a <span className="text-gradient-pink">Podcast</span>
+                  More Than a{" "}
+                  <span className="bg-gradient-to-r from-pink-500 to-amber-400 bg-clip-text text-transparent">
+                    Podcast
+                  </span>
                 </h2>
               </FadeInUp>
               <FadeInUp delay={0.1}>
-                <div className="space-y-4 text-pink-700/75 text-lg leading-relaxed">
+                <div className="space-y-4 text-pink-700/70 text-lg leading-relaxed">
                   <p>
                     Curlie Girlie Collective started with two women who found God
                     later in life — and couldn&apos;t stop talking about it.
@@ -123,10 +233,54 @@ export function AboutPageClient() {
             </div>
           </div>
 
+          {/* Host Bios */}
+          <FadeInUp>
+            <div className="text-center mb-12">
+              <span className="inline-flex items-center gap-2 bg-pink-50 text-pink-500 border border-pink-100 rounded-full px-4 py-1.5 text-xs font-medium uppercase tracking-wider mb-4">
+                Meet the Hosts
+              </span>
+              <h2 className="text-3xl md:text-5xl font-black text-pink-900 mt-3">
+                The Voices Behind the Mic
+              </h2>
+            </div>
+          </FadeInUp>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24 max-w-4xl mx-auto">
+            <FadeInUp delay={0.1}>
+              <div className="bg-white border border-pink-100 rounded-2xl p-8 h-full">
+                <div className="w-14 h-14 bg-pink-50 border border-pink-100 rounded-full flex items-center justify-center mb-5">
+                  <SparkleIcon className="w-6 h-6 text-pink-500" />
+                </div>
+                <h3 className="text-xl font-bold text-pink-900 mb-1">Sabrina Anderson</h3>
+                <p className="text-pink-500 text-sm font-medium mb-4">Co-Host & Educator</p>
+                <p className="text-pink-700/65 leading-relaxed">
+                  A Jon Renau alternative hair educator passionate about helping
+                  women experiencing hair loss rediscover their confidence. Sabrina
+                  brings warmth, wisdom, and real talk to every episode.
+                </p>
+              </div>
+            </FadeInUp>
+
+            <FadeInUp delay={0.2}>
+              <div className="bg-white border border-pink-100 rounded-2xl p-8 h-full">
+                <div className="w-14 h-14 bg-pink-50 border border-pink-100 rounded-full flex items-center justify-center mb-5">
+                  <SparkleIcon className="w-6 h-6 text-pink-500" />
+                </div>
+                <h3 className="text-xl font-bold text-pink-900 mb-1">Chanelle</h3>
+                <p className="text-pink-500 text-sm font-medium mb-4">Co-Host & Educator</p>
+                <p className="text-pink-700/65 leading-relaxed">
+                  Chanelle pairs her hair education expertise with a deep, authentic
+                  faith journey. Her energy and honesty make every conversation feel
+                  like catching up with your best friend.
+                </p>
+              </div>
+            </FadeInUp>
+          </div>
+
           {/* Values */}
           <FadeInUp>
             <div className="text-center mb-12">
-              <span className="text-pink-400 font-semibold uppercase tracking-[0.25em] text-sm">
+              <span className="inline-flex items-center gap-2 bg-pink-50 text-pink-500 border border-pink-100 rounded-full px-4 py-1.5 text-xs font-medium uppercase tracking-wider mb-4">
                 What We Stand For
               </span>
               <h2 className="text-3xl md:text-5xl font-black text-pink-900 mt-3">
@@ -138,10 +292,10 @@ export function AboutPageClient() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-24">
             {values.map((value, i) => (
               <FadeInUp key={value.title} delay={i * 0.1}>
-                <div className="bg-white rounded-2xl p-8 shadow-lg shadow-pink-200/30 magnetic-card h-full">
+                <div className="bg-white border border-pink-100 rounded-2xl p-8 h-full">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-10 h-10 gradient-pink rounded-full flex items-center justify-center">
-                      <SparkleIcon className="w-5 h-5 text-white" />
+                    <div className="w-10 h-10 bg-pink-50 border border-pink-100 rounded-full flex items-center justify-center">
+                      <SparkleIcon className="w-5 h-5 text-pink-500" />
                     </div>
                     <h3 className="text-xl font-bold text-pink-900">
                       {value.title}
@@ -158,7 +312,7 @@ export function AboutPageClient() {
           {/* Timeline */}
           <FadeInUp>
             <div className="text-center mb-12">
-              <span className="text-pink-400 font-semibold uppercase tracking-[0.25em] text-sm">
+              <span className="inline-flex items-center gap-2 bg-pink-50 text-pink-500 border border-pink-100 rounded-full px-4 py-1.5 text-xs font-medium uppercase tracking-wider mb-4">
                 The Journey
               </span>
               <h2 className="text-3xl md:text-5xl font-black text-pink-900 mt-3">
@@ -172,11 +326,11 @@ export function AboutPageClient() {
               <FadeInUp key={item.year} delay={i * 0.15}>
                 <div className="flex gap-6 mb-10 last:mb-0">
                   <div className="flex flex-col items-center">
-                    <div className="w-12 h-12 gradient-pink rounded-full flex items-center justify-center text-white font-bold text-sm shadow-lg">
+                    <div className="w-12 h-12 bg-gradient-to-br from-pink-500 to-amber-400 rounded-full flex items-center justify-center text-white font-bold text-sm shadow-lg shadow-pink-300/30">
                       {item.year}
                     </div>
                     {i < timeline.length - 1 && (
-                      <div className="w-0.5 flex-1 bg-pink-200 mt-2" />
+                      <div className="w-0.5 flex-1 bg-pink-100 mt-2" />
                     )}
                   </div>
                   <div className="pb-8">

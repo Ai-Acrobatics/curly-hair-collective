@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { MagneticButton } from "../components/GsapAnimations";
 import { SparkleIcon } from "../components/Icons";
 import { RotatingBadge } from "../components/FramerAnimations";
@@ -90,39 +91,26 @@ export function HeroSection() {
             </motion.span>
           </motion.div>
 
-          {/* Main title with split-text reveal */}
-          <div className="overflow-hidden mb-3">
-            <motion.h1
-              className="text-5xl sm:text-7xl md:text-[6.5rem] font-black text-white tracking-tight leading-[0.95]"
-              initial={{ y: "100%" }}
-              animate={{ y: 0 }}
-              transition={{
-                duration: 1,
-                delay: 0.2,
-                ease: [0.23, 1, 0.32, 1],
-              }}
-            >
-              Curlie Girlie
-            </motion.h1>
-          </div>
-          <div className="overflow-hidden mb-6">
-            <motion.h1
-              className="text-5xl sm:text-7xl md:text-[6.5rem] font-black text-gradient-gold tracking-tight leading-[0.95]"
-              initial={{ y: "100%" }}
-              animate={{ y: 0 }}
-              transition={{
-                duration: 1,
-                delay: 0.4,
-                ease: [0.23, 1, 0.32, 1],
-              }}
-              style={{
-                WebkitTextStroke: "1px rgba(255, 215, 0, 0.3)",
-                textShadow: "0 0 60px rgba(255, 215, 0, 0.3)",
-              }}
-            >
-              Collective
-            </motion.h1>
-          </div>
+          {/* Logo image — matches the brand logo font */}
+          <motion.div
+            className="mb-6"
+            initial={{ opacity: 0, scale: 0.8, y: 30 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{
+              duration: 1,
+              delay: 0.2,
+              ease: [0.23, 1, 0.32, 1],
+            }}
+          >
+            <Image
+              src="/images/logo.png"
+              alt="Curlie Girlie Collective"
+              width={700}
+              height={180}
+              className="h-24 sm:h-32 md:h-44 lg:h-52 w-auto mx-auto drop-shadow-2xl brightness-0 invert"
+              priority
+            />
+          </motion.div>
 
           <motion.p
             className="text-lg sm:text-xl md:text-2xl text-white/85 max-w-2xl mx-auto mb-12 leading-relaxed"

@@ -10,6 +10,7 @@ import { FooterSection } from "../sections/Footer";
 import { FadeInUp } from "../components/FramerAnimations";
 import { SparkleIcon } from "../components/Icons";
 import { merchItems, merchCategories } from "../data/merch";
+import { useCart } from "../context/CartContext";
 
 function ArrowUpRight({ className }: { className?: string }) {
   return (
@@ -32,6 +33,24 @@ function ArrowUpRight({ className }: { className?: string }) {
 
 export function MerchPageClient() {
   const [activeCategory, setActiveCategory] = useState("all");
+  const [addedId, setAddedId] = useState<number | null>(null);
+  const { addToCart } = useCart();
+
+  function handleQuickAdd(e: React.MouseEvent, item: (typeof merchItems)[number]) {
+    e.preventDefault(); // prevent Link navigation
+    e.stopPropagation();
+    addToCart({
+      id: item.id,
+      slug: item.slug,
+      name: item.name,
+      price: item.price,
+      quantity: 1,
+      image: item.image,
+      size: item.sizes ? "M" : undefined,
+    });
+    setAddedId(item.id);
+    setTimeout(() => setAddedId(null), 1500);
+  }
 
   const filtered =
     activeCategory === "all"
@@ -175,9 +194,24 @@ export function MerchPageClient() {
                             <span className="text-lg font-black text-gradient-pink">
                               ${item.price.toFixed(2)}
                             </span>
-                            <span className="text-[10px] font-semibold uppercase tracking-wider text-pink-300 group-hover:text-pink-500 transition-colors">
-                              Coming Soon
-                            </span>
+                            {item.badge === "Coming Soon" ? (
+                              <span className="text-[10px] font-semibold uppercase tracking-wider text-pink-300 cursor-not-allowed">
+                                Coming Soon
+                              </span>
+                            ) : (
+                              <motion.button
+                                onClick={(e) => handleQuickAdd(e, item)}
+                                className={`px-3 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-wider transition-all duration-300 shadow-sm ${
+                                  addedId === item.id
+                                    ? "bg-green-500 text-white shadow-green-300/40"
+                                    : "bg-pink-500 hover:bg-pink-600 text-white shadow-pink-300/40 opacity-100 sm:opacity-0 sm:group-hover:opacity-100"
+                                }`}
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.92 }}
+                              >
+                                {addedId === item.id ? "Added!" : "Add to Cart"}
+                              </motion.button>
+                            )}
                           </div>
                         </div>
                       </div>

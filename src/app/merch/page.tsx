@@ -12,6 +12,12 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://curliegirlie.com/merch",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Merch | Curlie Girlie Collective",
+    description:
+      "Shop the official Curlie Girlie Collective merch. Apparel, accessories, and hair care for every curl type.",
+  },
   alternates: {
     canonical: "https://curliegirlie.com/merch",
   },

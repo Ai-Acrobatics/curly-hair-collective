@@ -8,16 +8,21 @@ import {
 import { FloatingParticles } from "./FloatingParticles";
 import { Navbar } from "./Navbar";
 import { LoadingScreen } from "./LoadingScreen";
+import { CartProvider } from "../context/CartContext";
+import { CartDrawer } from "./CartDrawer";
 
 export function ClientShell({ children }: { children: ReactNode }) {
   return (
-    <ScrollRevealProvider>
-      <LoadingScreen />
-      <CursorGlow />
-      <FloatingParticles count={25} />
-      <Navbar />
-      <div className="gradient-bar-header" />
-      {children}
-    </ScrollRevealProvider>
+    <CartProvider>
+      <ScrollRevealProvider>
+        <LoadingScreen />
+        <CursorGlow />
+        <FloatingParticles count={25} />
+        <Navbar />
+        <CartDrawer />
+        <div className="gradient-bar-header" />
+        {children}
+      </ScrollRevealProvider>
+    </CartProvider>
   );
 }

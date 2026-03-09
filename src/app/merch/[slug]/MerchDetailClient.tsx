@@ -1,16 +1,42 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { ClientShell } from "../../components/ClientShell";
 import { PageHeader } from "../../components/PageHeader";
 import { FooterSection } from "../../sections/Footer";
 import { FadeInUp } from "../../components/FramerAnimations";
 import { SparkleIcon } from "../../components/Icons";
+import { useCart } from "../../context/CartContext";
 import type { MerchItem } from "../../data/merch";
 
 export function MerchDetailClient({ item }: { item: MerchItem }) {
+  const { addToCart } = useCart();
+  const [selectedSize, setSelectedSize] = useState<string | undefined>(
+    item.sizes?.[0]
+  );
+  const [quantity, setQuantity] = useState(1);
+  const [showAdded, setShowAdded] = useState(false);
+
+  const handleAddToCart = () => {
+    if (item.badge === "Coming Soon") return;
+    if (item.sizes && !selectedSize) return;
+
+    addToCart({
+      id: item.id,
+      slug: item.slug,
+      name: item.name,
+      price: item.price,
+      quantity,
+      size: selectedSize,
+      image: item.image,
+    });
+    setShowAdded(true);
+    setTimeout(() => setShowAdded(false), 2000);
+  };
+
   return (
     <ClientShell>
       <PageHeader
@@ -70,6 +96,7 @@ export function MerchDetailClient({ item }: { item: MerchItem }) {
                 </p>
               </FadeInUp>
 
+              {/* Size Selector */}
               {item.sizes && (
                 <FadeInUp delay={0.15}>
                   <div className="mb-8">
@@ -80,7 +107,12 @@ export function MerchDetailClient({ item }: { item: MerchItem }) {
                       {item.sizes.map((size) => (
                         <motion.button
                           key={size}
-                          className="w-12 h-12 rounded-xl border-2 border-pink-200 text-pink-700 font-semibold text-sm hover:border-pink-500 hover:bg-pink-50 transition-colors"
+                          onClick={() => setSelectedSize(size)}
+                          className={`w-12 h-12 rounded-xl border-2 font-semibold text-sm transition-colors ${
+                            selectedSize === size
+                              ? "border-pink-500 bg-pink-500 text-white"
+                              : "border-pink-200 text-pink-700 hover:border-pink-500 hover:bg-pink-50"
+                          }`}
                           whileHover={{ scale: 1.05 }}
                           whileTap={{ scale: 0.95 }}
                         >
@@ -92,14 +124,98 @@ export function MerchDetailClient({ item }: { item: MerchItem }) {
                 </FadeInUp>
               )}
 
+              {/* Quantity Selector */}
+              <FadeInUp delay={0.17}>
+                <div className="mb-8">
+                  <p className="text-sm font-bold text-pink-900 mb-3">
+                    Quantity
+                  </p>
+                  <div className="inline-flex items-center gap-1 bg-white border border-pink-100 rounded-full p-1">
+                    <motion.button
+                      type="button"
+                      onClick={() => setQuantity((q) => Math.max(1, q - 1))}
+                      className="w-10 h-10 rounded-full flex items-center justify-center text-pink-500 font-bold text-lg hover:bg-pink-50 transition-colors"
+                      whileTap={{ scale: 0.9 }}
+                    >
+                      -
+                    </motion.button>
+                    <span className="w-10 text-center text-lg font-bold text-pink-900">
+                      {quantity}
+                    </span>
+                    <motion.button
+                      type="button"
+                      onClick={() => setQuantity((q) => q + 1)}
+                      className="w-10 h-10 rounded-full flex items-center justify-center text-pink-500 font-bold text-lg hover:bg-pink-50 transition-colors"
+                      whileTap={{ scale: 0.9 }}
+                    >
+                      +
+                    </motion.button>
+                  </div>
+                </div>
+              </FadeInUp>
+
+              {/* Add to Cart Button */}
               <FadeInUp delay={0.2}>
-                <motion.button
-                  className="w-full gradient-pink text-white py-4 rounded-full font-bold text-lg shadow-xl shadow-pink-300/40 shimmer glow-pulse"
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                >
-                  {item.badge === "Coming Soon" ? "Join Waitlist" : "Add to Cart"}
-                </motion.button>
+                <div className="relative">
+                  <motion.button
+                    onClick={handleAddToCart}
+                    className="w-full gradient-pink text-white py-4 rounded-full font-bold text-lg shadow-xl shadow-pink-300/40 shimmer glow-pulse"
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    {item.badge === "Coming Soon"
+                      ? "Join Waitlist"
+                      : `Add to Cart — $${(item.price * quantity).toFixed(2)}`}
+                  </motion.button>
+
+                  {/* Added confirmation toast */}
+                  <AnimatePresence>
+                    {showAdded && (
+                      <motion.div
+                        initial={{ opacity: 0, y: 10, scale: 0.9 }}
+                        animate={{ opacity: 1, y: -10, scale: 1 }}
+                        exit={{ opacity: 0, y: -20, scale: 0.9 }}
+                        className="absolute -top-2 left-1/2 -translate-x-1/2 -translate-y-full"
+                      >
+                        <div className="bg-green-500 text-white text-sm font-bold px-5 py-2.5 rounded-full shadow-lg flex items-center gap-2">
+                          <svg
+                            className="w-4 h-4"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                            strokeWidth={3}
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              d="M5 13l4 4L19 7"
+                            />
+                          </svg>
+                          Added!
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+
+                {/* View Cart link */}
+                <AnimatePresence>
+                  {showAdded && (
+                    <motion.div
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: "auto" }}
+                      exit={{ opacity: 0, height: 0 }}
+                      className="mt-3 text-center"
+                    >
+                      <Link
+                        href="/checkout"
+                        className="text-pink-500 hover:text-pink-700 font-semibold text-sm transition-colors"
+                      >
+                        View Cart & Checkout &rarr;
+                      </Link>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </FadeInUp>
 
               <FadeInUp delay={0.25}>

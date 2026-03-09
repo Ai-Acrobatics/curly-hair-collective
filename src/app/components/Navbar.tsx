@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { useCart } from "../context/CartContext";
 
 const navLinks = [
   { label: "Episodes", href: "/episodes" },
@@ -17,6 +18,7 @@ const navLinks = [
 
 export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const { toggleCart, cartCount } = useCart();
   const { scrollY } = useScroll();
   const bgOpacity = useTransform(scrollY, [0, 100], [0, 0.95]);
   const borderOpacity = useTransform(scrollY, [0, 100], [0, 1]);
@@ -74,7 +76,32 @@ export function Navbar() {
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.8 }}
+                className="flex items-center gap-3"
               >
+                <button
+                  onClick={toggleCart}
+                  className="relative p-2 text-gray-600 hover:text-pink-900 transition-colors"
+                  aria-label="Open cart"
+                >
+                  <svg
+                    className="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
+                    />
+                  </svg>
+                  {cartCount > 0 && (
+                    <span className="absolute -top-1 -right-1 bg-pink-500 text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">
+                      {cartCount > 9 ? "9+" : cartCount}
+                    </span>
+                  )}
+                </button>
                 <Link
                   href="/episodes"
                   className="bg-gray-900 text-white px-5 py-2 rounded-full font-semibold shadow-md hover:bg-gray-800 transition-colors text-sm"
@@ -86,6 +113,30 @@ export function Navbar() {
 
             {/* Mobile menu button */}
             <div className="lg:hidden flex items-center gap-3">
+              <button
+                onClick={toggleCart}
+                className="relative p-2 text-gray-600 hover:text-pink-900 transition-colors"
+                aria-label="Open cart"
+              >
+                <svg
+                  className="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
+                  />
+                </svg>
+                {cartCount > 0 && (
+                  <span className="absolute -top-1 -right-1 bg-pink-500 text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">
+                    {cartCount > 9 ? "9+" : cartCount}
+                  </span>
+                )}
+              </button>
               <Link
                 href="/episodes"
                 className="bg-gray-900 text-white px-4 py-2 rounded-full text-sm font-semibold"

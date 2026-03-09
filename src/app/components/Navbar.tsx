@@ -18,7 +18,7 @@ const navLinks = [
 export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const { scrollY } = useScroll();
-  const bgOpacity = useTransform(scrollY, [0, 100], [0, 0.92]);
+  const bgOpacity = useTransform(scrollY, [0, 100], [0, 0.95]);
   const borderOpacity = useTransform(scrollY, [0, 100], [0, 1]);
 
   return (
@@ -63,7 +63,7 @@ export function Navbar() {
                 >
                   <Link
                     href={link.href}
-                    className="text-gray-700 hover:text-pink-900 transition-colors font-medium relative group text-sm"
+                    className="text-gray-600 hover:text-gray-900 transition-colors font-medium relative group text-sm"
                   >
                     {link.label}
                     <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold group-hover:w-full transition-all duration-300" />
@@ -77,9 +77,9 @@ export function Navbar() {
               >
                 <Link
                   href="/episodes"
-                  className="bg-pink-900 text-white px-5 py-2 rounded-full font-semibold shadow-md hover:bg-pink-800 transition-colors relative overflow-hidden text-sm"
+                  className="bg-gray-900 text-white px-5 py-2 rounded-full font-semibold shadow-md hover:bg-gray-800 transition-colors text-sm"
                 >
-                  <span className="relative z-10">Listen Now</span>
+                  Listen Now
                 </Link>
               </motion.div>
             </div>
@@ -88,13 +88,13 @@ export function Navbar() {
             <div className="lg:hidden flex items-center gap-3">
               <Link
                 href="/episodes"
-                className="bg-pink-900 text-white px-4 py-2 rounded-full text-sm font-semibold"
+                className="bg-gray-900 text-white px-4 py-2 rounded-full text-sm font-semibold"
               >
                 Listen
               </Link>
               <button
                 onClick={() => setMobileOpen(!mobileOpen)}
-                className="text-gray-700 p-2"
+                className="text-gray-600 p-2"
                 aria-label="Toggle menu"
               >
                 <svg
@@ -151,7 +151,7 @@ export function Navbar() {
                     key={link.label}
                     href={link.href}
                     onClick={() => setMobileOpen(false)}
-                    className="block py-3 px-4 text-gray-800 font-medium hover:bg-pink-50 hover:text-pink-900 rounded-xl transition-colors"
+                    className="block py-3 px-4 text-gray-700 font-medium hover:bg-gray-50 hover:text-gray-900 rounded-xl transition-colors"
                   >
                     {link.label}
                   </Link>

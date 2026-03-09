@@ -34,15 +34,21 @@ export function LoadingScreen() {
           exit={{ opacity: 0 }}
           transition={{ duration: 0.8, ease: [0.23, 1, 0.32, 1] }}
         >
-          {/* Animated mesh background */}
-          <div className="absolute inset-0 mesh-gradient" />
+          {/* Warm cream/blush background */}
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                "linear-gradient(160deg, #FFFBF5 0%, #FDF2F8 40%, #FCE7F3 70%, #FFFBF5 100%)",
+            }}
+          />
 
           {/* Soft radial overlay */}
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_20%,rgba(157,23,77,0.4)_100%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_30%,rgba(253,242,248,0.6)_100%)]" />
 
-          {/* Floating orbs */}
+          {/* Floating orbs — soft and muted */}
           <motion.div
-            className="absolute w-64 h-64 rounded-full bg-pink-400/20 blur-3xl"
+            className="absolute w-64 h-64 rounded-full bg-blush/15 blur-3xl"
             animate={{
               x: [0, 60, -30, 0],
               y: [0, -40, 20, 0],
@@ -52,7 +58,7 @@ export function LoadingScreen() {
             style={{ top: "15%", left: "20%" }}
           />
           <motion.div
-            className="absolute w-48 h-48 rounded-full bg-gold/10 blur-3xl"
+            className="absolute w-48 h-48 rounded-full bg-gold-light/20 blur-3xl"
             animate={{
               x: [0, -40, 30, 0],
               y: [0, 30, -20, 0],
@@ -86,7 +92,7 @@ export function LoadingScreen() {
                   alt="Curlie Girlie Collective"
                   width={320}
                   height={80}
-                  className="h-16 md:h-20 w-auto mx-auto drop-shadow-2xl"
+                  className="h-16 md:h-20 w-auto mx-auto drop-shadow-lg"
                   priority
                 />
               </motion.div>
@@ -94,7 +100,7 @@ export function LoadingScreen() {
 
             {/* Tagline */}
             <motion.p
-              className="text-white/50 text-sm tracking-[0.2em] uppercase mt-4 mb-10"
+              className="text-gray-400 text-sm tracking-[0.2em] uppercase mt-4 mb-10"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5, duration: 0.6 }}
@@ -109,12 +115,12 @@ export function LoadingScreen() {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5 }}
             >
-              <div className="h-[2px] bg-white/10 rounded-full overflow-hidden">
+              <div className="h-[2px] bg-gray-200 rounded-full overflow-hidden">
                 <motion.div
                   className="h-full rounded-full"
                   style={{
                     background:
-                      "linear-gradient(90deg, #D4AF37, #F9A8D4, #D4AF37)",
+                      "linear-gradient(90deg, #D4AF37, #F5E6B8, #D4AF37)",
                     backgroundSize: "200% 100%",
                     width: `${Math.min(progress, 100)}%`,
                   }}

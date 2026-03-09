@@ -2,9 +2,11 @@
 
 ## Who We Are
 
-Two women in our 20s and 30s who:
+**Sabrina Anderson** (@fabsabstyle) and **Chanelle** (@createdbychanelle) — two women in our 20s and 30s who:
 - **Came to the Lord later in life** — our faith journey is central to everything
-- **Work at John Renau** with Sabrina doing alternative hair education
+- **Both work at Jon Renau** as alternative hair educators
+- **Sabrina**: "JESUS, then everything else" — Educator @jonrenau, Curly Girl in San Diego, CA
+- **Chanelle**: "God's Girl & Powered by Prayer" — On-Set Hairstylist, Licensed Cosmetologist, Alternative Hair Educator & Product Specialist @jonrenau
 - **Specialize in** wigs, toppers, and hair replacement systems for people experiencing hair loss (chemo, autoimmune conditions, alopecia)
 - **Want to build a ministry** through authentic conversation
 

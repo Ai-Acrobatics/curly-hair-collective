@@ -2,7 +2,8 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
-import { CurlIcon, SparkleIcon } from "./Icons";
+import Image from "next/image";
+import { SparkleIcon } from "./Icons";
 
 export function LoadingScreen() {
   const [loading, setLoading] = useState(true);
@@ -30,7 +31,14 @@ export function LoadingScreen() {
               transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
               className="mb-6"
             >
-              <CurlIcon className="w-16 h-16 text-white mx-auto" />
+              <Image
+                src="/images/logo.png"
+                alt="Curly Hair Collective"
+                width={80}
+                height={80}
+                className="w-20 h-20 mx-auto"
+                priority
+              />
             </motion.div>
 
             {/* Brand name */}

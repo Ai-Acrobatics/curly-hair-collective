@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
-import { CurlIcon } from "./Icons";
 
 const navLinks = [
   { label: "Episodes", href: "/episodes" },
@@ -42,7 +42,13 @@ export function Navbar() {
           <div className="flex items-center justify-between h-16">
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Link href="/" className="flex items-center gap-2">
-                <CurlIcon className="w-8 h-8 text-pink-500" />
+                <Image
+                  src="/images/logo.png"
+                  alt="Curly Hair Collective"
+                  width={40}
+                  height={40}
+                  className="w-10 h-10"
+                />
                 <span className="text-xl font-bold text-gradient-pink">
                   Curly Hair Collective
                 </span>

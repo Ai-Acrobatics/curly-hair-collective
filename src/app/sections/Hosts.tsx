@@ -1,22 +1,29 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { FadeInUp, ScaleOnScroll } from "../components/FramerAnimations";
-import { SparkleIcon, CurlIcon } from "../components/Icons";
+import { SparkleIcon } from "../components/Icons";
 
 const hosts = [
   {
-    name: "Sabrina",
-    role: "Alternative Hair Educator",
-    bio: "Works at John Renau specializing in wigs, toppers, and hair replacement systems for those experiencing hair loss. Came to faith later in life and never looked back.",
+    name: "Sabrina Anderson",
+    handle: "@fabsabstyle",
+    role: "Educator @jonrenau · Curly Girl · San Diego, CA",
+    bio: "JESUS, then everything else. Sabrina specializes in wigs, toppers, and hair replacement systems at Jon Renau — helping women experiencing hair loss feel beautiful and confident again. She came to the Lord later in life and hasn't looked back since.",
     badge: "Hair Expert",
+    image: "/hosts/img_0811.jpg",
+    cartoon: "/images/sabrina-cartoon.png",
     gradient: "from-pink-400 via-pink-500 to-rose-500",
   },
   {
-    name: "Co-Host",
-    role: "Faith & Encouragement",
-    bio: "Two women. One mission. Both found God when they least expected it. Together they bring raw honesty, laughter, and the kind of encouragement that changes lives.",
+    name: "Chanelle",
+    handle: "@createdbychanelle",
+    role: "On-Set Hairstylist · Licensed Cosmetologist · Alt. Hair Educator @jonrenau",
+    bio: "God's Girl & Powered by Prayer. Chanelle is creating with purpose — as a licensed cosmetologist and alternative hair educator at Jon Renau, she brings expertise, heart, and a passion for helping women embrace who God made them to be.",
     badge: "Faith Walker",
+    image: "/hosts/img_0814.jpg",
+    cartoon: "/images/chanelle-cartoon.png",
     gradient: "from-fuchsia-400 via-pink-500 to-pink-600",
   },
 ];
@@ -48,8 +55,37 @@ export function HostsSection() {
           </p>
         </FadeInUp>
 
+        {/* Duo photo */}
+        <FadeInUp className="mb-16">
+          <div className="relative max-w-3xl mx-auto rounded-3xl overflow-hidden shadow-2xl shadow-pink-300/30">
+            <Image
+              src="/hosts/img_0815.jpg"
+              alt="Sabrina Anderson and Chanelle — hosts of Curly Hair Collective"
+              width={1200}
+              height={800}
+              className="w-full h-auto object-cover"
+              priority
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-pink-900/60 via-transparent to-transparent" />
+            <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between">
+              <div>
+                <p className="text-white font-black text-2xl md:text-3xl">
+                  Sabrina & Chanelle
+                </p>
+                <p className="text-white/80 text-sm font-body mt-1">
+                  Your hosts. Your girls. Your collective.
+                </p>
+              </div>
+              <span className="glass text-white text-xs font-bold px-4 py-1.5 rounded-full font-body hidden sm:block">
+                <SparkleIcon className="w-3 h-3 inline mr-1" />
+                Jon Renau Educators
+              </span>
+            </div>
+          </div>
+        </FadeInUp>
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-16">
-          {hosts.map((host, i) => (
+          {hosts.map((host) => (
             <ScaleOnScroll key={host.name}>
               <motion.div
                 className="relative rounded-3xl overflow-hidden gradient-border"
@@ -57,23 +93,34 @@ export function HostsSection() {
                 transition={{ duration: 0.3 }}
               >
                 <div className="bg-white p-8 lg:p-10 rounded-3xl">
-                  {/* Host image placeholder */}
-                  <div
-                    className={`w-full h-64 rounded-2xl bg-gradient-to-br ${host.gradient} mb-6 relative overflow-hidden`}
-                  >
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <motion.div
-                        animate={{ rotate: [0, 5, -5, 0] }}
-                        transition={{ duration: 6, repeat: Infinity }}
-                      >
-                        <CurlIcon className="w-20 h-20 text-white/20" />
-                      </motion.div>
-                    </div>
+                  {/* Host image */}
+                  <div className="w-full h-80 rounded-2xl mb-6 relative overflow-hidden">
+                    <Image
+                      src={host.image}
+                      alt={host.name}
+                      fill
+                      className="object-cover object-top"
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-pink-900/40 via-transparent to-transparent" />
                     <div className="absolute bottom-4 left-4">
                       <span className="glass text-white text-xs font-bold px-4 py-1.5 rounded-full font-body">
-                        Photo Coming Soon
+                        {host.handle}
                       </span>
                     </div>
+                    {/* Cartoon avatar */}
+                    <motion.div
+                      className="absolute -bottom-2 -right-2 w-24 h-24 rounded-full overflow-hidden border-4 border-white shadow-lg"
+                      whileHover={{ scale: 1.15, rotate: 5 }}
+                      transition={{ type: "spring", stiffness: 300 }}
+                    >
+                      <Image
+                        src={host.cartoon}
+                        alt={`${host.name} cartoon`}
+                        fill
+                        className="object-cover object-top"
+                      />
+                    </motion.div>
                   </div>
 
                   <div className="flex items-center gap-3 mb-4">

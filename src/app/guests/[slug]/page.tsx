@@ -26,10 +26,10 @@ export async function generateMetadata({
       title: `${guest.name} | Curlie Girlie Collective Guest`,
       description: guest.bio.slice(0, 160),
       type: "profile",
-      url: `https://curliegirlie.com/guests/${slug}`,
+      url: `https://curliegirliecollective.com/guests/${slug}`,
     },
     alternates: {
-      canonical: `https://curliegirlie.com/guests/${slug}`,
+      canonical: `https://curliegirliecollective.com/guests/${slug}`,
     },
   };
 }
@@ -53,7 +53,7 @@ export default async function GuestDetailPage({
     name: guest.name,
     jobTitle: guest.title,
     description: guest.bio,
-    url: `https://curliegirlie.com/guests/${slug}`,
+    url: `https://curliegirliecollective.com/guests/${slug}`,
     sameAs: guest.socials.map((s) => s.url),
   };
 

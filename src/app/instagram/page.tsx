@@ -10,10 +10,10 @@ export const metadata: Metadata = {
     description:
       "Ready-to-use Instagram templates for podcast marketing, episode announcements, and community engagement.",
     type: "website",
-    url: "https://curliegirlie.com/instagram",
+    url: "https://curliegirliecollective.com/instagram",
   },
   alternates: {
-    canonical: "https://curliegirlie.com/instagram",
+    canonical: "https://curliegirliecollective.com/instagram",
   },
 };
 

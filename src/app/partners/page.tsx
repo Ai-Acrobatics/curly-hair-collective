@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     description:
       "Partner with us to reach a faith-driven community of women.",
     type: "website",
-    url: "https://curliegirlie.com/partners",
+    url: "https://curliegirliecollective.com/partners",
   },
   twitter: {
     card: "summary_large_image",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
       "Partner with us to reach a faith-driven community of women.",
   },
   alternates: {
-    canonical: "https://curliegirlie.com/partners",
+    canonical: "https://curliegirliecollective.com/partners",
   },
 };
 

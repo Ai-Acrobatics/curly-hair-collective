@@ -42,7 +42,7 @@ export function FooterSection() {
                 />
               </Link>
               <p className="text-pink-200/70 text-sm leading-relaxed italic">
-                &ldquo;God wants to heal us to such a degree that multitudes are won.&rdquo;
+                &ldquo;She who kneels before God can stand before anyone.&rdquo;
               </p>
               <p className="text-pink-300/40 text-xs mt-3">
                 Faith, hair, and becoming who God made you to be.
@@ -85,6 +85,7 @@ export function FooterSection() {
                   { label: "Merch Store", href: "/merch" },
                   { label: "Sponsors & Partners", href: "/sponsors" },
                   { label: "Let's Talk Partnership", href: "/partners" },
+                  { label: "Instagram Templates", href: "/instagram" },
                 ].map((link) => (
                   <li key={link.label}>
                     <motion.div whileHover={{ x: 4 }}>
@@ -134,8 +135,8 @@ export function FooterSection() {
                   { name: "YouTube", href: "https://youtube.com/@curliegirlie" },
                   { name: "Twitter", href: "https://twitter.com/curliegirlie" },
                   {
-                    name: "hello@curliegirlie.com",
-                    href: "mailto:hello@curliegirlie.com",
+                    name: "hello@curliegirliecollective.com",
+                    href: "mailto:hello@curliegirliecollective.com",
                   },
                 ].map((link) => (
                   <li key={link.name}>

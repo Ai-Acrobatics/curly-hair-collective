@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     description:
       "Expert articles on curly hair care, science, and culture.",
     type: "website",
-    url: "https://curliegirlie.com/blog",
+    url: "https://curliegirliecollective.com/blog",
   },
   twitter: {
     card: "summary_large_image",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
       "Expert articles on curly hair care, science, and culture.",
   },
   alternates: {
-    canonical: "https://curliegirlie.com/blog",
+    canonical: "https://curliegirliecollective.com/blog",
   },
   keywords: [
     "curly hair blog",

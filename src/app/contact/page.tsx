@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     title: "Contact | Curlie Girlie Collective",
     description: "Get in touch with the Curlie Girlie Collective team.",
     type: "website",
-    url: "https://curliegirlie.com/contact",
+    url: "https://curliegirliecollective.com/contact",
   },
   twitter: {
     card: "summary_large_image",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     description: "Get in touch with the Curlie Girlie Collective team.",
   },
   alternates: {
-    canonical: "https://curliegirlie.com/contact",
+    canonical: "https://curliegirliecollective.com/contact",
   },
 };
 

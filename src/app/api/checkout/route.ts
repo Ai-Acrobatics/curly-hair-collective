@@ -11,7 +11,7 @@ interface CartLineItem {
 export async function POST(request: Request) {
   try {
     const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || "", {
-      apiVersion: "2024-12-18.acacia",
+      apiVersion: "2026-02-25.clover",
     });
 
     const body = await request.json();
@@ -50,8 +50,8 @@ export async function POST(request: Request) {
       payment_method_types: ["card"],
       line_items,
       mode: "payment",
-      success_url: `${request.headers.get("origin") || "https://curliegirlie.com"}/checkout/success`,
-      cancel_url: `${request.headers.get("origin") || "https://curliegirlie.com"}/checkout`,
+      success_url: `${request.headers.get("origin") || "https://curliegirliecollective.com"}/checkout/success`,
+      cancel_url: `${request.headers.get("origin") || "https://curliegirliecollective.com"}/checkout`,
       customer_email: shipping.email,
       metadata: {
         customer_name: shipping.name,

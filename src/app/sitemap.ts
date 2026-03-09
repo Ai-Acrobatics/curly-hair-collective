@@ -4,7 +4,7 @@ import { blogPosts } from "./data/blog";
 import { merchItems } from "./data/merch";
 import { guests } from "./data/guests";
 
-const BASE_URL = "https://curliegirlie.com";
+const BASE_URL = "https://curliegirliecollective.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [
@@ -66,6 +66,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${BASE_URL}/partners`,
       lastModified: new Date(),
       changeFrequency: "monthly",
+      priority: 0.6,
+    },
+    {
+      url: `${BASE_URL}/instagram`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
       priority: 0.6,
     },
     {

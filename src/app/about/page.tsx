@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     description:
       "Meet the host and learn the story behind Curlie Girlie Collective.",
     type: "website",
-    url: "https://curliegirlie.com/about",
+    url: "https://curliegirliecollective.com/about",
   },
   twitter: {
     card: "summary_large_image",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
       "Meet the host and learn the story behind Curlie Girlie Collective.",
   },
   alternates: {
-    canonical: "https://curliegirlie.com/about",
+    canonical: "https://curliegirliecollective.com/about",
   },
 };
 

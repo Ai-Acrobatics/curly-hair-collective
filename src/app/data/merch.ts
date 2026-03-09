@@ -105,6 +105,67 @@ export const merchItems: MerchItem[] = [
     gradient: "from-pink-500 via-pink-600 to-rose-600",
     image: "/images/merch/collective-tote.png",
   },
+  {
+    id: 9,
+    slug: "crowned-cropped-hoodie",
+    name: "Crowned Cropped Hoodie",
+    description:
+      "Cropped fleece hoodie with 'Crowned' in gold embroidery and a small crown above the text. Relaxed fit, raw hem, perfect with high-waisted everything.",
+    price: 54.99,
+    category: "apparel",
+    gradient: "from-pink-400 via-fuchsia-400 to-rose-500",
+    image: "/images/merch/crowned-cropped-hoodie.png",
+    badge: "New",
+    sizes: ["XS", "S", "M", "L", "XL"],
+  },
+  {
+    id: 10,
+    slug: "wash-day-worship-sweatshirt",
+    name: "Wash Day & Worship Crewneck",
+    description:
+      "Oversized crewneck sweatshirt with 'Wash Day & Worship' in vintage-style lettering. Soft brushed fleece inside — your new wash day uniform.",
+    price: 49.99,
+    category: "apparel",
+    gradient: "from-rose-400 via-pink-500 to-fuchsia-400",
+    image: "/images/merch/wash-day-worship-sweatshirt.png",
+    sizes: ["S", "M", "L", "XL", "2XL"],
+  },
+  {
+    id: 11,
+    slug: "silk-edge-scarf",
+    name: "Silk Edge Wrap Scarf",
+    description:
+      "100% mulberry silk edge scarf in blush pink with gold foil 'Faith. Hair. Becoming.' along the edge. Protects your edges and your peace.",
+    price: 29.99,
+    category: "accessories",
+    gradient: "from-pink-300 via-rose-400 to-pink-500",
+    image: "/images/merch/silk-edge-scarf.png",
+    badge: "New",
+  },
+  {
+    id: 12,
+    slug: "anointed-joggers",
+    name: "Anointed & Appointed Joggers",
+    description:
+      "Ultra-soft French terry joggers with 'Anointed & Appointed' down the left leg in gold. Tapered fit with pockets deep enough for your phone and your faith.",
+    price: 44.99,
+    category: "apparel",
+    gradient: "from-fuchsia-400 via-pink-500 to-rose-600",
+    image: "/images/merch/anointed-joggers.png",
+    sizes: ["XS", "S", "M", "L", "XL", "2XL"],
+  },
+  {
+    id: 13,
+    slug: "curl-care-devotional-journal",
+    name: "Curl Care Devotional Journal",
+    description:
+      "A 90-day guided journal combining daily devotionals with hair care tracking. Scripture reflections on one page, wash day logs on the other. Feed your soul and your curls.",
+    price: 26.99,
+    category: "faith-essentials",
+    gradient: "from-pink-400 via-rose-400 to-fuchsia-400",
+    image: "/images/merch/curl-care-devotional-journal.png",
+    badge: "Best Seller",
+  },
 ];
 
 export const merchCategories = [

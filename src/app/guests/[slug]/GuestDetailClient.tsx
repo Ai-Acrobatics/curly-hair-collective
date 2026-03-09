@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import { ClientShell } from "../../components/ClientShell";
 import { FadeInUp } from "../../components/FramerAnimations";
 import { FooterSection } from "../../sections/Footer";
@@ -134,6 +135,21 @@ export function GuestDetailClient({
 
             {/* Sidebar */}
             <div className="space-y-6">
+              {guest.image && (
+                <FadeInUp delay={0.15}>
+                  <div className="bg-white rounded-3xl overflow-hidden shadow-lg shadow-pink-200/20">
+                    <div className="relative aspect-square">
+                      <Image
+                        src={guest.image}
+                        alt={guest.name}
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                  </div>
+                </FadeInUp>
+              )}
+
               <FadeInUp delay={0.2}>
                 <div className="bg-white rounded-3xl p-6 shadow-lg shadow-pink-200/20">
                   <h3 className="font-bold text-pink-900 mb-4">Expertise</h3>

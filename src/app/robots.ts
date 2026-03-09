@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/api/"],
       },
     ],
-    sitemap: "https://curliegirlie.com/sitemap.xml",
+    sitemap: "https://curliegirliecollective.com/sitemap.xml",
   };
 }

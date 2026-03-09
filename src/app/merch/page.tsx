@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     description:
       "Shop the official Curlie Girlie Collective merch. Apparel, accessories, and hair care for every curl type.",
     type: "website",
-    url: "https://curliegirlie.com/merch",
+    url: "https://curliegirliecollective.com/merch",
   },
   twitter: {
     card: "summary_large_image",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
       "Shop the official Curlie Girlie Collective merch. Apparel, accessories, and hair care for every curl type.",
   },
   alternates: {
-    canonical: "https://curliegirlie.com/merch",
+    canonical: "https://curliegirliecollective.com/merch",
   },
   keywords: [
     "curly hair merch",

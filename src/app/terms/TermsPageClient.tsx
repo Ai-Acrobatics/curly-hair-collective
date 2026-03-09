@@ -48,7 +48,7 @@ const sections = [
   },
   {
     title: "Contact",
-    text: "For questions about these terms, contact us at legal@curliegirlie.com.",
+    text: "For questions about these terms, contact us at legal@curliegirliecollective.com.",
   },
 ];
 

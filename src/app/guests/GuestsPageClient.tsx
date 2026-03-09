@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import { ClientShell } from "../components/ClientShell";
 import { FooterSection } from "../sections/Footer";
 import { FadeInUp, StaggerContainer, StaggerItem } from "../components/FramerAnimations";
@@ -51,10 +52,22 @@ export function GuestsPageClient() {
                     <div className="absolute -top-12 -right-12 w-40 h-40 rounded-full bg-gradient-to-br from-pink-200/30 to-rose-200/20 blur-2xl group-hover:scale-125 transition-transform duration-700" />
                     <div className="absolute -bottom-8 -left-8 w-32 h-32 rounded-full bg-gradient-to-tr from-fuchsia-200/20 to-pink-100/30 blur-2xl group-hover:scale-110 transition-transform duration-700" />
 
-                    {/* Gradient Header Strip */}
-                    <div
-                      className={`h-2 bg-gradient-to-r ${guest.gradient}`}
-                    />
+                    {/* Guest Image or Gradient Header */}
+                    {guest.image ? (
+                      <div className="relative h-48 overflow-hidden">
+                        <Image
+                          src={guest.image}
+                          alt={guest.name}
+                          fill
+                          className="object-cover object-top"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-white/80 via-transparent to-transparent" />
+                      </div>
+                    ) : (
+                      <div
+                        className={`h-2 bg-gradient-to-r ${guest.gradient}`}
+                      />
+                    )}
 
                     <div className="relative p-6">
                       {/* Expertise Tags */}

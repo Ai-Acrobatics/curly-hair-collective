@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     description:
       "Partner with the #1 curly hair community. Reach engaged listeners who trust our recommendations.",
     type: "website",
-    url: "https://curliegirlie.com/sponsors",
+    url: "https://curliegirliecollective.com/sponsors",
   },
   twitter: {
     card: "summary_large_image",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
       "Partner with the #1 curly hair community. Reach engaged listeners who trust our recommendations.",
   },
   alternates: {
-    canonical: "https://curliegirlie.com/sponsors",
+    canonical: "https://curliegirliecollective.com/sponsors",
   },
   keywords: [
     "podcast sponsorship",

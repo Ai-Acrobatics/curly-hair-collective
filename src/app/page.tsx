@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     description:
       "Celebrating curly hair culture through faith-centered conversations, community, and confidence.",
     type: "website",
-    url: "https://curliegirlie.com",
+    url: "https://curliegirliecollective.com",
     images: [
       {
         url: "https://curliegirliecollective.com/images/og-share.png",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     images: ["https://curliegirliecollective.com/images/og-share.png"],
   },
   alternates: {
-    canonical: "https://curliegirlie.com",
+    canonical: "https://curliegirliecollective.com",
   },
 };
 

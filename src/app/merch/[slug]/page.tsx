@@ -25,10 +25,10 @@ export async function generateMetadata({
       title: `${item.name} — $${item.price.toFixed(2)}`,
       description: item.description,
       type: "website",
-      url: `https://curliegirlie.com/merch/${slug}`,
+      url: `https://curliegirliecollective.com/merch/${slug}`,
     },
     alternates: {
-      canonical: `https://curliegirlie.com/merch/${slug}`,
+      canonical: `https://curliegirliecollective.com/merch/${slug}`,
     },
   };
 }

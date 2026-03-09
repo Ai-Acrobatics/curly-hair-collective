@@ -25,10 +25,10 @@ export async function generateMetadata({
       title: `${episode.title} | Curlie Girlie Collective`,
       description: episode.description,
       type: "article",
-      url: `https://curliegirlie.com/episodes/${slug}`,
+      url: `https://curliegirliecollective.com/episodes/${slug}`,
     },
     alternates: {
-      canonical: `https://curliegirlie.com/episodes/${slug}`,
+      canonical: `https://curliegirliecollective.com/episodes/${slug}`,
     },
   };
 }
@@ -51,7 +51,7 @@ export default async function EpisodeDetailPage({
     partOfSeries: {
       "@type": "PodcastSeries",
       name: "Curlie Girlie Collective",
-      url: "https://curliegirlie.com",
+      url: "https://curliegirliecollective.com",
     },
     actor: {
       "@type": "Person",

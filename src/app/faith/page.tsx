@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     description:
       "More than hair — leading women to Jesus through conversations about identity, purpose, and becoming who God made you to be.",
     type: "website",
-    url: "https://curliegirlie.com/faith",
+    url: "https://curliegirliecollective.com/faith",
   },
   twitter: {
     card: "summary_large_image",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
       "More than hair — leading women to Jesus through conversations about identity, purpose, and becoming.",
   },
   alternates: {
-    canonical: "https://curliegirlie.com/faith",
+    canonical: "https://curliegirliecollective.com/faith",
   },
 };
 

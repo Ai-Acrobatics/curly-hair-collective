@@ -301,7 +301,7 @@ export function SponsorsPageClient() {
                       ))}
                     </ul>
                     <motion.a
-                      href="mailto:sponsors@curliegirlie.com"
+                      href="mailto:sponsors@curliegirliecollective.com"
                       className={`mt-8 block text-center py-3.5 rounded-full font-bold text-sm transition-colors ${
                         tier.featured
                           ? "bg-gradient-to-r from-pink-500 to-fuchsia-500 text-white hover:from-pink-600 hover:to-fuchsia-600"
@@ -379,7 +379,7 @@ export function SponsorsPageClient() {
               </p>
               <div className="mt-10">
                 <motion.a
-                  href="mailto:sponsors@curliegirlie.com"
+                  href="mailto:sponsors@curliegirliecollective.com"
                   className="inline-flex items-center gap-2 bg-gradient-to-r from-pink-500 to-fuchsia-500 text-white px-8 py-4 rounded-full font-bold text-lg hover:from-pink-600 hover:to-fuchsia-600 transition-all"
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.97 }}

@@ -34,7 +34,7 @@ const faqJsonLd = {
       name: "How can I be a guest on the podcast?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We love hearing from the community! Send your pitch to guests@curliegirlie.com with your name, background, and what you'd like to discuss on the show.",
+        text: "We love hearing from the community! Send your pitch to guests@curliegirliecollective.com with your name, background, and what you'd like to discuss on the show.",
       },
     },
   ],
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     title: "FAQ | Curlie Girlie Collective",
     description: "Answers to common questions about Curlie Girlie Collective.",
     type: "website",
-    url: "https://curliegirlie.com/faq",
+    url: "https://curliegirliecollective.com/faq",
   },
   twitter: {
     card: "summary_large_image",
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     description: "Answers to common questions about Curlie Girlie Collective.",
   },
   alternates: {
-    canonical: "https://curliegirlie.com/faq",
+    canonical: "https://curliegirliecollective.com/faq",
   },
 };
 

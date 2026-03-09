@@ -57,7 +57,7 @@ head and shoulders portrait framing, high quality 3D render
 
 | Feature | Detail |
 |---------|--------|
-| Hair | Long wavy auburn/reddish-brown hair, flowing, loose waves |
+| Hair | Long voluminous curly auburn/reddish-brown hair, defined curls and ringlets |
 | Hair color | Auburn/reddish-brown with warm highlights |
 | Skin tone | Light-medium warm with freckles |
 | Outfit | Dusty rose/muted pink ruffled blouse with collar |
@@ -67,12 +67,12 @@ head and shoulders portrait framing, high quality 3D render
 
 **Prompt template**:
 ```
-3D Pixar Disney animated character portrait of a beautiful woman with long wavy
-auburn reddish-brown hair, light warm skin with freckles across nose and cheeks,
-large expressive brown eyes, warm friendly smile showing teeth, rosy cheeks, gold
-hoop earrings, wearing a dusty rose ruffled blouse with collar, delicate gold cross
-necklace, soft pink gradient background, soft warm diffused lighting, head and
-shoulders portrait framing, high quality 3D render
+3D Pixar Disney animated character portrait of a beautiful woman with long voluminous
+curly auburn reddish-brown hair with defined curls and ringlets, light warm skin with
+freckles across nose and cheeks, large expressive brown eyes, warm friendly smile
+showing teeth, rosy cheeks, gold hoop earrings, wearing a dusty rose ruffled blouse
+with collar, delicate gold cross necklace, soft pink gradient background, soft warm
+diffused lighting, head and shoulders portrait framing, high quality 3D render
 ```
 
 ---
@@ -130,7 +130,8 @@ When generating a new character, verify:
 | File | Character | Status |
 |------|-----------|--------|
 | `sabrina-cartoon.png` | Sabrina (host) | Current |
-| `chanelle-cartoon.png` | Chanelle (host) | Current (v2 — regenerated to match style) |
+| `chanelle-cartoon.png` | Chanelle (host) | Current (v3 — curly hair) |
+| `chanelle-cartoon-v3.png` | Chanelle (v3 source) | Backup of current |
 | `chanelle-cartoon-new.png` | Chanelle (old v1 attempt) | Archive |
 | `chanelle-cartoon-new-v2.png` | Chanelle (v2 backup) | Archive/backup |
 | `chanelle-cartoon-old.png` | Chanelle (original 2D) | Archive — do not use |

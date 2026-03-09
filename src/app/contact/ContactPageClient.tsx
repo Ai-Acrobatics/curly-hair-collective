@@ -9,22 +9,22 @@ import { SparkleIcon } from "../components/Icons";
 const contactMethods = [
   {
     title: "General Inquiries",
-    email: "hello@curliegirlie.com",
+    email: "hello@curliegirliecollective.com",
     description: "Questions, feedback, or just want to say hey.",
   },
   {
     title: "Sponsorships & Partnerships",
-    email: "sponsors@curliegirlie.com",
+    email: "sponsors@curliegirliecollective.com",
     description: "Brand collaborations, ad reads, and partnership opportunities.",
   },
   {
     title: "Guest Pitches",
-    email: "guests@curliegirlie.com",
+    email: "guests@curliegirliecollective.com",
     description: "Want to be on the show? Tell us your curl story.",
   },
   {
     title: "Press & Media",
-    email: "press@curliegirlie.com",
+    email: "press@curliegirliecollective.com",
     description: "Interview requests, press kits, and media inquiries.",
   },
 ];
@@ -93,7 +93,7 @@ export function ContactPageClient() {
               Send a Message
             </a>
             <a
-              href="mailto:hello@curliegirlie.com"
+              href="mailto:hello@curliegirliecollective.com"
               className="inline-flex items-center gap-2 bg-white text-pink-900 border border-pink-200 px-8 py-3.5 rounded-full font-bold text-base hover:border-pink-300 hover:bg-pink-50/50 transition-colors"
             >
               Email Us Directly

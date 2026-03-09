@@ -1,7 +1,7 @@
 import { episodes } from "../data/episodes";
 
 export async function GET() {
-  const baseUrl = "https://curliegirlie.com";
+  const baseUrl = "https://curliegirliecollective.com";
 
   const items = episodes
     .map(
@@ -36,7 +36,7 @@ export async function GET() {
     <itunes:summary>Real conversations about curly hair culture, care, and confidence. Featuring experts, advocates, and everyday queens.</itunes:summary>
     <itunes:owner>
       <itunes:name>Curlie Girlie Collective</itunes:name>
-      <itunes:email>hello@curliegirlie.com</itunes:email>
+      <itunes:email>hello@curliegirliecollective.com</itunes:email>
     </itunes:owner>
     <itunes:explicit>false</itunes:explicit>
     <itunes:category text="Health &amp; Fitness">

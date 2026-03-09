@@ -245,34 +245,64 @@ export function AboutPageClient() {
             </div>
           </FadeInUp>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24 max-w-5xl mx-auto">
             <FadeInUp delay={0.1}>
-              <div className="bg-white border border-pink-100 rounded-2xl p-8 h-full">
-                <div className="w-14 h-14 bg-pink-50 border border-pink-100 rounded-full flex items-center justify-center mb-5">
-                  <SparkleIcon className="w-6 h-6 text-pink-500" />
+              <div className="bg-white border border-pink-100 rounded-3xl overflow-hidden h-full shadow-lg shadow-pink-200/20">
+                <div className="relative aspect-square bg-gradient-to-b from-pink-100 to-pink-50">
+                  <Image
+                    src="/images/sabrina-cartoon.png"
+                    alt="Sabrina Anderson"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
-                <h3 className="text-xl font-bold text-pink-900 mb-1">Sabrina Anderson</h3>
-                <p className="text-pink-500 text-sm font-medium mb-4">Co-Host & Educator</p>
-                <p className="text-pink-700/65 leading-relaxed">
-                  A Jon Renau alternative hair educator passionate about helping
-                  women experiencing hair loss rediscover their confidence. Sabrina
-                  brings warmth, wisdom, and real talk to every episode.
-                </p>
+                <div className="p-8">
+                  <h3 className="text-2xl font-black text-pink-900 mb-1">Sabrina Anderson</h3>
+                  <p className="text-pink-500 text-sm font-semibold mb-4">Co-Host & Jon Renau Educator</p>
+                  <p className="text-pink-700/65 leading-relaxed mb-4">
+                    Sabrina found Jesus later in life — and it changed everything.
+                    As a Jon Renau alternative hair educator, she spends her days
+                    helping women experiencing hair loss rediscover their confidence
+                    and beauty. But her real passion? Leading women to Christ through
+                    honest, unfiltered conversation.
+                  </p>
+                  <p className="text-pink-700/65 leading-relaxed">
+                    On the podcast, Sabrina brings the warmth, the wisdom, and the
+                    real talk. She&apos;s not afraid to be vulnerable about her own
+                    journey — from feeling lost to finding purpose in God&apos;s plan.
+                    Her motto: &ldquo;Come as you are. God will meet you there.&rdquo;
+                  </p>
+                </div>
               </div>
             </FadeInUp>
 
             <FadeInUp delay={0.2}>
-              <div className="bg-white border border-pink-100 rounded-2xl p-8 h-full">
-                <div className="w-14 h-14 bg-pink-50 border border-pink-100 rounded-full flex items-center justify-center mb-5">
-                  <SparkleIcon className="w-6 h-6 text-pink-500" />
+              <div className="bg-white border border-pink-100 rounded-3xl overflow-hidden h-full shadow-lg shadow-pink-200/20">
+                <div className="relative aspect-square bg-gradient-to-b from-pink-100 to-pink-50">
+                  <Image
+                    src="/images/chanelle-cartoon.png"
+                    alt="Chanelle"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
-                <h3 className="text-xl font-bold text-pink-900 mb-1">Chanelle</h3>
-                <p className="text-pink-500 text-sm font-medium mb-4">Co-Host & Educator</p>
-                <p className="text-pink-700/65 leading-relaxed">
-                  Chanelle pairs her hair education expertise with a deep, authentic
-                  faith journey. Her energy and honesty make every conversation feel
-                  like catching up with your best friend.
-                </p>
+                <div className="p-8">
+                  <h3 className="text-2xl font-black text-pink-900 mb-1">Chanelle</h3>
+                  <p className="text-pink-500 text-sm font-semibold mb-4">Co-Host & Jon Renau Educator</p>
+                  <p className="text-pink-700/65 leading-relaxed mb-4">
+                    Chanelle&apos;s faith journey started when she least expected it
+                    — and now she can&apos;t stop talking about it. As a fellow Jon
+                    Renau educator, she knows firsthand how hair loss can shake a
+                    woman&apos;s identity. But she also knows the One who restores it.
+                  </p>
+                  <p className="text-pink-700/65 leading-relaxed">
+                    On the mic, Chanelle brings the energy, the honesty, and the
+                    kind of laugh that makes you feel like you&apos;re catching up
+                    with your best friend. Her heart is for every woman who thinks
+                    she&apos;s too far gone — because she&apos;s living proof that
+                    God&apos;s grace has no expiration date.
+                  </p>
+                </div>
               </div>
             </FadeInUp>
           </div>

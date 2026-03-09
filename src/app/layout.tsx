@@ -21,7 +21,7 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://curliegirlie.com"),
+  metadataBase: new URL("https://curliegirliecollective.com"),
   title: {
     default: "Curlie Girlie Collective | Podcast & Community",
     template: "%s | Curlie Girlie Collective",
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
       "Celebrating curly hair culture through conversations, community, and confidence. Every curl has a story.",
     type: "website",
     locale: "en_US",
-    url: "https://curliegirlie.com",
+    url: "https://curliegirliecollective.com",
     siteName: "Curlie Girlie Collective",
     images: [
       {
@@ -83,7 +83,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://curliegirlie.com",
+    canonical: "https://curliegirliecollective.com",
   },
 };
 
@@ -91,7 +91,7 @@ const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "Curlie Girlie Collective",
-  url: "https://curliegirlie.com",
+  url: "https://curliegirliecollective.com",
   description:
     "A podcast and community celebrating curly hair culture through conversations, community, and confidence.",
   sameAs: [
@@ -102,7 +102,7 @@ const organizationJsonLd = {
   ],
   contactPoint: {
     "@type": "ContactPoint",
-    email: "hello@curliegirlie.com",
+    email: "hello@curliegirliecollective.com",
     contactType: "customer service",
   },
 };
@@ -113,8 +113,8 @@ const podcastJsonLd = {
   name: "Curlie Girlie Collective",
   description:
     "Real conversations about curly hair culture, care, and confidence. Featuring experts, advocates, and everyday queens.",
-  url: "https://curliegirlie.com",
-  webFeed: "https://curliegirlie.com/episodes",
+  url: "https://curliegirliecollective.com",
+  webFeed: "https://curliegirliecollective.com/episodes",
   genre: ["Beauty", "Culture", "Lifestyle", "Health"],
   inLanguage: "en",
 };
@@ -131,7 +131,7 @@ export default function RootLayout({
           rel="alternate"
           type="application/rss+xml"
           title="Curlie Girlie Collective Podcast"
-          href="https://curliegirlie.com/feed.xml"
+          href="https://curliegirliecollective.com/feed.xml"
         />
         <script
           type="application/ld+json"

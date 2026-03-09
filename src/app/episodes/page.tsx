@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     description:
       "Browse all episodes of the Curlie Girlie Collective podcast. Real conversations about natural hair culture, care, and confidence.",
     type: "website",
-    url: "https://curliegirlie.com/episodes",
+    url: "https://curliegirliecollective.com/episodes",
   },
   twitter: {
     card: "summary_large_image",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
       "Browse all episodes of the Curlie Girlie Collective podcast. Real conversations about natural hair culture, care, and confidence.",
   },
   alternates: {
-    canonical: "https://curliegirlie.com/episodes",
+    canonical: "https://curliegirliecollective.com/episodes",
   },
 };
 

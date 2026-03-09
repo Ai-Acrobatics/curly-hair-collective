@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     description:
       "Meet the incredible experts and advocates who have been on the show.",
     type: "website",
-    url: "https://curliegirlie.com/guests",
+    url: "https://curliegirliecollective.com/guests",
   },
   twitter: {
     card: "summary_large_image",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
       "Meet the incredible experts and advocates who have been on the show.",
   },
   alternates: {
-    canonical: "https://curliegirlie.com/guests",
+    canonical: "https://curliegirliecollective.com/guests",
   },
 };
 

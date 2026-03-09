@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     description:
       "Share your story on the Curlie Girlie Collective podcast.",
     type: "website",
-    url: "https://curliegirlie.com/guests/apply",
+    url: "https://curliegirliecollective.com/guests/apply",
   },
   twitter: {
     card: "summary_large_image",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
       "Share your story on the Curlie Girlie Collective podcast.",
   },
   alternates: {
-    canonical: "https://curliegirlie.com/guests/apply",
+    canonical: "https://curliegirliecollective.com/guests/apply",
   },
 };
 

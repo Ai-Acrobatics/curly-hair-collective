@@ -25,11 +25,11 @@ export async function generateMetadata({
       title: post.title,
       description: post.excerpt,
       type: "article",
-      url: `https://curliegirlie.com/blog/${slug}`,
+      url: `https://curliegirliecollective.com/blog/${slug}`,
       publishedTime: post.date,
     },
     alternates: {
-      canonical: `https://curliegirlie.com/blog/${slug}`,
+      canonical: `https://curliegirliecollective.com/blog/${slug}`,
     },
   };
 }
@@ -52,7 +52,7 @@ export default async function BlogPostPage({
     author: {
       "@type": "Organization",
       name: "Curlie Girlie Collective",
-      url: "https://curliegirlie.com",
+      url: "https://curliegirliecollective.com",
     },
     publisher: {
       "@type": "Organization",

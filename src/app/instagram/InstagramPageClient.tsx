@@ -199,8 +199,8 @@ export function InstagramPageClient() {
                 <div className="flex flex-col sm:flex-row items-center gap-6">
                   <div className="w-20 h-20 md:w-24 md:h-24 rounded-full overflow-hidden border-2 border-pink-200 flex-shrink-0">
                     <Image
-                      src="/images/logo-monogram.png"
-                      alt="Curlie Girlie Collective"
+                      src="/images/duo-cartoon.png"
+                      alt="Sabrina & Chanelle"
                       width={96}
                       height={96}
                       className="w-full h-full object-cover"

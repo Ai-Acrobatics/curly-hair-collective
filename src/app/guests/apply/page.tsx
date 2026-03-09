@@ -12,6 +12,12 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://curliegirlie.com/guests/apply",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Apply to Be a Guest | Curlie Girlie Collective",
+    description:
+      "Share your story on the Curlie Girlie Collective podcast.",
+  },
   alternates: {
     canonical: "https://curliegirlie.com/guests/apply",
   },

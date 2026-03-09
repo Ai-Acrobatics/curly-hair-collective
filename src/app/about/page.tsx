@@ -12,6 +12,12 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://curliegirlie.com/about",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "About | Curlie Girlie Collective",
+    description:
+      "Meet the host and learn the story behind Curlie Girlie Collective.",
+  },
   alternates: {
     canonical: "https://curliegirlie.com/about",
   },

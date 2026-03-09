@@ -12,6 +12,12 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://curliegirlie.com/partners",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Let's Talk Partnership | Curlie Girlie Collective",
+    description:
+      "Partner with us to reach a faith-driven community of women.",
+  },
   alternates: {
     canonical: "https://curliegirlie.com/partners",
   },

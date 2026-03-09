@@ -84,6 +84,7 @@ export function FooterSection() {
                 {[
                   { label: "Merch Store", href: "/merch" },
                   { label: "Sponsors & Partners", href: "/sponsors" },
+                  { label: "Let's Talk Partnership", href: "/partners" },
                 ].map((link) => (
                   <li key={link.label}>
                     <motion.div whileHover={{ x: 4 }}>
@@ -101,19 +102,24 @@ export function FooterSection() {
                 Listen On
               </h3>
               <ul className="space-y-2.5 text-pink-200/50 text-sm">
-                {["Spotify", "Apple Podcasts", "YouTube", "Amazon Music"].map(
-                  (platform) => (
-                    <li key={platform}>
+                {[
+                  { name: "Spotify", href: "https://open.spotify.com" },
+                  { name: "Apple Podcasts", href: "https://podcasts.apple.com" },
+                  { name: "YouTube", href: "https://youtube.com/@curliegirlie" },
+                  { name: "Amazon Music", href: "https://music.amazon.com" },
+                ].map((platform) => (
+                    <li key={platform.name}>
                       <motion.a
-                        href="#"
+                        href={platform.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="hover:text-white transition-colors inline-block"
                         whileHover={{ x: 4 }}
                       >
-                        {platform}
+                        {platform.name}
                       </motion.a>
                     </li>
-                  )
-                )}
+                  ))}
               </ul>
             </div>
 

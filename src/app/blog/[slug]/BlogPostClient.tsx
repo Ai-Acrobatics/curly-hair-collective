@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { ClientShell } from "../../components/ClientShell";
 import { PageHeader } from "../../components/PageHeader";
 import { FooterSection } from "../../sections/Footer";
@@ -18,6 +19,20 @@ export function BlogPostClient({ post }: { post: BlogPost }) {
 
       <section className="py-20 bg-pink-50">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          {post.image && (
+            <FadeInUp>
+              <div className="relative aspect-[16/9] rounded-2xl overflow-hidden mb-10 shadow-lg shadow-pink-200/30">
+                <Image
+                  src={post.image}
+                  alt={post.title}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 768px"
+                  priority
+                />
+              </div>
+            </FadeInUp>
+          )}
           <FadeInUp>
             <div className="bg-white rounded-2xl p-8 md:p-12 shadow-lg shadow-pink-200/30">
               <div className="prose prose-pink max-w-none">

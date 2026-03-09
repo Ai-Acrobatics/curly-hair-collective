@@ -8,9 +8,36 @@ export function CommunitySection() {
   return (
     <section
       id="community"
-      className="py-24 mesh-gradient relative overflow-hidden noise-overlay"
+      className="py-24 relative overflow-hidden"
+      style={{
+        background: "linear-gradient(160deg, #1a0a12 0%, #2d0f1e 30%, #3d1228 60%, #2d0f1e 80%, #1a0a12 100%)",
+      }}
     >
-      <div className="aurora" />
+      {/* Pink floating orbs */}
+      <motion.div
+        className="absolute top-[10%] left-[15%] w-72 h-72 rounded-full blur-3xl"
+        style={{ background: "rgba(236, 72, 153, 0.15)" }}
+        animate={{ x: [-20, 20, -20], y: [-10, 15, -10], scale: [1, 1.1, 1] }}
+        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+      />
+      <motion.div
+        className="absolute bottom-[15%] right-[10%] w-80 h-80 rounded-full blur-3xl"
+        style={{ background: "rgba(244, 114, 182, 0.12)" }}
+        animate={{ x: [15, -15, 15], y: [10, -20, 10], scale: [1.1, 1, 1.1] }}
+        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+      />
+      <motion.div
+        className="absolute top-[40%] right-[30%] w-64 h-64 rounded-full blur-3xl"
+        style={{ background: "rgba(212, 175, 55, 0.08)" }}
+        animate={{ x: [-10, 10, -10], y: [5, -10, 5] }}
+        transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
+      />
+      <motion.div
+        className="absolute bottom-[30%] left-[5%] w-48 h-48 rounded-full blur-3xl"
+        style={{ background: "rgba(236, 72, 153, 0.1)" }}
+        animate={{ scale: [1, 1.3, 1], opacity: [0.6, 1, 0.6] }}
+        transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
+      />
 
       {/* Floating sparkles */}
       <motion.div
@@ -32,7 +59,7 @@ export function CommunitySection() {
         animate={{ scale: [1, 1.5, 1], opacity: [0.2, 0.5, 0.2] }}
         transition={{ duration: 5, repeat: Infinity }}
       >
-        <SparkleIcon className="w-4 h-4 text-white" />
+        <SparkleIcon className="w-4 h-4 text-pink-300" />
       </motion.div>
 
       <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
@@ -48,15 +75,19 @@ export function CommunitySection() {
 
         <FadeInUp delay={0.1}>
           <h2
-            className="text-4xl md:text-6xl font-black text-white mb-4"
+            className="text-4xl md:text-6xl font-black mb-4"
+            style={{ color: "#fff", textShadow: "0 2px 20px rgba(236, 72, 153, 0.3)" }}
             data-gsap="heading"
           >
-            Join the Collective
+            Join the{" "}
+            <span className="bg-gradient-to-r from-pink-300 to-amber-300 bg-clip-text text-transparent">
+              Collective
+            </span>
           </h2>
         </FadeInUp>
 
         <FadeInUp delay={0.2}>
-          <p className="text-white/75 text-lg md:text-xl max-w-2xl mx-auto mb-12">
+          <p className="text-pink-100/80 text-lg md:text-xl max-w-2xl mx-auto mb-12">
             Get exclusive curl tips, episode drops, and community updates
             straight to your inbox. No spam — just good vibes and great hair
             days.
@@ -86,7 +117,7 @@ export function CommunitySection() {
                 Subscribe
               </motion.button>
             </motion.div>
-            <p className="text-white/40 text-sm mt-4">
+            <p className="text-pink-200/50 text-sm mt-4">
               Join the movement — be one of the first.
             </p>
           </div>
@@ -95,7 +126,7 @@ export function CommunitySection() {
         {/* Social links */}
         <FadeInUp delay={0.4}>
           <div className="mt-16">
-            <p className="text-white/50 text-sm mb-5 uppercase tracking-[0.2em]">
+            <p className="text-pink-200/60 text-sm mb-5 uppercase tracking-[0.2em]">
               Follow the Collective
             </p>
             <div className="flex items-center justify-center gap-4">

@@ -8,6 +8,7 @@ export interface BlogPost {
   date: string;
   gradient: string;
   featured?: boolean;
+  image?: string;
 }
 
 export const blogPosts: BlogPost[] = [
@@ -22,6 +23,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-03-01",
     gradient: "from-pink-400 via-pink-500 to-rose-500",
     featured: true,
+    image: "/images/blog/finding-god-through-your-hair-journey.png",
   },
   {
     id: 2,
@@ -34,6 +36,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-02-22",
     gradient: "from-fuchsia-400 via-pink-500 to-rose-500",
     featured: true,
+    image: "/images/blog/what-the-bible-says-about-beauty.png",
   },
   {
     id: 3,
@@ -45,6 +48,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "5 min read",
     date: "2026-02-15",
     gradient: "from-pink-500 via-fuchsia-500 to-purple-500",
+    image: "/images/blog/wash-day-prayers.png",
   },
   {
     id: 4,
@@ -56,6 +60,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "7 min read",
     date: "2026-02-08",
     gradient: "from-rose-400 via-pink-500 to-pink-600",
+    image: "/images/blog/top-5-protective-styles.png",
   },
   {
     id: 5,
@@ -67,6 +72,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "6 min read",
     date: "2026-02-01",
     gradient: "from-pink-400 via-rose-500 to-red-400",
+    image: "/images/blog/identity-in-christ-not-your-hair.png",
   },
   {
     id: 6,
@@ -78,6 +84,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "9 min read",
     date: "2026-01-25",
     gradient: "from-rose-500 via-pink-500 to-fuchsia-500",
+    image: "/images/blog/curl-typing-is-a-scam.png",
   },
 ];
 

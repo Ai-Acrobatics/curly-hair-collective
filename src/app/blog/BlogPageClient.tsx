@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { ClientShell } from "../components/ClientShell";
 import { FooterSection } from "../sections/Footer";
@@ -139,10 +140,20 @@ export function BlogPageClient() {
                       <div
                         className={`aspect-[3/2] lg:aspect-auto lg:min-h-[360px] bg-gradient-to-br ${featured[0].gradient} relative overflow-hidden rounded-2xl`}
                       >
-                        <div className="absolute inset-0 flex items-center justify-center">
-                          <SparkleIcon className="w-24 h-24 text-white/10" />
-                        </div>
-                        <div className="absolute top-4 left-4">
+                        {featured[0].image ? (
+                          <Image
+                            src={featured[0].image}
+                            alt={featured[0].title}
+                            fill
+                            className="object-cover group-hover:scale-105 transition-transform duration-500"
+                            sizes="(max-width: 1024px) 100vw, 50vw"
+                          />
+                        ) : (
+                          <div className="absolute inset-0 flex items-center justify-center">
+                            <SparkleIcon className="w-24 h-24 text-white/10" />
+                          </div>
+                        )}
+                        <div className="absolute top-4 left-4 z-10">
                           <span className="bg-gold text-pink-900 text-xs font-bold px-3 py-1.5 rounded-full glow-gold">
                             Featured
                           </span>
@@ -203,10 +214,20 @@ export function BlogPageClient() {
                           <div
                             className={`aspect-[3/2] bg-gradient-to-br ${post.gradient} relative overflow-hidden rounded-t-2xl`}
                           >
-                            <div className="absolute inset-0 flex items-center justify-center">
-                              <SparkleIcon className="w-16 h-16 text-white/10" />
-                            </div>
-                            <div className="absolute top-4 left-4">
+                            {post.image ? (
+                              <Image
+                                src={post.image}
+                                alt={post.title}
+                                fill
+                                className="object-cover group-hover:scale-105 transition-transform duration-500"
+                                sizes="(max-width: 768px) 100vw, 50vw"
+                              />
+                            ) : (
+                              <div className="absolute inset-0 flex items-center justify-center">
+                                <SparkleIcon className="w-16 h-16 text-white/10" />
+                              </div>
+                            )}
+                            <div className="absolute top-4 left-4 z-10">
                               <span className="bg-gold text-pink-900 text-xs font-bold px-3 py-1.5 rounded-full glow-gold">
                                 Featured
                               </span>
@@ -276,12 +297,22 @@ export function BlogPageClient() {
                 >
                   <div className="border border-pink-100 rounded-2xl overflow-hidden bg-white hover:shadow-lg hover:shadow-pink-200/30 transition-all duration-300 h-full flex flex-col">
                     {/* Image Area */}
-                    <div className="aspect-[3/2] overflow-hidden rounded-t-2xl bg-pink-50">
-                      <div
-                        className={`w-full h-full bg-gradient-to-br ${post.gradient} relative flex items-center justify-center`}
-                      >
-                        <SparkleIcon className="w-12 h-12 text-white/10" />
-                      </div>
+                    <div className="aspect-[3/2] overflow-hidden rounded-t-2xl bg-pink-50 relative">
+                      {post.image ? (
+                        <Image
+                          src={post.image}
+                          alt={post.title}
+                          fill
+                          className="object-cover group-hover:scale-105 transition-transform duration-500"
+                          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        />
+                      ) : (
+                        <div
+                          className={`w-full h-full bg-gradient-to-br ${post.gradient} relative flex items-center justify-center`}
+                        >
+                          <SparkleIcon className="w-12 h-12 text-white/10" />
+                        </div>
+                      )}
                     </div>
 
                     {/* Card Body */}

@@ -44,6 +44,7 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
 }
 
 /* Barbie Pink Gradient Utilities */
@@ -59,45 +60,273 @@ body {
   background: linear-gradient(160deg, #E0218A 0%, #FF69B4 30%, #FFB6C1 60%, #FFF0F5 100%);
 }
 
-/* Glitter/shimmer effect */
+/* ==========================================
+   PREMIUM EFFECTS
+   ========================================== */
+
+/* Animated mesh gradient background */
+.mesh-gradient {
+  background:
+    radial-gradient(ellipse at 20% 50%, rgba(255, 105, 180, 0.4) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(224, 33, 138, 0.3) 0%, transparent 50%),
+    radial-gradient(ellipse at 40% 80%, rgba(255, 215, 0, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse at 70% 60%, rgba(199, 21, 133, 0.25) 0%, transparent 50%),
+    linear-gradient(160deg, #E0218A 0%, #FF69B4 30%, #FFB6C1 60%, #FFF0F5 100%);
+  background-size: 200% 200%;
+  animation: meshMove 12s ease-in-out infinite;
+}
+
+@keyframes meshMove {
+  0%, 100% { background-position: 0% 0%; }
+  25% { background-position: 50% 25%; }
+  50% { background-position: 100% 50%; }
+  75% { background-position: 50% 75%; }
+}
+
+/* Glassmorphism */
+.glass {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.glass-dark {
+  background: rgba(74, 7, 48, 0.3);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 105, 180, 0.15);
+}
+
+/* Glitter/shimmer sweep */
 .shimmer {
+  position: relative;
+  overflow: hidden;
+}
+.shimmer::after {
+  content: '';
+  position: absolute;
+  inset: 0;
   background: linear-gradient(
     110deg,
-    transparent 25%,
-    rgba(255, 215, 0, 0.15) 37%,
-    transparent 50%
+    transparent 20%,
+    rgba(255, 215, 0, 0.25) 35%,
+    rgba(255, 255, 255, 0.3) 38%,
+    rgba(255, 215, 0, 0.25) 41%,
+    transparent 55%
   );
-  background-size: 200% 100%;
-  animation: shimmer 3s ease-in-out infinite;
+  background-size: 300% 100%;
+  animation: shimmerSweep 4s ease-in-out infinite;
+  pointer-events: none;
 }
 
-@keyframes shimmer {
-  0% { background-position: 200% 0; }
-  100% { background-position: -200% 0; }
+@keyframes shimmerSweep {
+  0% { background-position: 300% 0; }
+  100% { background-position: -300% 0; }
 }
 
-/* Fade in animation */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
+/* Glow pulse for CTAs */
+.glow-pulse {
+  box-shadow:
+    0 0 20px rgba(224, 33, 138, 0.4),
+    0 0 40px rgba(224, 33, 138, 0.2),
+    0 0 80px rgba(224, 33, 138, 0.1);
+  animation: glowPulse 3s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    box-shadow:
+      0 0 20px rgba(224, 33, 138, 0.4),
+      0 0 40px rgba(224, 33, 138, 0.2),
+      0 0 80px rgba(224, 33, 138, 0.1);
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  50% {
+    box-shadow:
+      0 0 30px rgba(255, 105, 180, 0.6),
+      0 0 60px rgba(255, 105, 180, 0.3),
+      0 0 100px rgba(255, 105, 180, 0.15);
   }
 }
 
-.animate-fade-in-up {
-  animation: fadeInUp 0.6s ease-out forwards;
+/* Gold glow */
+.glow-gold {
+  box-shadow:
+    0 0 15px rgba(255, 215, 0, 0.4),
+    0 0 30px rgba(255, 215, 0, 0.2);
+  animation: glowGold 2.5s ease-in-out infinite;
 }
 
-.animate-delay-100 { animation-delay: 0.1s; }
-.animate-delay-200 { animation-delay: 0.2s; }
-.animate-delay-300 { animation-delay: 0.3s; }
-.animate-delay-400 { animation-delay: 0.4s; }
+@keyframes glowGold {
+  0%, 100% { box-shadow: 0 0 15px rgba(255, 215, 0, 0.4), 0 0 30px rgba(255, 215, 0, 0.2); }
+  50% { box-shadow: 0 0 25px rgba(255, 215, 0, 0.6), 0 0 50px rgba(255, 215, 0, 0.3); }
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  33% { transform: translateY(-12px) rotate(2deg); }
+  66% { transform: translateY(-6px) rotate(-1deg); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: float 8s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float 7s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+/* Sparkle burst */
+@keyframes sparkleBurst {
+  0% { transform: scale(0) rotate(0deg); opacity: 0; }
+  50% { transform: scale(1.2) rotate(180deg); opacity: 1; }
+  100% { transform: scale(0.8) rotate(360deg); opacity: 0.6; }
+}
+
+/* Magnetic hover effect for cards */
+.magnetic-card {
+  transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.magnetic-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow:
+    0 20px 40px rgba(224, 33, 138, 0.15),
+    0 10px 20px rgba(224, 33, 138, 0.1);
+}
+
+/* Gradient text */
+.text-gradient-pink {
+  background: linear-gradient(135deg, #FF69B4 0%, #E0218A 40%, #C71585 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-gold {
+  background: linear-gradient(135deg, #FFD700 0%, #FFC107 50%, #FFB300 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Animated gradient border */
+.gradient-border {
+  position: relative;
+  border-radius: 1.5rem;
+}
+
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, #FF69B4, #FFD700, #E0218A, #FF69B4);
+  background-size: 300% 300%;
+  animation: gradientBorderSpin 4s ease infinite;
+  z-index: -1;
+}
+
+@keyframes gradientBorderSpin {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Noise/grain texture overlay */
+.noise-overlay::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Aurora / northern lights effect */
+.aurora {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.aurora::before,
+.aurora::after {
+  content: '';
+  position: absolute;
+  width: 150%;
+  height: 150%;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.4;
+}
+
+.aurora::before {
+  background: radial-gradient(ellipse, rgba(255, 105, 180, 0.5), transparent 60%);
+  top: -50%;
+  left: -25%;
+  animation: auroraFloat1 10s ease-in-out infinite;
+}
+
+.aurora::after {
+  background: radial-gradient(ellipse, rgba(255, 215, 0, 0.3), transparent 60%);
+  bottom: -50%;
+  right: -25%;
+  animation: auroraFloat2 12s ease-in-out infinite;
+}
+
+@keyframes auroraFloat1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(10%, 5%) scale(1.1); }
+}
+
+@keyframes auroraFloat2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-10%, -5%) scale(1.15); }
+}
+
+/* Cursor trail glow — purely CSS, subtle */
+.cursor-glow {
+  position: fixed;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 105, 180, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s;
+}
+
+/* Marquee / infinite scroll */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 25s linear infinite;
+}
 
 /* Smooth scroll */
 html {
   scroll-behavior: smooth;
+}
+
+/* Hide scrollbar but keep functionality */
+.hide-scrollbar::-webkit-scrollbar { display: none; }
+.hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Stagger children animation helper */
+.stagger-children > * {
+  opacity: 0;
+  transform: translateY(20px);
 }

@@ -16,6 +16,7 @@ export function ClientShell({ children }: { children: ReactNode }) {
       <CursorGlow />
       <FloatingParticles count={25} />
       <Navbar />
+      <div className="gradient-bar-header" />
       {children}
     </ScrollRevealProvider>
   );

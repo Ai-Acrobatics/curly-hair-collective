@@ -2,8 +2,9 @@ import type { MetadataRoute } from "next";
 import { episodes } from "./data/episodes";
 import { blogPosts } from "./data/blog";
 import { merchItems } from "./data/merch";
+import { guests } from "./data/guests";
 
-const BASE_URL = "https://curlyhaircollective.com";
+const BASE_URL = "https://curliegirlie.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [
@@ -50,6 +51,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.5,
     },
     {
+      url: `${BASE_URL}/guests`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    {
+      url: `${BASE_URL}/guests/apply`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.6,
+    },
+    {
       url: `${BASE_URL}/faq`,
       lastModified: new Date(),
       changeFrequency: "monthly",
@@ -90,5 +103,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.5,
   }));
 
-  return [...staticPages, ...episodePages, ...blogPages, ...merchPages];
+  const guestPages: MetadataRoute.Sitemap = guests.map((guest) => ({
+    url: `${BASE_URL}/guests/${guest.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }));
+
+  return [...staticPages, ...episodePages, ...blogPages, ...merchPages, ...guestPages];
 }

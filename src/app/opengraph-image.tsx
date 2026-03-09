@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const alt = "Curly Hair Collective — Podcast & Community";
+export const alt = "Curlie Girlie Collective — Podcast & Community";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -40,7 +40,7 @@ export default async function Image() {
               marginBottom: 8,
             }}
           >
-            Curly Hair
+            Curlie Girlie
           </div>
           <div
             style={{

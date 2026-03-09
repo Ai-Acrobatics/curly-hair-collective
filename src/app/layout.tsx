@@ -20,10 +20,10 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://curlyhaircollective.com"),
+  metadataBase: new URL("https://curliegirlie.com"),
   title: {
-    default: "Curly Hair Collective | Podcast & Community",
-    template: "%s | Curly Hair Collective",
+    default: "Curlie Girlie Collective | Podcast & Community",
+    template: "%s | Curlie Girlie Collective",
   },
   description:
     "Celebrating curly hair culture through conversations, community, and confidence. A podcast for every curl, coil, and wave — featuring expert guests, hair care tips, and the stories that make us who we are.",
@@ -42,24 +42,24 @@ export const metadata: Metadata = {
     "hair discrimination",
     "curl confidence",
   ],
-  authors: [{ name: "Curly Hair Collective" }],
-  creator: "Curly Hair Collective",
-  publisher: "Curly Hair Collective",
+  authors: [{ name: "Curlie Girlie Collective" }],
+  creator: "Curlie Girlie Collective",
+  publisher: "Curlie Girlie Collective",
   openGraph: {
-    title: "Curly Hair Collective | Podcast & Community",
+    title: "Curlie Girlie Collective | Podcast & Community",
     description:
       "Celebrating curly hair culture through conversations, community, and confidence. Every curl has a story.",
     type: "website",
     locale: "en_US",
-    url: "https://curlyhaircollective.com",
-    siteName: "Curly Hair Collective",
+    url: "https://curliegirlie.com",
+    siteName: "Curlie Girlie Collective",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Curly Hair Collective | Podcast & Community",
+    title: "Curlie Girlie Collective | Podcast & Community",
     description:
       "Celebrating curly hair culture through conversations, community, and confidence.",
-    creator: "@curlycollective",
+    creator: "@curliegirlie",
   },
   robots: {
     index: true,
@@ -73,26 +73,26 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://curlyhaircollective.com",
+    canonical: "https://curliegirlie.com",
   },
 };
 
 const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "Curly Hair Collective",
-  url: "https://curlyhaircollective.com",
+  name: "Curlie Girlie Collective",
+  url: "https://curliegirlie.com",
   description:
     "A podcast and community celebrating curly hair culture through conversations, community, and confidence.",
   sameAs: [
-    "https://instagram.com/curlyhaircollective",
-    "https://tiktok.com/@curlyhaircollective",
-    "https://youtube.com/@curlyhaircollective",
-    "https://twitter.com/curlycollective",
+    "https://instagram.com/curliegirlie",
+    "https://tiktok.com/@curliegirlie",
+    "https://youtube.com/@curliegirlie",
+    "https://twitter.com/curliegirlie",
   ],
   contactPoint: {
     "@type": "ContactPoint",
-    email: "hello@curlyhaircollective.com",
+    email: "hello@curliegirlie.com",
     contactType: "customer service",
   },
 };
@@ -100,11 +100,11 @@ const organizationJsonLd = {
 const podcastJsonLd = {
   "@context": "https://schema.org",
   "@type": "PodcastSeries",
-  name: "Curly Hair Collective",
+  name: "Curlie Girlie Collective",
   description:
     "Real conversations about curly hair culture, care, and confidence. Featuring experts, advocates, and everyday queens.",
-  url: "https://curlyhaircollective.com",
-  webFeed: "https://curlyhaircollective.com/episodes",
+  url: "https://curliegirlie.com",
+  webFeed: "https://curliegirlie.com/episodes",
   genre: ["Beauty", "Culture", "Lifestyle", "Health"],
   inLanguage: "en",
 };
@@ -120,8 +120,8 @@ export default function RootLayout({
         <link
           rel="alternate"
           type="application/rss+xml"
-          title="Curly Hair Collective Podcast"
-          href="https://curlyhaircollective.com/feed.xml"
+          title="Curlie Girlie Collective Podcast"
+          href="https://curliegirlie.com/feed.xml"
         />
         <script
           type="application/ld+json"

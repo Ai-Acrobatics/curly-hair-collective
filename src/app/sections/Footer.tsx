@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { FadeInUp } from "../components/FramerAnimations";
-import { CurlIcon } from "../components/Icons";
+import Image from "next/image";
 
 export function FooterSection() {
   return (
@@ -15,9 +15,15 @@ export function FooterSection() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
             <div>
               <Link href="/" className="flex items-center gap-2 mb-4">
-                <CurlIcon className="w-8 h-8 text-pink-300" />
+                <Image
+                  src="/images/logo.png"
+                  alt="Curlie Girlie Collective"
+                  width={36}
+                  height={36}
+                  className="w-9 h-9"
+                />
                 <span className="text-xl font-bold text-pink-200">
-                  Curly Hair Collective
+                  Curlie Girlie Collective
                 </span>
               </Link>
               <p className="text-pink-300/60 text-sm leading-relaxed">
@@ -33,6 +39,7 @@ export function FooterSection() {
               <ul className="space-y-2.5 text-pink-300/60 text-sm">
                 {[
                   { label: "Episodes", href: "/episodes" },
+                  { label: "Guests", href: "/guests" },
                   { label: "About", href: "/about" },
                   { label: "Blog", href: "/blog" },
                   { label: "FAQ", href: "/faq" },
@@ -99,13 +106,13 @@ export function FooterSection() {
               </h3>
               <ul className="space-y-2.5 text-pink-300/60 text-sm">
                 {[
-                  { name: "Instagram", href: "#" },
-                  { name: "TikTok", href: "#" },
-                  { name: "YouTube", href: "#" },
-                  { name: "Twitter", href: "#" },
+                  { name: "Instagram", href: "https://instagram.com/curliegirlie" },
+                  { name: "TikTok", href: "https://tiktok.com/@curliegirlie" },
+                  { name: "YouTube", href: "https://youtube.com/@curliegirlie" },
+                  { name: "Twitter", href: "https://twitter.com/curliegirlie" },
                   {
-                    name: "hello@curlyhaircollective.com",
-                    href: "mailto:hello@curlyhaircollective.com",
+                    name: "hello@curliegirlie.com",
+                    href: "mailto:hello@curliegirlie.com",
                   },
                 ].map((link) => (
                   <li key={link.name}>
@@ -125,7 +132,7 @@ export function FooterSection() {
 
         <div className="mt-14 pt-8 border-t border-pink-800/50 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-pink-400/50 text-sm">
-            &copy; {new Date().getFullYear()} Curly Hair Collective. All rights
+            &copy; {new Date().getFullYear()} Curlie Girlie Collective. All rights
             reserved.
           </p>
           <div className="flex items-center gap-4 text-pink-400/50 text-sm">

@@ -2,18 +2,18 @@ import type { Metadata } from "next";
 import { EpisodesPageClient } from "./EpisodesPageClient";
 
 export const metadata: Metadata = {
-  title: "Episodes | Curly Hair Collective",
+  title: "Episodes | Curlie Girlie Collective",
   description:
-    "Browse all episodes of the Curly Hair Collective podcast. Real conversations with curl experts, stylists, advocates, and queens about natural hair culture, care, and confidence.",
+    "Browse all episodes of the Curlie Girlie Collective podcast. Real conversations with curl experts, stylists, advocates, and queens about natural hair culture, care, and confidence.",
   openGraph: {
-    title: "Episodes | Curly Hair Collective",
+    title: "Episodes | Curlie Girlie Collective",
     description:
-      "Browse all episodes of the Curly Hair Collective podcast. Real conversations about natural hair culture, care, and confidence.",
+      "Browse all episodes of the Curlie Girlie Collective podcast. Real conversations about natural hair culture, care, and confidence.",
     type: "website",
-    url: "https://curlyhaircollective.com/episodes",
+    url: "https://curliegirlie.com/episodes",
   },
   alternates: {
-    canonical: "https://curlyhaircollective.com/episodes",
+    canonical: "https://curliegirlie.com/episodes",
   },
 };
 

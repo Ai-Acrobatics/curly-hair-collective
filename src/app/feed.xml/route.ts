@@ -1,7 +1,7 @@
 import { episodes } from "../data/episodes";
 
 export async function GET() {
-  const baseUrl = "https://curlyhaircollective.com";
+  const baseUrl = "https://curliegirlie.com";
 
   const items = episodes
     .map(
@@ -26,17 +26,17 @@ export async function GET() {
   xmlns:content="http://purl.org/rss/1.0/modules/content/"
   xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Curly Hair Collective</title>
+    <title>Curlie Girlie Collective</title>
     <link>${baseUrl}</link>
     <description>Celebrating curly hair culture through conversations, community, and confidence. Real conversations with experts, advocates, and everyday queens about natural hair care, culture, and confidence.</description>
     <language>en-us</language>
-    <copyright>Copyright ${new Date().getFullYear()} Curly Hair Collective</copyright>
+    <copyright>Copyright ${new Date().getFullYear()} Curlie Girlie Collective</copyright>
     <atom:link href="${baseUrl}/feed.xml" rel="self" type="application/rss+xml"/>
-    <itunes:author>Curly Hair Collective</itunes:author>
+    <itunes:author>Curlie Girlie Collective</itunes:author>
     <itunes:summary>Real conversations about curly hair culture, care, and confidence. Featuring experts, advocates, and everyday queens.</itunes:summary>
     <itunes:owner>
-      <itunes:name>Curly Hair Collective</itunes:name>
-      <itunes:email>hello@curlyhaircollective.com</itunes:email>
+      <itunes:name>Curlie Girlie Collective</itunes:name>
+      <itunes:email>hello@curliegirlie.com</itunes:email>
     </itunes:owner>
     <itunes:explicit>false</itunes:explicit>
     <itunes:category text="Health &amp; Fitness">

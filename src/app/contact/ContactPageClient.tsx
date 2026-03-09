@@ -10,22 +10,22 @@ import { SparkleIcon } from "../components/Icons";
 const contactMethods = [
   {
     title: "General Inquiries",
-    email: "hello@curlyhaircollective.com",
+    email: "hello@curliegirlie.com",
     description: "Questions, feedback, or just want to say hey.",
   },
   {
     title: "Sponsorships & Partnerships",
-    email: "sponsors@curlyhaircollective.com",
+    email: "sponsors@curliegirlie.com",
     description: "Brand collaborations, ad reads, and partnership opportunities.",
   },
   {
     title: "Guest Pitches",
-    email: "guests@curlyhaircollective.com",
+    email: "guests@curliegirlie.com",
     description: "Want to be on the show? Tell us your curl story.",
   },
   {
     title: "Press & Media",
-    email: "press@curlyhaircollective.com",
+    email: "press@curliegirlie.com",
     description: "Interview requests, press kits, and media inquiries.",
   },
 ];
@@ -141,15 +141,22 @@ export function ContactPageClient() {
                     Follow Us
                   </h3>
                   <div className="flex flex-wrap gap-3">
-                    {["Instagram", "TikTok", "YouTube", "Twitter"].map(
+                    {[
+                      { name: "Instagram", href: "https://instagram.com/curliegirlie" },
+                      { name: "TikTok", href: "https://tiktok.com/@curliegirlie" },
+                      { name: "YouTube", href: "https://youtube.com/@curliegirlie" },
+                      { name: "Twitter", href: "https://twitter.com/curliegirlie" },
+                    ].map(
                       (social) => (
                         <motion.a
-                          key={social}
-                          href="#"
+                          key={social.name}
+                          href={social.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className="bg-pink-100 text-pink-600 px-4 py-2 rounded-full text-sm font-medium hover:bg-pink-200 transition-colors"
                           whileHover={{ scale: 1.05 }}
                         >
-                          {social}
+                          {social.name}
                         </motion.a>
                       )
                     )}

@@ -19,16 +19,16 @@ export async function generateMetadata({
   if (!item) return {};
 
   return {
-    title: `${item.name} | Curly Hair Collective Merch`,
+    title: `${item.name} | Curlie Girlie Collective Merch`,
     description: item.description,
     openGraph: {
       title: `${item.name} — $${item.price.toFixed(2)}`,
       description: item.description,
       type: "website",
-      url: `https://curlyhaircollective.com/merch/${slug}`,
+      url: `https://curliegirlie.com/merch/${slug}`,
     },
     alternates: {
-      canonical: `https://curlyhaircollective.com/merch/${slug}`,
+      canonical: `https://curliegirlie.com/merch/${slug}`,
     },
   };
 }
@@ -49,7 +49,7 @@ export default async function MerchDetailPage({
     description: item.description,
     brand: {
       "@type": "Brand",
-      name: "Curly Hair Collective",
+      name: "Curlie Girlie Collective",
     },
     offers: {
       "@type": "Offer",

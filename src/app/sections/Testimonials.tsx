@@ -7,44 +7,44 @@ import { SparkleIcon } from "../components/Icons";
 const testimonials = [
   {
     quote:
-      "Finally a podcast that gets it. I've been natural for 5 years and I still learned so much from the first episode. This community is everything.",
+      "I started wearing a topper after losing my hair to alopecia, and I felt so ashamed. This podcast reminded me that God sees my heart, not my hairline. I finally feel at peace with where I am.",
     name: "Jasmine T.",
-    role: "3B Curls · Listener & Curl Queen",
+    role: "Topper Wearer & Woman of Faith",
     gradient: "from-pink-400 to-rose-500",
   },
   {
     quote:
-      "The CROWN Act episode literally made me cry. Knowing someone is fighting for our right to wear our hair at work means the world.",
+      "I came to Christ at 34 and thought I was too late. Hearing Sabrina and Chanelle talk about their own journeys gave me the courage to walk into church for the first time. Now I never miss a Sunday.",
     name: "Aisha M.",
-    role: "4A Coils · Natural Hair Advocate",
+    role: "New Believer & Podcast Listener",
     gradient: "from-fuchsia-400 to-pink-500",
   },
   {
     quote:
-      "I always thought my hair was just 'frizzy' — this podcast helped me realize I have beautiful waves that just needed the right care. Life-changing.",
+      "I never connected my hair journey to my faith journey until this podcast. Learning to accept my hair loss was actually learning to trust God's plan. These two women get it.",
     name: "Sofia R.",
-    role: "2C Waves · New to Natural",
+    role: "Wig Wearer & Faith Walker",
     gradient: "from-rose-400 to-pink-500",
   },
   {
     quote:
-      "My daughter and I listen together every week. The episode about raising curly kids gave us our entire wash day routine. She finally loves her hair!",
+      "As someone in the alternative hair industry, I've been looking for content that speaks to my faith AND my profession. Sabrina and Chanelle bring both together so beautifully. Finally, a podcast for us.",
     name: "Destiny W.",
-    role: "4C Coils · Curly Mom",
+    role: "Hair Stylist & Believer",
     gradient: "from-pink-500 to-fuchsia-500",
   },
   {
     quote:
-      "The product recommendations are always spot-on. I've saved so much money since I stopped buying random products and started following the science-backed tips.",
+      "The way they talk about identity and beauty through a biblical lens is so refreshing. No judgment, just love. It reminded me that God made me exactly the way I'm supposed to be.",
     name: "Morgan K.",
-    role: "3A Curls · Product Minimalist",
+    role: "Christian Woman & Encourager",
     gradient: "from-rose-500 to-pink-600",
   },
   {
     quote:
-      "As a woman of color in tech, the workplace episode hit different. I've shared it with my entire team. Representation matters and this podcast proves it.",
+      "I've struggled with hair loss for years and felt like God forgot about me. This podcast helped me see that He was with me through it all. The encouragement from this community is unmatched.",
     name: "Priya N.",
-    role: "2B Waves · Tech Professional",
+    role: "Hair Loss Warrior & Prayer Warrior",
     gradient: "from-pink-400 to-rose-400",
   },
 ];
@@ -65,7 +65,7 @@ export function TestimonialsSection() {
             From the Collective
           </h2>
           <p className="text-pink-600/80 mt-5 max-w-xl mx-auto text-lg">
-            Real words from real curly queens who are part of the movement.
+            Real words from real women walking in faith, beauty, and becoming.
           </p>
         </FadeInUp>
 

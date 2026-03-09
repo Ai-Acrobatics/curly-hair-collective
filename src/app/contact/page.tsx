@@ -2,17 +2,17 @@ import type { Metadata } from "next";
 import { ContactPageClient } from "./ContactPageClient";
 
 export const metadata: Metadata = {
-  title: "Contact | Curly Hair Collective",
+  title: "Contact | Curlie Girlie Collective",
   description:
-    "Get in touch with the Curly Hair Collective team. Sponsorship inquiries, guest pitches, press, or just say hey — we'd love to hear from you.",
+    "Get in touch with the Curlie Girlie Collective team. Sponsorship inquiries, guest pitches, press, or just say hey — we'd love to hear from you.",
   openGraph: {
-    title: "Contact | Curly Hair Collective",
-    description: "Get in touch with the Curly Hair Collective team.",
+    title: "Contact | Curlie Girlie Collective",
+    description: "Get in touch with the Curlie Girlie Collective team.",
     type: "website",
-    url: "https://curlyhaircollective.com/contact",
+    url: "https://curliegirlie.com/contact",
   },
   alternates: {
-    canonical: "https://curlyhaircollective.com/contact",
+    canonical: "https://curliegirlie.com/contact",
   },
 };
 

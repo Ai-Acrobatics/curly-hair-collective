@@ -22,8 +22,8 @@ export function MerchPageClient() {
       <PageHeader
         badge="Official Merch"
         title="Rep Your"
-        titleAccent="Curls"
-        subtitle="Apparel, accessories, and essentials that celebrate your natural texture. Every purchase supports the Collective."
+        titleAccent="Faith"
+        subtitle="Faith-forward apparel, accessories, and essentials that celebrate who you are in Christ. Every purchase supports the Collective."
       />
 
       <section className="py-20 bg-pink-50">
@@ -125,8 +125,8 @@ export function MerchPageClient() {
                 Be the First to Shop
               </h3>
               <p className="text-pink-700/60 max-w-lg mx-auto mb-6">
-                Join the waitlist and get early access to new drops, exclusive
-                colorways, and member-only discounts.
+                Join the waitlist and get early access to new faith-forward
+                drops, exclusive designs, and member-only discounts.
               </p>
               <div className="max-w-sm mx-auto flex gap-3">
                 <input

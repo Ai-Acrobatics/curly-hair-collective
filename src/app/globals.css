@@ -1,22 +1,22 @@
 @import "tailwindcss";
 
 :root {
-  --background: #FFF5F7;
-  --foreground: #2D1B2E;
-  --pink-50: #FFF0F5;
-  --pink-100: #FFE4EF;
-  --pink-200: #FFB6D3;
-  --pink-300: #FF87B5;
-  --pink-400: #FF69B4;
-  --pink-500: #E0218A;
-  --pink-600: #C71585;
-  --pink-700: #A01068;
-  --pink-800: #7A0C4F;
-  --pink-900: #4A0730;
-  --gold: #FFD700;
-  --gold-light: #FFF3B0;
-  --cream: #FFF5F5;
-  --blush: #FFB6C1;
+  --background: #FDF2F8;
+  --foreground: #1A1A2E;
+  --pink-50: #FDF2F8;
+  --pink-100: #FCE7F3;
+  --pink-200: #FBCFE8;
+  --pink-300: #F9A8D4;
+  --pink-400: #F472B6;
+  --pink-500: #EC4899;
+  --pink-600: #DB2777;
+  --pink-700: #BE185D;
+  --pink-800: #9D174D;
+  --pink-900: #831843;
+  --gold: #D4AF37;
+  --gold-light: #F5E6B8;
+  --cream: #FFFBF5;
+  --blush: #FBB6CE;
 }
 
 @theme inline {
@@ -60,35 +60,35 @@ p, span, a, li, .font-body {
 
 /* Selection color */
 ::selection {
-  background: rgba(224, 33, 138, 0.3);
-  color: #4A0730;
+  background: rgba(236, 72, 153, 0.25);
+  color: #831843;
 }
 
-/* Barbie Pink Gradient Utilities */
+/* Luxury Barbie Pink Gradient Utilities */
 .gradient-pink {
-  background: linear-gradient(135deg, #FF69B4 0%, #E0218A 50%, #C71585 100%);
+  background: linear-gradient(135deg, #F472B6 0%, #EC4899 50%, #DB2777 100%);
 }
 
 .gradient-pink-soft {
-  background: linear-gradient(135deg, #FFF0F5 0%, #FFE4EF 50%, #FFB6D3 100%);
+  background: linear-gradient(135deg, #FDF2F8 0%, #FCE7F3 50%, #FBCFE8 100%);
 }
 
 .gradient-hero {
-  background: linear-gradient(160deg, #E0218A 0%, #FF69B4 30%, #FFB6C1 60%, #FFF0F5 100%);
+  background: linear-gradient(160deg, #DB2777 0%, #EC4899 30%, #F9A8D4 60%, #FDF2F8 100%);
 }
 
 /* ==========================================
    PREMIUM EFFECTS
    ========================================== */
 
-/* Animated mesh gradient background */
+/* Animated mesh gradient background — luxury Web 3.0 */
 .mesh-gradient {
   background:
-    radial-gradient(ellipse at 20% 50%, rgba(255, 105, 180, 0.4) 0%, transparent 50%),
-    radial-gradient(ellipse at 80% 20%, rgba(224, 33, 138, 0.3) 0%, transparent 50%),
-    radial-gradient(ellipse at 40% 80%, rgba(255, 215, 0, 0.15) 0%, transparent 50%),
-    radial-gradient(ellipse at 70% 60%, rgba(199, 21, 133, 0.25) 0%, transparent 50%),
-    linear-gradient(160deg, #E0218A 0%, #FF69B4 30%, #FFB6C1 60%, #FFF0F5 100%);
+    radial-gradient(ellipse at 20% 50%, rgba(244, 114, 182, 0.35) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(219, 39, 119, 0.25) 0%, transparent 50%),
+    radial-gradient(ellipse at 40% 80%, rgba(212, 175, 55, 0.12) 0%, transparent 50%),
+    radial-gradient(ellipse at 70% 60%, rgba(190, 24, 93, 0.2) 0%, transparent 50%),
+    linear-gradient(160deg, #9D174D 0%, #DB2777 25%, #EC4899 50%, #F9A8D4 75%, #FDF2F8 100%);
   background-size: 200% 200%;
   animation: meshMove 12s ease-in-out infinite;
 }
@@ -145,24 +145,24 @@ p, span, a, li, .font-body {
 /* Glow pulse for CTAs */
 .glow-pulse {
   box-shadow:
-    0 0 20px rgba(224, 33, 138, 0.4),
-    0 0 40px rgba(224, 33, 138, 0.2),
-    0 0 80px rgba(224, 33, 138, 0.1);
+    0 0 20px rgba(236, 72, 153, 0.3),
+    0 0 40px rgba(236, 72, 153, 0.15),
+    0 0 80px rgba(236, 72, 153, 0.08);
   animation: glowPulse 3s ease-in-out infinite;
 }
 
 @keyframes glowPulse {
   0%, 100% {
     box-shadow:
-      0 0 20px rgba(224, 33, 138, 0.4),
-      0 0 40px rgba(224, 33, 138, 0.2),
-      0 0 80px rgba(224, 33, 138, 0.1);
+      0 0 20px rgba(236, 72, 153, 0.3),
+      0 0 40px rgba(236, 72, 153, 0.15),
+      0 0 80px rgba(236, 72, 153, 0.08);
   }
   50% {
     box-shadow:
-      0 0 30px rgba(255, 105, 180, 0.6),
-      0 0 60px rgba(255, 105, 180, 0.3),
-      0 0 100px rgba(255, 105, 180, 0.15);
+      0 0 30px rgba(244, 114, 182, 0.45),
+      0 0 60px rgba(244, 114, 182, 0.2),
+      0 0 100px rgba(244, 114, 182, 0.1);
   }
 }
 
@@ -214,20 +214,20 @@ p, span, a, li, .font-body {
 .magnetic-card:hover {
   transform: translateY(-8px) scale(1.02);
   box-shadow:
-    0 20px 40px rgba(224, 33, 138, 0.15),
-    0 10px 20px rgba(224, 33, 138, 0.1);
+    0 20px 40px rgba(236, 72, 153, 0.12),
+    0 10px 20px rgba(236, 72, 153, 0.08);
 }
 
 /* Gradient text */
 .text-gradient-pink {
-  background: linear-gradient(135deg, #FF69B4 0%, #E0218A 40%, #C71585 100%);
+  background: linear-gradient(135deg, #F472B6 0%, #EC4899 40%, #DB2777 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .text-gradient-gold {
-  background: linear-gradient(135deg, #FFD700 0%, #FFC107 50%, #FFB300 100%);
+  background: linear-gradient(135deg, #D4AF37 0%, #C9A227 50%, #B8941F 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -242,12 +242,13 @@ p, span, a, li, .font-body {
 .gradient-border::before {
   content: '';
   position: absolute;
-  inset: -2px;
+  inset: -1px;
   border-radius: inherit;
-  background: linear-gradient(135deg, #FF69B4, #FFD700, #E0218A, #FF69B4);
+  background: linear-gradient(135deg, #F9A8D4, #D4AF37, #EC4899, #F9A8D4);
   background-size: 300% 300%;
   animation: gradientBorderSpin 4s ease infinite;
   z-index: -1;
+  opacity: 0.7;
 }
 
 @keyframes gradientBorderSpin {
@@ -287,14 +288,14 @@ p, span, a, li, .font-body {
 }
 
 .aurora::before {
-  background: radial-gradient(ellipse, rgba(255, 105, 180, 0.5), transparent 60%);
+  background: radial-gradient(ellipse, rgba(244, 114, 182, 0.35), transparent 60%);
   top: -50%;
   left: -25%;
   animation: auroraFloat1 10s ease-in-out infinite;
 }
 
 .aurora::after {
-  background: radial-gradient(ellipse, rgba(255, 215, 0, 0.3), transparent 60%);
+  background: radial-gradient(ellipse, rgba(212, 175, 55, 0.2), transparent 60%);
   bottom: -50%;
   right: -25%;
   animation: auroraFloat2 12s ease-in-out infinite;

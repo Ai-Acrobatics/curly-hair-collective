@@ -1,4 +1,4 @@
-# Curly Hair Collective — Email Nurture & Sponsor Strategy
+# Curlie Girlie Collective — Email Nurture & Sponsor Strategy
 
 ## Overview
 

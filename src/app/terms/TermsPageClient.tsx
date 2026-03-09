@@ -8,7 +8,7 @@ import { FadeInUp } from "../components/FramerAnimations";
 const sections = [
   {
     title: "Acceptance of Terms",
-    text: "By accessing and using Curly Hair Collective's website, podcast, and related services, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our services.",
+    text: "By accessing and using Curlie Girlie Collective's website, podcast, and related services, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our services.",
   },
   {
     title: "Use of Services",
@@ -20,7 +20,7 @@ const sections = [
   },
   {
     title: "Intellectual Property",
-    text: "All content on Curly Hair Collective — including podcast episodes, blog articles, graphics, logos, and branding — is protected by copyright and trademark law. You may not reproduce, distribute, or create derivative works without our written permission, except for personal use and sharing via provided social links.",
+    text: "All content on Curlie Girlie Collective — including podcast episodes, blog articles, graphics, logos, and branding — is protected by copyright and trademark law. You may not reproduce, distribute, or create derivative works without our written permission, except for personal use and sharing via provided social links.",
   },
   {
     title: "Merchandise",
@@ -36,11 +36,11 @@ const sections = [
   },
   {
     title: "Disclaimer",
-    text: "Content provided by Curly Hair Collective is for informational and entertainment purposes only. Hair care advice should not replace professional consultation. We are not liable for any outcomes resulting from following advice shared on our platform. Individual results may vary.",
+    text: "Content provided by Curlie Girlie Collective is for informational and entertainment purposes only. Hair care advice should not replace professional consultation. We are not liable for any outcomes resulting from following advice shared on our platform. Individual results may vary.",
   },
   {
     title: "Limitation of Liability",
-    text: "Curly Hair Collective shall not be liable for any indirect, incidental, or consequential damages arising from your use of our services. Our total liability for any claim related to our services shall not exceed the amount you have paid to us in the past 12 months.",
+    text: "Curlie Girlie Collective shall not be liable for any indirect, incidental, or consequential damages arising from your use of our services. Our total liability for any claim related to our services shall not exceed the amount you have paid to us in the past 12 months.",
   },
   {
     title: "Changes to Terms",
@@ -48,7 +48,7 @@ const sections = [
   },
   {
     title: "Contact",
-    text: "For questions about these terms, contact us at legal@curlyhaircollective.com.",
+    text: "For questions about these terms, contact us at legal@curliegirlie.com.",
   },
 ];
 

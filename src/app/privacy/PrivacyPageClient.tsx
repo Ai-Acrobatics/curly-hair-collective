@@ -73,7 +73,7 @@ const sections = [
   {
     title: "Contact Us",
     content: [
-      "For privacy-related questions or data requests, email us at privacy@curlyhaircollective.com",
+      "For privacy-related questions or data requests, email us at privacy@curliegirlie.com",
       "We aim to respond to all privacy requests within 30 days",
     ],
   },

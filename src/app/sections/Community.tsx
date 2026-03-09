@@ -87,7 +87,7 @@ export function CommunitySection() {
               </motion.button>
             </motion.div>
             <p className="text-white/40 text-sm mt-4">
-              Join 0 curl lovers (and counting)
+              Join the movement — be one of the first.
             </p>
           </div>
         </FadeInUp>
@@ -99,11 +99,18 @@ export function CommunitySection() {
               Follow the Collective
             </p>
             <div className="flex items-center justify-center gap-4">
-              {["Instagram", "TikTok", "YouTube", "Twitter"].map(
+              {[
+                { name: "Instagram", href: "https://instagram.com/curliegirlie" },
+                { name: "TikTok", href: "https://tiktok.com/@curliegirlie" },
+                { name: "YouTube", href: "https://youtube.com/@curliegirlie" },
+                { name: "Twitter", href: "https://twitter.com/curliegirlie" },
+              ].map(
                 (social, i) => (
                   <motion.a
-                    key={social}
-                    href="#"
+                    key={social.name}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="glass text-white px-5 py-2 rounded-full text-sm font-medium"
                     whileHover={{
                       scale: 1.1,
@@ -115,7 +122,7 @@ export function CommunitySection() {
                     viewport={{ once: true }}
                     transition={{ delay: 0.5 + i * 0.08 }}
                   >
-                    {social}
+                    {social.name}
                   </motion.a>
                 )
               )}

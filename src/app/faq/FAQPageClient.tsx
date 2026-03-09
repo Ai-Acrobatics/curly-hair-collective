@@ -17,9 +17,21 @@ interface FAQ {
 const faqs: FAQ[] = [
   {
     category: "The Podcast",
-    question: "What is Curly Hair Collective?",
+    question: "What is the Curlie Girlie Collective?",
     answer:
-      "Curly Hair Collective is a podcast and community platform celebrating curly hair culture. We feature expert guests — trichologists, advocates, content creators, and everyday queens — discussing natural hair care, science, culture, and confidence.",
+      "The Curlie Girlie Collective is a faith-based podcast hosted by Sabrina Anderson (@fabsabstyle) and Chanelle (@createdbychanelle). We talk about faith, hair, identity, and becoming. Our core mission is simple: anybody can come to the Lord, no matter where you're at in your walk. We want to help women follow Jesus Christ and lead in their faith.",
+  },
+  {
+    category: "The Podcast",
+    question: "Who are the hosts?",
+    answer:
+      "Sabrina Anderson and Chanelle are both alternative hair educators at Jon Renau, one of the leading wig and topper brands. They both came to the Lord later in life and are passionate about sharing their faith journey while helping women feel confident and beautiful through alternative hair solutions.",
+  },
+  {
+    category: "The Podcast",
+    question: "Is this a Christian podcast?",
+    answer:
+      "Yes! We are a faith-centered podcast rooted in following Jesus Christ. But we welcome everyone — no matter where you are in your faith journey. Whether you've been walking with the Lord for decades or you're just curious, you belong here. Our heart is that anybody can come to the Lord.",
   },
   {
     category: "The Podcast",
@@ -34,64 +46,58 @@ const faqs: FAQ[] = [
       "We'll be available on Spotify, Apple Podcasts, YouTube, and Amazon Music. Follow us on your preferred platform to get notified at launch!",
   },
   {
-    category: "The Podcast",
-    question: "How can I be a guest on the show?",
+    category: "Faith & Hair",
+    question: "What is alternative hair education?",
     answer:
-      "We love hearing from the community! Send your pitch to guests@curlyhaircollective.com with your name, background, and what you'd like to discuss. We're looking for diverse voices across all curl types and experiences.",
+      "Alternative hair includes wigs, toppers, hair extensions, and other hair solutions for women experiencing hair loss from alopecia, medical treatments, hormonal changes, aging, or other causes. As alternative hair educators at Jon Renau, Sabrina and Chanelle help women find confidence and feel beautiful through these solutions.",
+  },
+  {
+    category: "Faith & Hair",
+    question: "Do I need to be experiencing hair loss to listen?",
+    answer:
+      "Not at all! While we do talk about wigs, toppers, and hair journeys, our podcast is really about faith, identity, and becoming who God made you to be. If you're a woman who loves Jesus (or wants to know more about Him), this podcast is for you.",
+  },
+  {
+    category: "Faith & Hair",
+    question: "How do faith and hair connect?",
+    answer:
+      "For many women, their hair is deeply tied to their identity. When hair loss happens, it can shake your confidence and even your faith. We believe that walking through these seasons with God — and with community — can be transformative. Your hair journey can become a faith journey when you let God lead.",
   },
   {
     category: "Community",
     question: "How do I join the Collective?",
     answer:
-      "The easiest way is to subscribe to our newsletter on the homepage or community page. You'll get episode alerts, exclusive curl tips, and community updates. We're also active on Instagram, TikTok, YouTube, and Twitter — follow us everywhere!",
+      "The easiest way is to subscribe to our newsletter on the homepage. You'll get episode alerts, devotionals, encouragement, and community updates. We're also active on Instagram, TikTok, and YouTube — follow us everywhere!",
   },
   {
     category: "Community",
     question: "Is the community free?",
     answer:
-      "Yes! Our podcast, blog, and newsletter are completely free. We may introduce premium content and exclusive community features in the future, but the core Collective will always be free and open.",
+      "Yes! Our podcast, blog, and newsletter are completely free. We may introduce premium content and exclusive community features in the future, but the core Collective will always be free and open to everyone.",
   },
   {
-    category: "Community",
-    question: "What curl types do you cover?",
+    category: "Merch",
+    question: "What kind of merch do you have?",
     answer:
-      "All of them! From 2A waves to 4C coils and everything in between. Curly Hair Collective celebrates every texture. Our content is designed to be inclusive and relevant to the full spectrum of textured hair.",
+      "Our merch is faith-forward and designed to encourage you daily. Think 'God's Girl' tees, 'Powered by Prayer' hoodies, 'Faith Over Fear' satin bonnets, cross necklaces, Scripture affirmation cards, and more. Everything is designed to remind you of whose you are.",
   },
   {
     category: "Merch",
     question: "When does merch drop?",
     answer:
-      "Our first merch collection launches alongside the podcast! Join the waitlist on our merch page to get early access, exclusive colorways, and member-only discounts.",
-  },
-  {
-    category: "Merch",
-    question: "Do you ship internationally?",
-    answer:
-      "We're starting with US shipping at launch, with international shipping coming shortly after. Subscribe to our newsletter to be notified when international shipping becomes available.",
-  },
-  {
-    category: "Merch",
-    question: "What's your return policy?",
-    answer:
-      "We offer hassle-free returns within 30 days of purchase for unworn, unwashed items in original packaging. Hair care products are final sale for hygiene reasons. Full details will be available on each product page.",
+      "Our first merch collection launches alongside the podcast! Join the waitlist on our merch page to get early access and member-only discounts.",
   },
   {
     category: "Sponsorships",
     question: "How do I sponsor the podcast?",
     answer:
-      "Visit our sponsors page for detailed information about our sponsorship tiers (Bronze, Gold, Platinum), audience demographics, and partnership opportunities. Or email sponsors@curlyhaircollective.com directly.",
+      "Visit our sponsors page for detailed information about our sponsorship tiers (Bronze, Gold, Platinum), audience demographics, and partnership opportunities. We work best with faith-aligned brands, alternative hair companies, beauty brands, and Christian organizations.",
   },
   {
     category: "Sponsorships",
     question: "What brands do you work with?",
     answer:
-      "We partner with brands that align with our values — hair care, beauty, wellness, fashion, and lifestyle companies that celebrate diversity and natural beauty. We only promote products we genuinely believe in.",
-  },
-  {
-    category: "Sponsorships",
-    question: "Do you do affiliate partnerships?",
-    answer:
-      "Yes, we offer affiliate and ambassador programs for brands that are a great fit for our community. All affiliate relationships are transparently disclosed in our content.",
+      "We partner with brands that align with our mission — faith-based organizations, alternative hair brands, beauty and wellness companies, Christian publishers, and women's ministry resources. We only promote products and services we genuinely believe in and that serve our community.",
   },
 ];
 
@@ -140,7 +146,7 @@ export function FAQPageClient() {
         badge="Questions?"
         title="Frequently"
         titleAccent="Asked"
-        subtitle="Everything you need to know about the podcast, community, merch, and partnerships."
+        subtitle="Everything you need to know about the podcast, our faith, alternative hair, and how to get involved."
       />
 
       <section className="py-20 bg-pink-50">

@@ -1,9 +1,9 @@
-# Curly Hair Collective — Brand Reference Guide
+# Curlie Girlie Collective — Brand Reference Guide
 
 ## Brand Identity
 
 ### Name
-**Curly Hair Collective**
+**Curlie Girlie Collective**
 
 ### Tagline
 *"Every curl has a story."*
@@ -64,7 +64,7 @@ To be the #1 destination for curly hair culture — a space where textured hair 
 ## Logo Usage
 
 ### Primary Logo
-- CurlIcon (stylized curl strand) + "Curly Hair Collective" wordmark
+- CurlIcon (stylized curl strand) + "Curlie Girlie Collective" wordmark
 - Minimum clear space: 1x the height of the curl icon on all sides
 
 ### Logo Variations
@@ -176,7 +176,7 @@ To be the #1 destination for curly hair culture — a space where textured hair 
 ### Key Phrases for Merch
 - "Curl Queen"
 - "Every Day is a Good Hair Day"
-- "Curly Hair Collective"
+- "Curlie Girlie Collective"
 - "Curly, Coily, Wavy — All Welcome"
 - "My Curls, My Crown"
 - "Wash Day Vibes"

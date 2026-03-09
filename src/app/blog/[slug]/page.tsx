@@ -19,17 +19,17 @@ export async function generateMetadata({
   if (!post) return {};
 
   return {
-    title: `${post.title} | Curly Hair Collective Blog`,
+    title: `${post.title} | Curlie Girlie Collective Blog`,
     description: post.excerpt,
     openGraph: {
       title: post.title,
       description: post.excerpt,
       type: "article",
-      url: `https://curlyhaircollective.com/blog/${slug}`,
+      url: `https://curliegirlie.com/blog/${slug}`,
       publishedTime: post.date,
     },
     alternates: {
-      canonical: `https://curlyhaircollective.com/blog/${slug}`,
+      canonical: `https://curliegirlie.com/blog/${slug}`,
     },
   };
 }
@@ -51,12 +51,12 @@ export default async function BlogPostPage({
     datePublished: post.date,
     author: {
       "@type": "Organization",
-      name: "Curly Hair Collective",
-      url: "https://curlyhaircollective.com",
+      name: "Curlie Girlie Collective",
+      url: "https://curliegirlie.com",
     },
     publisher: {
       "@type": "Organization",
-      name: "Curly Hair Collective",
+      name: "Curlie Girlie Collective",
     },
   };
 

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import {
@@ -43,26 +44,16 @@ export function EpisodesSection() {
                     <div
                       className={`h-52 bg-gradient-to-br ${episode.gradient} relative overflow-hidden`}
                     >
-                      <div className="absolute inset-0 opacity-10">
-                        <div
-                          className="absolute inset-0"
-                          style={{
-                            backgroundImage: `radial-gradient(circle at 20% 80%, white 1px, transparent 1px),
-                            radial-gradient(circle at 80% 20%, white 1px, transparent 1px),
-                            radial-gradient(circle at 50% 50%, white 1px, transparent 1px)`,
-                            backgroundSize: "40px 40px, 60px 60px, 80px 80px",
-                          }}
+                      {episode.coverImage && (
+                        <Image
+                          src={episode.coverImage}
+                          alt={episode.title}
+                          fill
+                          className="object-cover"
+                          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                         />
-                      </div>
-
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <motion.span
-                          className="text-7xl font-black text-white/15 select-none"
-                          whileHover={{ scale: 1.1, rotate: -5 }}
-                        >
-                          {String(episode.id).padStart(2, "0")}
-                        </motion.span>
-                      </div>
+                      )}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
 
                       <div className="absolute bottom-3 left-3 flex items-center gap-2">
                         <span className="glass text-white text-xs font-medium px-3 py-1 rounded-full">

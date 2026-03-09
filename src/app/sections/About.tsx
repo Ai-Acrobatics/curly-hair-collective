@@ -107,7 +107,7 @@ export function AboutSection() {
             <FadeInUp delay={0.2}>
               <div className="space-y-4 text-pink-700/75 text-lg leading-relaxed">
                 <p data-gsap="text-reveal">
-                  Welcome to Curly Hair Collective — the podcast where we
+                  Welcome to Curlie Girlie Collective — the podcast where we
                   celebrate the beauty, science, and culture of textured hair.
                 </p>
                 <p>

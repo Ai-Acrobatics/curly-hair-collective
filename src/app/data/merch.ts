@@ -4,7 +4,7 @@ export interface MerchItem {
   name: string;
   description: string;
   price: number;
-  category: "apparel" | "accessories" | "hair-care" | "lifestyle";
+  category: "apparel" | "accessories" | "faith-essentials" | "lifestyle";
   gradient: string;
   badge?: string;
   sizes?: string[];
@@ -13,10 +13,10 @@ export interface MerchItem {
 export const merchItems: MerchItem[] = [
   {
     id: 1,
-    slug: "curl-queen-tee",
-    name: "Curl Queen Tee",
+    slug: "gods-girl-tee",
+    name: "God's Girl Tee",
     description:
-      "100% organic cotton tee with our signature 'Curl Queen' design in gold foil on Barbie pink.",
+      "100% organic cotton tee with 'God's Girl' in gold foil lettering. A daily reminder of whose you are.",
     price: 34.99,
     category: "apparel",
     gradient: "from-pink-400 via-pink-500 to-rose-500",
@@ -25,10 +25,10 @@ export const merchItems: MerchItem[] = [
   },
   {
     id: 2,
-    slug: "collective-hoodie",
-    name: "Collective Hoodie",
+    slug: "powered-by-prayer-hoodie",
+    name: "Powered by Prayer Hoodie",
     description:
-      "Oversized unisex hoodie with embroidered curl logo. Cozy fleece interior, perfect for wash day.",
+      "Oversized unisex hoodie with embroidered 'Powered by Prayer' across the chest. Cozy fleece interior, perfect for devotional mornings.",
     price: 64.99,
     category: "apparel",
     gradient: "from-pink-500 via-fuchsia-500 to-purple-500",
@@ -36,10 +36,10 @@ export const merchItems: MerchItem[] = [
   },
   {
     id: 3,
-    slug: "satin-bonnet-pink",
-    name: "Satin Sleep Bonnet — Pink",
+    slug: "faith-over-fear-satin-bonnet",
+    name: "Faith Over Fear Satin Bonnet",
     description:
-      "Double-layered satin bonnet to protect your curls overnight. Adjustable band, breathable fabric.",
+      "Double-layered satin bonnet with 'Faith Over Fear' embroidered in gold. Protects your hair while you rest in His promises.",
     price: 24.99,
     category: "accessories",
     gradient: "from-rose-400 via-pink-400 to-pink-500",
@@ -47,51 +47,51 @@ export const merchItems: MerchItem[] = [
   },
   {
     id: 4,
-    slug: "curl-defining-cream",
-    name: "Curl Defining Cream",
+    slug: "curlie-girlie-cross-necklace",
+    name: "Curlie Girlie Cross Necklace",
     description:
-      "Lightweight curl cream with shea butter and argan oil. Defines curls without the crunch.",
+      "Dainty gold-plated cross necklace with a tiny curl charm. Faith meets femininity in one beautiful piece.",
     price: 28.99,
-    category: "hair-care",
+    category: "accessories",
     gradient: "from-fuchsia-400 via-pink-500 to-rose-500",
     badge: "Coming Soon",
   },
   {
     id: 5,
-    slug: "microfiber-towel",
-    name: "Microfiber Hair Towel",
+    slug: "scripture-affirmation-cards",
+    name: "Scripture Affirmation Cards",
     description:
-      "Ultra-soft microfiber towel that reduces frizz and breakage. Curly girl approved.",
+      "30 beautifully designed cards with Scripture and affirmations for identity, beauty, and faith. Perfect for wash day or quiet time.",
     price: 19.99,
-    category: "accessories",
+    category: "faith-essentials",
     gradient: "from-pink-300 via-pink-400 to-rose-400",
   },
   {
     id: 6,
-    slug: "affirmation-mug",
-    name: "'Good Hair Day' Mug",
+    slug: "fearfully-made-mug",
+    name: "'Fearfully & Wonderfully Made' Mug",
     description:
-      "Ceramic mug with our signature pink gradient and 'Every Day is a Good Hair Day' message.",
+      "Ceramic mug with Psalm 139:14 in our signature pink gradient. Start your morning with coffee and the Word.",
     price: 18.99,
     category: "lifestyle",
     gradient: "from-rose-500 via-pink-500 to-fuchsia-500",
   },
   {
     id: 7,
-    slug: "wide-tooth-comb",
-    name: "Wide Tooth Detangling Comb",
+    slug: "pray-then-slay-cap",
+    name: "Pray Then Slay Cap",
     description:
-      "Seamless wide-tooth comb designed for textured hair. Gentle detangling without breakage.",
-    price: 14.99,
+      "Adjustable dad cap with 'Pray Then Slay' embroidered in gold. For the days when you need both faith and fashion.",
+    price: 24.99,
     category: "accessories",
     gradient: "from-pink-400 via-rose-500 to-red-400",
   },
   {
     id: 8,
-    slug: "tote-bag",
-    name: "Curly Hair Collective Tote",
+    slug: "collective-tote",
+    name: "Curlie Girlie Collective Tote",
     description:
-      "Heavyweight canvas tote with screen-printed logo. Perfect for carrying your curl products.",
+      "Heavyweight canvas tote with our logo and 'Faith. Hair. Identity. Becoming.' printed on the side. Carry your Bible and your bonnets.",
     price: 22.99,
     category: "lifestyle",
     gradient: "from-pink-500 via-pink-600 to-rose-600",
@@ -102,6 +102,6 @@ export const merchCategories = [
   { key: "all", label: "All Products" },
   { key: "apparel", label: "Apparel" },
   { key: "accessories", label: "Accessories" },
-  { key: "hair-care", label: "Hair Care" },
+  { key: "faith-essentials", label: "Faith Essentials" },
   { key: "lifestyle", label: "Lifestyle" },
 ] as const;

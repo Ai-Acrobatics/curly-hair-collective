@@ -8,6 +8,7 @@ export interface Episode {
   date: string;
   duration: string;
   gradient: string;
+  coverImage: string;
   topics: string[];
   guestBio: string;
 }
@@ -16,97 +17,103 @@ export const episodes: Episode[] = [
   {
     id: 1,
     slug: "embracing-your-natural-texture",
-    title: "Embracing Your Natural Texture",
-    guest: "Nikki Walton",
+    title: "Faith, Hair & Finding Yourself",
+    guest: "Sabrina & Chanelle",
     description:
-      "The founder of CurlyNikki.com shares her journey from relaxed to natural and how self-acceptance changed everything.",
+      "In our very first episode, we share our stories — coming to the Lord later in life, working at Jon Renau, and why faith and hair are more connected than you think.",
     longDescription:
-      "In this debut episode, we sit down with Nikki Walton — the visionary behind CurlyNikki.com, one of the internet's first and most beloved natural hair communities. Nikki opens up about her transition from relaxed to natural hair, the emotional journey of self-acceptance, and how embracing her curls led to a movement that's inspired millions. We talk product picks, mindset shifts, and why natural hair is so much more than just hair.",
-    date: "Coming Soon",
+      "Welcome to the Curlie Girlie Collective! In this debut episode, your hosts Sabrina Anderson (@fabsabstyle) and Chanelle (@createdbychanelle) introduce themselves and the heart behind this podcast. They share their personal journeys of coming to Christ later in life, how working as alternative hair educators at Jon Renau shaped their understanding of identity and beauty, and why they believe anybody can come to the Lord no matter where you are in your walk. This is faith, hair, identity, and becoming — all in one conversation.",
+    date: "Spring 2026",
     duration: "45 min",
     gradient: "from-pink-400 via-pink-500 to-rose-600",
-    topics: ["Natural Hair Journey", "Self-Acceptance", "Community Building"],
+    coverImage: "/images/covers/ep01-natural-texture.png",
+    topics: ["Faith Journey", "Introduction", "Coming to Christ"],
     guestBio:
-      "Nikki Walton is the founder of CurlyNikki.com, one of the earliest and most influential natural hair blogs. A meditation teacher and author, she's dedicated her career to helping women embrace their natural beauty inside and out.",
+      "Sabrina Anderson (@fabsabstyle) and Chanelle (@createdbychanelle) are alternative hair educators at Jon Renau and the co-hosts of the Curlie Girlie Collective. Both came to the Lord later in life and are passionate about helping women find their identity in Christ.",
   },
   {
     id: 2,
     slug: "curl-care-for-every-season",
-    title: "Curl Care for Every Season",
-    guest: "Dr. Kari Williams",
+    title: "Wigs, Toppers & God's Perfect Timing",
+    guest: "Sabrina & Chanelle",
     description:
-      "A trichologist breaks down how weather, humidity, and lifestyle affect your curls — plus her holy grail product picks.",
+      "We break down the world of alternative hair — what wigs and toppers really are, who they're for, and how God uses unexpected seasons to grow our faith.",
     longDescription:
-      "Board-certified trichologist Dr. Kari Williams brings the science to curly hair care. In this episode, we dive deep into how seasonal changes, humidity levels, and even your diet affect your curl pattern and hair health. Dr. Williams shares her professional tips for adapting your routine throughout the year, debunks common hair myths, and reveals her holy grail product recommendations for every curl type.",
-    date: "Coming Soon",
+      "In this episode, Sabrina and Chanelle pull from their experience as alternative hair educators at Jon Renau to demystify the world of wigs, toppers, and hair alternatives. They talk about women dealing with hair loss from alopecia, chemo, hormonal changes, and aging — and how the shame around it keeps so many women silent. But more than the hair, they explore how God uses these unexpected seasons to deepen our trust in Him. If you or someone you love is going through hair loss, this episode is a warm hug wrapped in truth.",
+    date: "Spring 2026",
     duration: "38 min",
     gradient: "from-pink-500 via-fuchsia-500 to-purple-500",
-    topics: ["Hair Science", "Seasonal Care", "Product Recommendations"],
+    coverImage: "/images/covers/ep02-every-season.png",
+    topics: ["Alternative Hair", "Wigs & Toppers", "Trusting God"],
     guestBio:
-      "Dr. Kari Williams is a board-certified trichologist, licensed cosmetologist, and the founder of Mahogany Hair Revolution Salon & Trichology Clinic in Los Angeles. She specializes in scalp and hair disorders and is a sought-after expert in textured hair care.",
+      "Sabrina and Chanelle bring their professional expertise from Jon Renau, one of the leading alternative hair brands, to educate women on wigs, toppers, and hair solutions with grace, compassion, and faith.",
   },
   {
     id: 3,
     slug: "big-hair-bigger-dreams",
-    title: "Big Hair, Bigger Dreams",
-    guest: "Manes by Mell",
+    title: "Coming to Christ When the World Says You're Too Late",
+    guest: "Sabrina & Chanelle",
     description:
-      "From YouTube sensation to curl queen empire — how Mell built a brand by keeping it real about curly hair struggles.",
+      "We get real about finding God as adults — the doubts, the shame, and the moment everything changed. Spoiler: He was waiting for us all along.",
     longDescription:
-      "Mell, known to millions as Manes by Mell, joins us to share her incredible journey from frustrated curly girl to YouTube sensation and curl care entrepreneur. We talk about the raw, honest content that made her famous, the business of building a hair care brand, and why authenticity is the ultimate superpower in the beauty industry. Plus, Mell shares her best-kept curly hair secrets.",
-    date: "Coming Soon",
+      "This might be the most personal episode yet. Sabrina and Chanelle open up about what it was really like to come to Jesus as adults — after years of living their own way. They talk about the guilt of feeling 'too far gone,' the people who judged them, and the overwhelming grace they found when they finally surrendered. If you've ever thought you've missed your chance with God, this episode will change your mind. Anybody can come to the Lord, no matter where you're at in your walk.",
+    date: "Spring 2026",
     duration: "52 min",
     gradient: "from-rose-400 via-pink-500 to-pink-600",
-    topics: ["Entrepreneurship", "Content Creation", "Curl Care Tips"],
+    coverImage: "/images/covers/ep03-bigger-dreams.png",
+    topics: ["Salvation Story", "Grace", "New Beginnings"],
     guestBio:
-      "Manes by Mell is a YouTube creator with over 1 million subscribers, known for her no-nonsense approach to curly hair education. She's built an empire around honest, relatable content that helps people embrace and care for their natural texture.",
+      "Sabrina and Chanelle share their raw, unfiltered testimonies of finding Christ later in life and discovering that God's grace has no expiration date.",
   },
   {
     id: 4,
     slug: "the-politics-of-natural-hair",
-    title: "The Politics of Natural Hair",
-    guest: "Adjoa B. Asamoah",
+    title: "What the Bible Really Says About Beauty",
+    guest: "Sabrina & Chanelle",
     description:
-      "The advocate behind the CROWN Act discusses hair discrimination, legislation, and why your curls are a civil rights issue.",
+      "We dig into Scripture to see what God actually says about beauty, hair, and identity — and why the world's definition of beautiful doesn't match His.",
     longDescription:
-      "In one of our most important episodes, we're joined by Adjoa B. Asamoah — the powerhouse advocate behind the CROWN Act (Creating a Respectful and Open World for Natural Hair). Adjoa shares stories of hair discrimination in schools and workplaces, explains the legislative journey of the CROWN Act, and makes the case for why natural hair protection is a civil rights imperative. This conversation will change how you think about your curls.",
-    date: "Coming Soon",
+      "In a world obsessed with appearance, what does the Bible actually say about beauty? Sabrina and Chanelle walk through key Scriptures — from Proverbs 31 to 1 Peter 3:3-4 to Psalm 139 — and unpack what it means to be 'fearfully and wonderfully made.' They talk about how the beauty industry, social media, and even the church can distort our view of ourselves, and how returning to God's Word resets everything. This episode is part Bible study, part heart-to-heart, and all love.",
+    date: "Summer 2026",
     duration: "41 min",
     gradient: "from-fuchsia-400 via-pink-500 to-rose-500",
-    topics: ["CROWN Act", "Hair Discrimination", "Civil Rights", "Legislation"],
+    coverImage: "/images/covers/ep04-politics.png",
+    topics: ["Scripture", "Biblical Beauty", "Identity in Christ"],
     guestBio:
-      "Adjoa B. Asamoah is a social impact strategist and the co-creator of the CROWN Act, landmark legislation that prohibits race-based hair discrimination. Her advocacy has led to the passage of the CROWN Act in over 20 states.",
+      "Sabrina and Chanelle explore the intersection of faith and beauty, bringing their unique perspectives as alternative hair professionals and women of faith.",
   },
   {
     id: 5,
     slug: "curly-hair-in-the-workplace",
-    title: "Curly Hair in the Workplace",
-    guest: "Candice Carty-Williams",
+    title: "Hair Loss, Identity & Letting God Lead",
+    guest: "Sabrina & Chanelle",
     description:
-      "Bestselling author on navigating corporate spaces with natural hair and why representation matters at every level.",
+      "When your hair changes, your identity can feel shaken. We talk about walking through hair loss with faith and why God's plan for you is bigger than your hair.",
     longDescription:
-      "Bestselling author Candice Carty-Williams opens up about her experiences navigating corporate and creative spaces with natural hair. We discuss the unspoken 'hair codes' in professional settings, the emotional labor of hair policing, and why representation at every level of an organization matters. Candice shares personal stories, hard-won wisdom, and her vision for a future where all hair textures are celebrated in the workplace.",
-    date: "Coming Soon",
+      "Hair loss can feel like losing a part of who you are. In this deeply honest episode, Sabrina and Chanelle talk with women who have faced hair loss from alopecia, medical treatments, and stress — and found their way back to confidence through faith. They share practical advice from their work at Jon Renau alongside spiritual encouragement for anyone whose identity feels shaken. The message is clear: you are not your hair, and God's plan for your life is so much bigger than what's on your head.",
+    date: "Summer 2026",
     duration: "36 min",
     gradient: "from-pink-400 via-rose-500 to-red-400",
-    topics: ["Workplace Culture", "Representation", "Professional Natural Hair"],
+    coverImage: "/images/covers/ep05-workplace.png",
+    topics: ["Hair Loss", "Identity", "Faith Through Trials"],
     guestBio:
-      "Candice Carty-Williams is the bestselling author of 'Queenie' and a passionate advocate for representation in media and the workplace. Her writing and advocacy center the experiences of Black women navigating identity and belonging.",
+      "Sabrina and Chanelle combine their professional expertise in alternative hair with their personal faith to encourage women navigating hair loss and identity struggles.",
   },
   {
     id: 6,
     slug: "raising-curly-kids-with-confidence",
-    title: "Raising Curly Kids with Confidence",
-    guest: "Kia Stephens",
+    title: "Leading Other Women to Jesus",
+    guest: "Sabrina & Chanelle",
     description:
-      "A mother and educator shares tips for teaching kids to love their curls from day one — wash day routines included.",
+      "How do you share your faith without being pushy? We talk about leading by example, planting seeds, and trusting God with the harvest.",
     longDescription:
-      "Parent, educator, and curl enthusiast Kia Stephens joins us for a heartfelt conversation about raising children who love their natural hair from day one. We cover age-appropriate curl care routines, how to handle bullying and microaggressions, the importance of diverse representation in children's media, and practical wash day tips that make the process fun for the whole family. This episode is a must-listen for every curly parent.",
-    date: "Coming Soon",
+      "As women who came to Christ later in life, Sabrina and Chanelle have a heart for other women who are searching. In this episode, they talk about what it looks like to share your faith naturally — through the way you live, how you treat people, and the conversations you have in the salon chair. They discuss the difference between preaching at someone and loving someone toward Jesus, and share stories of women whose lives were changed simply because someone cared enough to be real with them. This is discipleship, Curlie Girlie style.",
+    date: "Summer 2026",
     duration: "44 min",
     gradient: "from-rose-500 via-pink-500 to-fuchsia-500",
-    topics: ["Parenting", "Kids Hair Care", "Confidence Building", "Wash Day"],
+    coverImage: "/images/covers/ep06-curly-kids.png",
+    topics: ["Evangelism", "Women's Ministry", "Discipleship"],
     guestBio:
-      "Kia Stephens is an educator, mother, and natural hair advocate dedicated to helping parents raise confident, curl-loving kids. She creates resources and content that make natural hair care accessible and fun for families.",
+      "Sabrina and Chanelle share their hearts for women's ministry and how their work in the beauty industry has become a platform for sharing the love of Christ.",
   },
 ];

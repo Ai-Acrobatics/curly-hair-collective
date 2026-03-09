@@ -7,10 +7,10 @@ const faqJsonLd = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "What is Curly Hair Collective?",
+      name: "What is Curlie Girlie Collective?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Curly Hair Collective is a podcast and community platform celebrating curly hair culture through conversations with experts, advocates, and everyday queens about natural hair care, confidence, and culture.",
+        text: "Curlie Girlie Collective is a podcast and community platform celebrating curly hair culture through conversations with experts, advocates, and everyday queens about natural hair care, confidence, and culture.",
       },
     },
     {
@@ -26,7 +26,7 @@ const faqJsonLd = {
       name: "Where can I listen to the podcast?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Curly Hair Collective will be available on Spotify, Apple Podcasts, YouTube, and Amazon Music. Follow us on your preferred platform to get notified at launch.",
+        text: "Curlie Girlie Collective will be available on Spotify, Apple Podcasts, YouTube, and Amazon Music. Follow us on your preferred platform to get notified at launch.",
       },
     },
     {
@@ -34,7 +34,7 @@ const faqJsonLd = {
       name: "How can I be a guest on the podcast?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We love hearing from the community! Send your pitch to guests@curlyhaircollective.com with your name, background, and what you'd like to discuss on the show.",
+        text: "We love hearing from the community! Send your pitch to guests@curliegirlie.com with your name, background, and what you'd like to discuss on the show.",
       },
     },
   ],
@@ -43,15 +43,15 @@ const faqJsonLd = {
 export const metadata: Metadata = {
   title: "FAQ",
   description:
-    "Frequently asked questions about Curly Hair Collective — the podcast, community, merch, sponsorships, and more.",
+    "Frequently asked questions about Curlie Girlie Collective — the podcast, community, merch, sponsorships, and more.",
   openGraph: {
-    title: "FAQ | Curly Hair Collective",
-    description: "Answers to common questions about Curly Hair Collective.",
+    title: "FAQ | Curlie Girlie Collective",
+    description: "Answers to common questions about Curlie Girlie Collective.",
     type: "website",
-    url: "https://curlyhaircollective.com/faq",
+    url: "https://curliegirlie.com/faq",
   },
   alternates: {
-    canonical: "https://curlyhaircollective.com/faq",
+    canonical: "https://curliegirlie.com/faq",
   },
 };
 

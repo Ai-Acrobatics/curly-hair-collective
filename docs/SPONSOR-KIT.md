@@ -1,8 +1,8 @@
-# Curly Hair Collective — Sponsor & Partnership Kit
+# Curlie Girlie Collective — Sponsor & Partnership Kit
 
 ## About Us
 
-**Curly Hair Collective** is a podcast and digital community celebrating curly hair culture through conversations, education, and empowerment. We connect with a passionate, engaged audience that trusts our recommendations and actively seeks products that serve their natural hair needs.
+**Curlie Girlie Collective** is a podcast and digital community celebrating curly hair culture through conversations, education, and empowerment. We connect with a passionate, engaged audience that trusts our recommendations and actively seeks products that serve their natural hair needs.
 
 ---
 
@@ -180,7 +180,7 @@ We only partner with brands that:
 
 ## How to Get Started
 
-1. **Email us**: sponsors@curlyhaircollective.com
+1. **Email us**: sponsors@curliegirlie.com
 2. **Tell us about your brand**: Products, values, goals
 3. **We'll send a custom proposal**: Tailored to your budget and objectives
 4. **Onboarding call**: Align on messaging, timeline, and deliverables
@@ -192,11 +192,11 @@ We only partner with brands that:
 
 | | |
 |---|---|
-| **Sponsorship inquiries** | sponsors@curlyhaircollective.com |
-| **General inquiries** | hello@curlyhaircollective.com |
-| **Website** | curlyhaircollective.com |
-| **Social** | @curlyhaircollective (all platforms) |
+| **Sponsorship inquiries** | sponsors@curliegirlie.com |
+| **General inquiries** | hello@curliegirlie.com |
+| **Website** | curliegirlie.com |
+| **Social** | @curliegirlie (all platforms) |
 
 ---
 
-*Curly Hair Collective — Where every curl is celebrated, every story is heard, and every partner is valued.*
+*Curlie Girlie Collective — Where every curl is celebrated, every story is heard, and every partner is valued.*

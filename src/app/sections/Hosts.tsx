@@ -12,7 +12,7 @@ const hosts = [
     role: "Educator @jonrenau · Curly Girl · San Diego, CA",
     bio: "JESUS, then everything else. Sabrina specializes in wigs, toppers, and hair replacement systems at Jon Renau — helping women experiencing hair loss feel beautiful and confident again. She came to the Lord later in life and hasn't looked back since.",
     badge: "Hair Expert",
-    image: "/hosts/img_0811.jpg",
+    image: "/hosts/img_0817.jpg",
     cartoon: "/images/sabrina-cartoon.png",
     gradient: "from-pink-400 via-pink-500 to-rose-500",
   },
@@ -60,7 +60,7 @@ export function HostsSection() {
           <div className="relative max-w-3xl mx-auto rounded-3xl overflow-hidden shadow-2xl shadow-pink-300/30">
             <Image
               src="/hosts/img_0815.jpg"
-              alt="Sabrina Anderson and Chanelle — hosts of Curly Hair Collective"
+              alt="Sabrina Anderson and Chanelle — hosts of Curlie Girlie Collective"
               width={1200}
               height={800}
               className="w-full h-auto object-cover"

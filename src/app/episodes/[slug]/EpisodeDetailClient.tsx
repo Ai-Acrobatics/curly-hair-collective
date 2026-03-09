@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ClientShell } from "../../components/ClientShell";
@@ -20,30 +21,31 @@ export function EpisodeDetailClient({ episode }: { episode: Episode }) {
 
       <section className="py-20 bg-pink-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Play Banner */}
+          {/* Play Banner with Cover Image */}
           <FadeInUp>
             <div
-              className={`bg-gradient-to-br ${episode.gradient} rounded-3xl p-8 md:p-12 text-center relative overflow-hidden mb-12`}
+              className={`bg-gradient-to-br ${episode.gradient} rounded-3xl p-0 text-center relative overflow-hidden mb-12`}
             >
-              <div className="absolute inset-0 opacity-10">
-                <div
-                  className="absolute inset-0"
-                  style={{
-                    backgroundImage: `radial-gradient(circle at 30% 70%, white 1px, transparent 1px),
-                    radial-gradient(circle at 70% 30%, white 1px, transparent 1px)`,
-                    backgroundSize: "50px 50px, 70px 70px",
-                  }}
+              <div className="relative h-64 md:h-80">
+                <Image
+                  src={episode.coverImage}
+                  alt={episode.title}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 800px"
+                  priority
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
               </div>
-              <div className="relative z-10">
+              <div className="absolute inset-0 flex flex-col items-center justify-center z-10">
                 <motion.div
-                  className="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-2xl cursor-pointer"
+                  className="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-2xl cursor-pointer"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
                 >
                   <PlayIcon className="w-9 h-9 text-pink-500 ml-1" />
                 </motion.div>
-                <p className="text-white/80 text-sm font-medium">
+                <p className="text-white/90 text-sm font-medium">
                   Episode dropping soon — stay tuned!
                 </p>
               </div>
@@ -73,7 +75,7 @@ export function EpisodeDetailClient({ episode }: { episode: Episode }) {
             </div>
           </FadeInUp>
 
-          {/* Guest Bio */}
+          {/* About the Hosts */}
           <FadeInUp delay={0.2}>
             <div className="bg-white rounded-2xl p-8 md:p-10 shadow-lg shadow-pink-200/30 mb-8">
               <div className="flex items-center gap-3 mb-4">
@@ -85,6 +87,37 @@ export function EpisodeDetailClient({ episode }: { episode: Episode }) {
               <p className="text-pink-700/70 leading-relaxed">
                 {episode.guestBio}
               </p>
+            </div>
+          </FadeInUp>
+
+          {/* Episode Details Card */}
+          <FadeInUp delay={0.25}>
+            <div className="bg-white rounded-2xl p-8 md:p-10 shadow-lg shadow-pink-200/30 mb-8">
+              <h2 className="text-2xl font-bold text-pink-900 mb-4">
+                Episode Details
+              </h2>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                <div>
+                  <p className="text-pink-400 text-xs font-semibold uppercase tracking-wider mb-1">
+                    Episode
+                  </p>
+                  <p className="text-pink-900 font-bold">
+                    {String(episode.id).padStart(2, "0")}
+                  </p>
+                </div>
+                <div>
+                  <p className="text-pink-400 text-xs font-semibold uppercase tracking-wider mb-1">
+                    Duration
+                  </p>
+                  <p className="text-pink-900 font-bold">{episode.duration}</p>
+                </div>
+                <div>
+                  <p className="text-pink-400 text-xs font-semibold uppercase tracking-wider mb-1">
+                    Release
+                  </p>
+                  <p className="text-pink-900 font-bold">{episode.date}</p>
+                </div>
+              </div>
             </div>
           </FadeInUp>
 

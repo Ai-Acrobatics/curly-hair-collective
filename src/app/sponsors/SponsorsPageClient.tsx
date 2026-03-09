@@ -59,21 +59,21 @@ const sponsorTiers = [
 ];
 
 const audienceStats = [
-  { value: "18-35", label: "Core Age Range" },
-  { value: "85%", label: "Female Audience" },
+  { value: "25-45", label: "Core Age Range" },
+  { value: "95%", label: "Female Audience" },
   { value: "92%", label: "Engagement Rate" },
-  { value: "70%", label: "Purchase from Recommendations" },
+  { value: "80%", label: "Women of Faith" },
 ];
 
 const idealPartners = [
-  "Hair Care Brands",
-  "Beauty & Cosmetics",
+  "Alternative Hair Brands",
+  "Christian Publishers",
+  "Faith-Based Organizations",
+  "Beauty & Hair Care",
   "Wellness & Self-Care",
-  "Fashion & Apparel",
-  "Health & Nutrition",
-  "Lifestyle Brands",
-  "Subscription Boxes",
-  "Events & Conferences",
+  "Women's Ministry Resources",
+  "Modest Fashion",
+  "Christian Conferences & Events",
 ];
 
 export function SponsorsPageClient() {
@@ -83,7 +83,7 @@ export function SponsorsPageClient() {
         badge="Partnerships"
         title="Grow With"
         titleAccent="The Collective"
-        subtitle="Reach a passionate, engaged community that trusts our recommendations. Let's create something beautiful together."
+        subtitle="Reach a faith-driven community of women who care about hair, identity, and walking with Jesus. Let's create something beautiful together."
       />
 
       <section className="py-20 bg-pink-50">
@@ -97,6 +97,11 @@ export function SponsorsPageClient() {
               <h2 className="text-3xl md:text-4xl font-black text-pink-900 mt-2">
                 Who You&apos;ll Reach
               </h2>
+              <p className="text-pink-700/60 max-w-2xl mx-auto mt-3">
+                Our listeners are Christian women passionate about faith, beauty, and identity.
+                Many are navigating hair loss or exploring alternative hair options like wigs
+                and toppers. They trust our recommendations because we keep it real.
+              </p>
             </div>
           </FadeInUp>
 
@@ -174,7 +179,7 @@ export function SponsorsPageClient() {
                       ))}
                     </ul>
                     <motion.a
-                      href="mailto:sponsors@curlyhaircollective.com"
+                      href="mailto:sponsors@curliegirlie.com"
                       className={`mt-6 block text-center py-3 rounded-full font-bold text-sm ${
                         tier.featured
                           ? "gradient-pink text-white shadow-lg shadow-pink-300/40"
@@ -199,8 +204,8 @@ export function SponsorsPageClient() {
                 Ideal Partners
               </h3>
               <p className="text-pink-700/60 max-w-lg mx-auto mb-8">
-                We work best with brands that align with our values of
-                authenticity, inclusivity, and celebrating natural beauty.
+                We work best with brands that align with our mission of faith,
+                hair education, and helping women find their identity in Christ.
               </p>
               <div className="flex flex-wrap justify-center gap-3">
                 {idealPartners.map((partner) => (
@@ -218,7 +223,7 @@ export function SponsorsPageClient() {
               </div>
               <div className="mt-10">
                 <motion.a
-                  href="mailto:sponsors@curlyhaircollective.com"
+                  href="mailto:sponsors@curliegirlie.com"
                   className="gradient-pink text-white px-8 py-4 rounded-full font-bold text-lg shadow-xl shadow-pink-300/40 inline-block shimmer"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}

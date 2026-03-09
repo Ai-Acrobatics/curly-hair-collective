@@ -2,18 +2,18 @@ import type { Metadata } from "next";
 import { MerchPageClient } from "./MerchPageClient";
 
 export const metadata: Metadata = {
-  title: "Merch | Curly Hair Collective",
+  title: "Merch | Curlie Girlie Collective",
   description:
-    "Shop the Curly Hair Collective merch collection. Curl Queen tees, satin bonnets, hair care essentials, and lifestyle goods that celebrate your natural texture.",
+    "Shop the Curlie Girlie Collective merch collection. Curl Queen tees, satin bonnets, hair care essentials, and lifestyle goods that celebrate your natural texture.",
   openGraph: {
-    title: "Merch | Curly Hair Collective",
+    title: "Merch | Curlie Girlie Collective",
     description:
-      "Shop the official Curly Hair Collective merch. Apparel, accessories, and hair care for every curl type.",
+      "Shop the official Curlie Girlie Collective merch. Apparel, accessories, and hair care for every curl type.",
     type: "website",
-    url: "https://curlyhaircollective.com/merch",
+    url: "https://curliegirlie.com/merch",
   },
   alternates: {
-    canonical: "https://curlyhaircollective.com/merch",
+    canonical: "https://curliegirlie.com/merch",
   },
   keywords: [
     "curly hair merch",

@@ -33,7 +33,7 @@ export function LoadingScreen() {
             >
               <Image
                 src="/images/logo.png"
-                alt="Curly Hair Collective"
+                alt="Curlie Girlie Collective"
                 width={80}
                 height={80}
                 className="w-20 h-20 mx-auto"
@@ -48,7 +48,7 @@ export function LoadingScreen() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
             >
-              Curly Hair Collective
+              Curlie Girlie Collective
             </motion.h1>
 
             {/* Loading bar */}

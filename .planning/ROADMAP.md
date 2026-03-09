@@ -1,4 +1,4 @@
-# Curly Hair Collective — Roadmap
+# Curlie Girlie Collective — Roadmap
 
 ## Milestone 1: Launch MVP (v1.0)
 

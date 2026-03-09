@@ -1,4 +1,4 @@
-# Curly Hair Collective — Podcast Strategy & Year 1 Plan
+# Curlie Girlie Collective — Podcast Strategy & Year 1 Plan
 
 ## Who We Are
 
@@ -149,7 +149,7 @@ We're building a podcast that sits at the intersection of:
 2. **Live events** — Host a local meetup or virtual summit: "Crown & Glory"
 3. **Ebook or devotional** — "30 Days of Confidence: Devotions for Women Reclaiming Their Crown" — sell for $12.99
 4. **Speaking engagements** — Churches, women's conferences, hair expos
-5. **Merch drop** — Pink branded: "Crown Queen," "His Masterpiece," "Curly Hair Collective" hoodies/tees
+5. **Merch drop** — Pink branded: "Crown Queen," "His Masterpiece," "Curlie Girlie Collective" hoodies/tees
 
 ---
 
@@ -303,7 +303,7 @@ Everything you create should fall into one of these 4 pillars:
 2. **Record your pilot episode** — Just hit record and talk. It doesn't need to be perfect.
 3. **Choose a hosting platform** — Buzzsprout ($12/mo) or Spotify for Podcasters (free)
 4. **Design cover art** — We have the Barbie pink brand locked in
-5. **Set up socials** — @curlyhaircollective on IG and TikTok
+5. **Set up socials** — @curliegirlie on IG and TikTok
 6. **Tell 20 people personally** — Text your friends. This is how shows grow early.
 7. **Create a content calendar** — Map out the first 12 episodes
 

@@ -1,8 +1,8 @@
-# Curly Hair Collective — Style Guide
+# Curlie Girlie Collective — Style Guide
 
 ## Brand Overview
 
-Curly Hair Collective is a podcast and community platform celebrating curly hair culture. Our visual identity is bold, unapologetically feminine, and premium — blending Barbie-maximalist energy with clean modern design.
+Curlie Girlie Collective is a podcast and community platform celebrating curly hair culture. Our visual identity is bold, unapologetically feminine, and premium — blending Barbie-maximalist energy with clean modern design.
 
 ---
 

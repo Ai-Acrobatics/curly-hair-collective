@@ -7,11 +7,11 @@ import Link from "next/link";
 
 const navLinks = [
   { label: "Episodes", href: "/episodes" },
+  { label: "Guests", href: "/guests" },
   { label: "About", href: "/about" },
   { label: "Merch", href: "/merch" },
   { label: "Blog", href: "/blog" },
   { label: "Sponsors", href: "/sponsors" },
-  { label: "FAQ", href: "/faq" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -41,16 +41,16 @@ export function Navbar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <Link href="/" className="flex items-center gap-2">
+              <Link href="/" className="flex items-center gap-3">
                 <Image
                   src="/images/logo.png"
-                  alt="Curly Hair Collective"
+                  alt="Curlie Girlie Collective"
                   width={40}
                   height={40}
                   className="w-10 h-10"
                 />
                 <span className="text-xl font-bold text-gradient-pink">
-                  Curly Hair Collective
+                  Curlie Girlie Collective
                 </span>
               </Link>
             </motion.div>

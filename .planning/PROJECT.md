@@ -1,4 +1,4 @@
-# Curly Hair Collective
+# Curlie Girlie Collective
 
 ## Vision
 A premium podcast & community platform celebrating curly hair culture — designed with a bold, Barbie-pink aesthetic that's unapologetically feminine and visually stunning.

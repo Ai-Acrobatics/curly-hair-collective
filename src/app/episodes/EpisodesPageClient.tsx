@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ClientShell } from "../components/ClientShell";
@@ -19,8 +20,8 @@ export function EpisodesPageClient() {
       <PageHeader
         badge="All Episodes"
         title="Listen &"
-        titleAccent="Learn"
-        subtitle="Real conversations with real curly queens. Deep dives into hair care, culture, confidence, and community."
+        titleAccent="Grow"
+        subtitle="Real conversations about faith, hair, identity, and becoming. Hosted by Sabrina & Chanelle from Jon Renau."
       />
 
       <section className="py-20 bg-pink-50">
@@ -37,19 +38,17 @@ export function EpisodesPageClient() {
                       <div
                         className={`h-48 bg-gradient-to-br ${episode.gradient} relative overflow-hidden`}
                       >
-                        <div className="absolute inset-0 opacity-10">
-                          <div
-                            className="absolute inset-0"
-                            style={{
-                              backgroundImage: `radial-gradient(circle at 20% 80%, white 1px, transparent 1px),
-                              radial-gradient(circle at 80% 20%, white 1px, transparent 1px)`,
-                              backgroundSize: "40px 40px, 60px 60px",
-                            }}
-                          />
-                        </div>
-                        <div className="absolute inset-0 flex items-center justify-center">
-                          <span className="text-7xl font-black text-white/15 select-none">
-                            {String(episode.id).padStart(2, "0")}
+                        <Image
+                          src={episode.coverImage}
+                          alt={episode.title}
+                          fill
+                          className="object-cover opacity-90"
+                          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                        <div className="absolute top-3 left-3">
+                          <span className="glass text-white text-xs font-bold px-3 py-1 rounded-full">
+                            EP {String(episode.id).padStart(2, "0")}
                           </span>
                         </div>
                         <div className="absolute bottom-3 left-3 flex items-center gap-2">

@@ -22,9 +22,9 @@ export function BlogPageClient() {
     <ClientShell>
       <PageHeader
         badge="The Blog"
-        title="Curl"
-        titleAccent="Knowledge"
-        subtitle="Expert articles, tips, and guides to help you understand, love, and care for your natural texture."
+        title="Faith &"
+        titleAccent="Hair"
+        subtitle="Devotionals, encouragement, and real talk about faith, hair journeys, identity, and becoming who God made you to be."
       />
 
       <section className="py-20 bg-pink-50">

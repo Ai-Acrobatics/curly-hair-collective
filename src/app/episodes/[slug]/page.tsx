@@ -19,16 +19,16 @@ export async function generateMetadata({
   if (!episode) return {};
 
   return {
-    title: `${episode.title} with ${episode.guest} | Curly Hair Collective`,
+    title: `${episode.title} with ${episode.guest} | Curlie Girlie Collective`,
     description: episode.longDescription.slice(0, 160),
     openGraph: {
-      title: `${episode.title} | Curly Hair Collective`,
+      title: `${episode.title} | Curlie Girlie Collective`,
       description: episode.description,
       type: "article",
-      url: `https://curlyhaircollective.com/episodes/${slug}`,
+      url: `https://curliegirlie.com/episodes/${slug}`,
     },
     alternates: {
-      canonical: `https://curlyhaircollective.com/episodes/${slug}`,
+      canonical: `https://curliegirlie.com/episodes/${slug}`,
     },
   };
 }
@@ -50,8 +50,8 @@ export default async function EpisodeDetailPage({
     duration: `PT${parseInt(episode.duration)}M`,
     partOfSeries: {
       "@type": "PodcastSeries",
-      name: "Curly Hair Collective",
-      url: "https://curlyhaircollective.com",
+      name: "Curlie Girlie Collective",
+      url: "https://curliegirlie.com",
     },
     actor: {
       "@type": "Person",

@@ -1,11 +1,12 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { ClientShell } from "../components/ClientShell";
 import { PageHeader } from "../components/PageHeader";
 import { FooterSection } from "../sections/Footer";
 import { FadeInUp, ScaleOnScroll } from "../components/FramerAnimations";
-import { CurlIcon, SparkleIcon } from "../components/Icons";
+import { SparkleIcon } from "../components/Icons";
 
 const values = [
   {
@@ -51,7 +52,7 @@ const timeline = [
     year: "2026",
     title: "Launch",
     description:
-      "The Curly Hair Collective podcast launches with our first season of episodes, merch, and community events.",
+      "The Curlie Girlie Collective podcast launches with our first season of episodes, merch, and community events.",
   },
 ];
 
@@ -62,7 +63,7 @@ export function AboutPageClient() {
         badge="Our Story"
         title="Every Curl"
         titleAccent="Has a Story"
-        subtitle="Including ours. Learn about the mission, the team, and the movement behind Curly Hair Collective."
+        subtitle="Including ours. Learn about the mission, the team, and the movement behind Curlie Girlie Collective."
       />
 
       <section className="py-20 bg-pink-50">
@@ -70,23 +71,19 @@ export function AboutPageClient() {
           {/* Mission */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
             <ScaleOnScroll>
-              <div className="w-full aspect-square max-w-lg mx-auto rounded-3xl gradient-pink-soft overflow-hidden relative gradient-border">
-                <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-pink-100 via-pink-50 to-white">
-                  <div className="text-center p-8">
-                    <motion.div
-                      animate={{ rotate: [0, 5, -5, 0] }}
-                      transition={{
-                        duration: 4,
-                        repeat: Infinity,
-                        ease: "easeInOut",
-                      }}
-                    >
-                      <CurlIcon className="w-28 h-28 text-pink-300 mx-auto mb-4" />
-                    </motion.div>
-                    <p className="text-pink-400 font-medium text-lg">
-                      Host Photo Coming Soon
-                    </p>
-                  </div>
+              <div className="w-full aspect-[3/4] max-w-lg mx-auto rounded-3xl overflow-hidden relative gradient-border shadow-2xl shadow-pink-300/30">
+                <Image
+                  src="/hosts/img_0815.jpg"
+                  alt="Sabrina Anderson and Chanelle — hosts of Curlie Girlie Collective"
+                  fill
+                  className="object-cover object-top"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  priority
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-pink-900/50 via-transparent to-transparent" />
+                <div className="absolute bottom-6 left-6">
+                  <p className="text-white font-black text-xl">Sabrina & Chanelle</p>
+                  <p className="text-white/80 text-sm">Jon Renau Educators · San Diego, CA</p>
                 </div>
               </div>
             </ScaleOnScroll>
@@ -103,20 +100,23 @@ export function AboutPageClient() {
               <FadeInUp delay={0.1}>
                 <div className="space-y-4 text-pink-700/75 text-lg leading-relaxed">
                   <p>
-                    Curly Hair Collective was born from a simple truth: textured
-                    hair is beautiful, powerful, and deserving of its own
-                    platform.
+                    Curlie Girlie Collective started with two women who found God
+                    later in life — and couldn&apos;t stop talking about it.
+                    Sabrina and Chanelle work together at Jon Renau as
+                    alternative hair educators, helping women experiencing hair
+                    loss feel beautiful and confident again.
                   </p>
                   <p>
-                    We&apos;re not just a podcast — we&apos;re a movement. A
-                    community of curly, coily, and wavy individuals who refuse
-                    to straighten themselves to fit in.
+                    But this podcast is about more than hair. It&apos;s about
+                    faith, identity, and becoming who you&apos;re meant to be.
+                    It&apos;s raw conversations about following Jesus — no matter
+                    where you&apos;re starting from.
                   </p>
                   <p>
-                    Through conversations with experts, advocates, and everyday
-                    queens, we explore everything from wash day science to
-                    workplace discrimination — because your hair is so much more
-                    than just hair.
+                    Our mission is simple: anybody can come to the Lord, no
+                    matter where you&apos;re at in your walk. We&apos;re here to
+                    encourage, uplift, and build a ministry through authentic
+                    conversation.
                   </p>
                 </div>
               </FadeInUp>

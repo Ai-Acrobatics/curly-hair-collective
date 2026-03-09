@@ -2,18 +2,18 @@ import type { Metadata } from "next";
 import { SponsorsPageClient } from "./SponsorsPageClient";
 
 export const metadata: Metadata = {
-  title: "Sponsor & Partner | Curly Hair Collective",
+  title: "Sponsor & Partner | Curlie Girlie Collective",
   description:
-    "Partner with Curly Hair Collective to reach an engaged community of curly hair enthusiasts. Sponsorship packages, media kit, and partnership opportunities.",
+    "Partner with Curlie Girlie Collective to reach an engaged community of curly hair enthusiasts. Sponsorship packages, media kit, and partnership opportunities.",
   openGraph: {
-    title: "Sponsor & Partner | Curly Hair Collective",
+    title: "Sponsor & Partner | Curlie Girlie Collective",
     description:
       "Partner with the #1 curly hair community. Reach engaged listeners who trust our recommendations.",
     type: "website",
-    url: "https://curlyhaircollective.com/sponsors",
+    url: "https://curliegirlie.com/sponsors",
   },
   alternates: {
-    canonical: "https://curlyhaircollective.com/sponsors",
+    canonical: "https://curliegirlie.com/sponsors",
   },
   keywords: [
     "podcast sponsorship",

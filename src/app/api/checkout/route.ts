@@ -1,10 +1,6 @@
 import { NextResponse } from "next/server";
 import Stripe from "stripe";
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
-  apiVersion: "2026-02-25.clover",
-});
-
 interface CartLineItem {
   name: string;
   price: number;
@@ -14,6 +10,10 @@ interface CartLineItem {
 
 export async function POST(request: Request) {
   try {
+    const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || "", {
+      apiVersion: "2024-12-18.acacia",
+    });
+
     const body = await request.json();
     const { items, shipping } = body as {
       items: CartLineItem[];

@@ -4,6 +4,7 @@ import { EpisodesSection } from "./sections/Episodes";
 import { HostsSection } from "./sections/Hosts";
 import { PillarsSection } from "./sections/Pillars";
 import { TestimonialsSection } from "./sections/Testimonials";
+import { FaithSection } from "./sections/Faith";
 import { CommunitySection } from "./sections/Community";
 import { FooterSection } from "./sections/Footer";
 import { MarqueeStrip } from "./sections/MarqueeStrip";
@@ -50,6 +51,7 @@ export default function Home() {
         <EpisodesSection />
         <HostsSection />
         <TestimonialsSection />
+        <FaithSection />
         <CommunitySection />
         <FooterSection />
       </div>

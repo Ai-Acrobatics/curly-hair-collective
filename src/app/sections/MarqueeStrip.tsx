@@ -7,16 +7,16 @@ export function MarqueeStrip() {
     <div className="bg-pink-50 py-6 border-b border-pink-100 overflow-hidden">
       <TextMarquee
         items={[
-          "Curls",
-          "Coils",
-          "Waves",
-          "Texture",
+          "Faith",
+          "Hair",
+          "Identity",
           "Community",
+          "Grace",
           "Confidence",
-          "Culture",
+          "Testimony",
           "Self-Love",
-          "Wash Day",
-          "Crown Act",
+          "Encouragement",
+          "Becoming",
         ]}
       />
     </div>

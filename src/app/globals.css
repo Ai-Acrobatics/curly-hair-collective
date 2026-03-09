@@ -36,15 +36,32 @@
   --color-gold-light: var(--gold-light);
   --color-cream: var(--cream);
   --color-blush: var(--blush);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-playfair);
+  --font-body: var(--font-dm-sans);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-dm-sans), var(--font-inter), system-ui, sans-serif;
   overflow-x: hidden;
+}
+
+/* Premium heading font */
+h1, h2, h3, .font-display {
+  font-family: var(--font-playfair), Georgia, serif;
+}
+
+/* Body text */
+p, span, a, li, .font-body {
+  font-family: var(--font-dm-sans), var(--font-inter), system-ui, sans-serif;
+}
+
+/* Selection color */
+::selection {
+  background: rgba(224, 33, 138, 0.3);
+  color: #4A0730;
 }
 
 /* Barbie Pink Gradient Utilities */

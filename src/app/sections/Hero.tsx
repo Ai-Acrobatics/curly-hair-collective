@@ -79,8 +79,8 @@ export function HeroSection() {
             >
               <SparkleIcon className="w-4 h-4 text-gold" />
             </motion.span>
-            <span className="text-white/90 text-sm font-medium tracking-wide uppercase">
-              New Podcast Launching Soon
+            <span className="text-white/90 text-sm font-medium tracking-wide uppercase font-body">
+              Faith. Hair. Becoming.
             </span>
             <motion.span
               animate={{ rotate: [360, 0] }}
@@ -130,8 +130,8 @@ export function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.7 }}
           >
-            Celebrating curly hair culture through conversations, community,
-            and confidence. Every curl has a story.
+            Two women. Real faith. Raw conversations about hair, identity, and
+            following Jesus — no matter where you&apos;re starting from.
           </motion.p>
 
           {/* CTA buttons with magnetic effect */}

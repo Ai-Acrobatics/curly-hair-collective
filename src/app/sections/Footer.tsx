@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { FadeInUp } from "../components/FramerAnimations";
 import { CurlIcon } from "../components/Icons";
@@ -7,22 +8,18 @@ import { CurlIcon } from "../components/Icons";
 export function FooterSection() {
   return (
     <footer className="bg-pink-900 text-white py-16 relative overflow-hidden">
-      {/* Subtle gradient glow */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[2px] bg-gradient-to-r from-transparent via-pink-400/50 to-transparent" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <FadeInUp>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
             <div>
-              <motion.div
-                className="flex items-center gap-2 mb-4"
-                whileHover={{ x: 5 }}
-              >
+              <Link href="/" className="flex items-center gap-2 mb-4">
                 <CurlIcon className="w-8 h-8 text-pink-300" />
                 <span className="text-xl font-bold text-pink-200">
                   Curly Hair Collective
                 </span>
-              </motion.div>
+              </Link>
               <p className="text-pink-300/60 text-sm leading-relaxed">
                 Celebrating curly hair culture through conversations, community,
                 and confidence.
@@ -31,6 +28,51 @@ export function FooterSection() {
 
             <div>
               <h3 className="font-bold text-pink-200 mb-4 tracking-wide">
+                Explore
+              </h3>
+              <ul className="space-y-2.5 text-pink-300/60 text-sm">
+                {[
+                  { label: "Episodes", href: "/episodes" },
+                  { label: "About", href: "/about" },
+                  { label: "Blog", href: "/blog" },
+                  { label: "Contact", href: "/contact" },
+                ].map((link) => (
+                  <li key={link.label}>
+                    <motion.div whileHover={{ x: 4 }}>
+                      <Link
+                        href={link.href}
+                        className="hover:text-pink-200 transition-colors inline-block"
+                      >
+                        {link.label}
+                      </Link>
+                    </motion.div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="font-bold text-pink-200 mb-4 tracking-wide">
+                Shop & Partner
+              </h3>
+              <ul className="space-y-2.5 text-pink-300/60 text-sm">
+                {[
+                  { label: "Merch Store", href: "/merch" },
+                  { label: "Sponsors & Partners", href: "/sponsors" },
+                ].map((link) => (
+                  <li key={link.label}>
+                    <motion.div whileHover={{ x: 4 }}>
+                      <Link
+                        href={link.href}
+                        className="hover:text-pink-200 transition-colors inline-block"
+                      >
+                        {link.label}
+                      </Link>
+                    </motion.div>
+                  </li>
+                ))}
+              </ul>
+              <h3 className="font-bold text-pink-200 mb-4 mt-6 tracking-wide">
                 Listen On
               </h3>
               <ul className="space-y-2.5 text-pink-300/60 text-sm">
@@ -58,6 +100,8 @@ export function FooterSection() {
                 {[
                   { name: "Instagram", href: "#" },
                   { name: "TikTok", href: "#" },
+                  { name: "YouTube", href: "#" },
+                  { name: "Twitter", href: "#" },
                   {
                     name: "hello@curlyhaircollective.com",
                     href: "mailto:hello@curlyhaircollective.com",

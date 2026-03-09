@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { episodes } from "./data/episodes";
 import { blogPosts } from "./data/blog";
+import { merchItems } from "./data/merch";
 
 const BASE_URL = "https://curlyhaircollective.com";
 
@@ -48,6 +49,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.5,
     },
+    {
+      url: `${BASE_URL}/faq`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.5,
+    },
+    {
+      url: `${BASE_URL}/privacy`,
+      lastModified: new Date(),
+      changeFrequency: "yearly",
+      priority: 0.3,
+    },
+    {
+      url: `${BASE_URL}/terms`,
+      lastModified: new Date(),
+      changeFrequency: "yearly",
+      priority: 0.3,
+    },
   ];
 
   const episodePages: MetadataRoute.Sitemap = episodes.map((ep) => ({
@@ -64,5 +83,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...staticPages, ...episodePages, ...blogPages];
+  const merchPages: MetadataRoute.Sitemap = merchItems.map((item) => ({
+    url: `${BASE_URL}/merch/${item.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.5,
+  }));
+
+  return [...staticPages, ...episodePages, ...blogPages, ...merchPages];
 }

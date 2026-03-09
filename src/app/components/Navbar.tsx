@@ -11,6 +11,7 @@ const navLinks = [
   { label: "Merch", href: "/merch" },
   { label: "Blog", href: "/blog" },
   { label: "Sponsors", href: "/sponsors" },
+  { label: "FAQ", href: "/faq" },
   { label: "Contact", href: "/contact" },
 ];
 

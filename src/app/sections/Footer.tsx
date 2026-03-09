@@ -35,6 +35,7 @@ export function FooterSection() {
                   { label: "Episodes", href: "/episodes" },
                   { label: "About", href: "/about" },
                   { label: "Blog", href: "/blog" },
+                  { label: "FAQ", href: "/faq" },
                   { label: "Contact", href: "/contact" },
                 ].map((link) => (
                   <li key={link.label}>
@@ -127,13 +128,21 @@ export function FooterSection() {
             &copy; {new Date().getFullYear()} Curly Hair Collective. All rights
             reserved.
           </p>
-          <motion.div
-            className="flex items-center gap-1 text-pink-400/50 text-sm"
-            whileHover={{ scale: 1.05 }}
-          >
-            Made with <span className="text-pink-400 mx-1">&hearts;</span> for
-            every curl
-          </motion.div>
+          <div className="flex items-center gap-4 text-pink-400/50 text-sm">
+            <Link href="/privacy" className="hover:text-pink-300 transition-colors">
+              Privacy
+            </Link>
+            <Link href="/terms" className="hover:text-pink-300 transition-colors">
+              Terms
+            </Link>
+            <motion.span
+              className="flex items-center gap-1"
+              whileHover={{ scale: 1.05 }}
+            >
+              Made with <span className="text-pink-400 mx-1">&hearts;</span> for
+              every curl
+            </motion.span>
+          </div>
         </div>
       </div>
     </footer>

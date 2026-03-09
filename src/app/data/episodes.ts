@@ -13,7 +13,8 @@ export interface Episode {
   guestBio: string;
 }
 
-export const episodes: Episode[] = [
+// Episodes ordered: newest real-life topics first, then original faith & hair episodes
+const _rawEpisodes: Episode[] = [
   {
     id: 1,
     slug: "embracing-your-natural-texture",
@@ -286,4 +287,10 @@ export const episodes: Episode[] = [
     guestBio:
       "Sabrina and Chanelle share the family wounds they've carried and the healing journey that changed everything.",
   },
+];
+
+// Put the real-life topic episodes (7-16) first, then original faith & hair episodes (1-6)
+export const episodes: Episode[] = [
+  ..._rawEpisodes.filter((e) => e.id >= 7),
+  ..._rawEpisodes.filter((e) => e.id < 7),
 ];

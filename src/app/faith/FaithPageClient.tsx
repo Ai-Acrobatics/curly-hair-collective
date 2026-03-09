@@ -51,26 +51,30 @@ const pillars = [
   {
     number: "01",
     title: "Identity in Christ",
+    href: "/faith/identity",
     description:
-      "Before you're a curl queen, you're a daughter of the King. We help women ground their identity in who God says they are — not in their hair texture, not in beauty standards, not in the world's approval.",
+      "Before you're a curl queen, you're a daughter of the King. We help women ground their identity in who God says they are — not in beauty standards, not in the world's approval.",
   },
   {
     number: "02",
     title: "Healing & Restoration",
+    href: "/faith/healing",
     description:
-      "Hair discrimination, self-hate, years of damage — physical and emotional. We believe God uses the simple act of embracing your natural hair as a gateway to deeper healing and wholeness.",
+      "Toxic relationships, self-hate, family wounds, church hurt. We believe God uses unexpected seasons as gateways to deeper healing and wholeness.",
   },
   {
     number: "03",
     title: "Community & Sisterhood",
+    href: "/faith/community",
     description:
-      "Iron sharpens iron. Our community isn't just about product recs and wash day tips — it's about women lifting each other up, praying together, and walking out faith in real life.",
+      "Iron sharpens iron. Our community isn't just about surface-level connection — it's about women lifting each other up, praying together, and walking out faith in real life.",
   },
   {
     number: "04",
     title: "Reaching the Lost",
+    href: "/faith/outreach",
     description:
-      "Every curl conversation is an opportunity. When women feel seen and loved in this community, the door opens for the Gospel. We exist to lead women to Jesus — one curl at a time.",
+      "Every conversation is an opportunity. When women feel seen and loved in this community, the door opens for the Gospel. We exist to lead women to Jesus.",
   },
 ];
 
@@ -127,24 +131,30 @@ export function FaithPageClient() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {pillars.map((pillar, i) => (
               <FadeInUp key={pillar.number} delay={0.1 * i}>
-                <motion.div
-                  className="bg-white border border-pink-100 rounded-3xl p-8 h-full relative overflow-hidden"
-                  whileHover={{ y: -4 }}
-                  transition={{ duration: 0.3 }}
-                >
-                  <span className="absolute top-4 right-6 text-7xl font-black text-pink-50 select-none">
-                    {pillar.number}
-                  </span>
-                  <div className="relative">
-                    <h3 className="text-xl font-bold text-pink-900 mb-3">
-                      {pillar.title}
-                    </h3>
-                    <div className="w-12 h-0.5 bg-gold mb-4" />
-                    <p className="text-gray-500 leading-relaxed">
-                      {pillar.description}
-                    </p>
-                  </div>
-                </motion.div>
+                <Link href={pillar.href} className="block h-full">
+                  <motion.div
+                    className="bg-white border border-pink-100 rounded-3xl p-8 h-full relative overflow-hidden group cursor-pointer"
+                    whileHover={{ y: -4 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <span className="absolute top-4 right-6 text-7xl font-black text-pink-50 select-none">
+                      {pillar.number}
+                    </span>
+                    <div className="relative">
+                      <h3 className="text-xl font-bold text-pink-900 mb-3">
+                        {pillar.title}
+                      </h3>
+                      <div className="w-12 h-0.5 bg-gold mb-4 group-hover:w-full transition-all duration-500" />
+                      <p className="text-gray-500 leading-relaxed mb-4">
+                        {pillar.description}
+                      </p>
+                      <span className="text-gold font-semibold text-sm inline-flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                        Explore
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+                      </span>
+                    </div>
+                  </motion.div>
+                </Link>
               </FadeInUp>
             ))}
           </div>

@@ -2,7 +2,9 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { ClientShell } from "../../components/ClientShell";
 import { PageHeader } from "../../components/PageHeader";
+import { FooterSection } from "../../sections/Footer";
 import { FadeInUp } from "../../components/FramerAnimations";
 
 const topicOptions = [
@@ -37,6 +39,7 @@ export function ApplyPageClient() {
   }
 
   return (
+    <ClientShell>
     <main className="bg-pink-50 min-h-screen">
       <PageHeader
         badge="Join Us"
@@ -292,6 +295,9 @@ export function ApplyPageClient() {
           </AnimatePresence>
         </div>
       </section>
+
+      <FooterSection />
     </main>
+    </ClientShell>
   );
 }

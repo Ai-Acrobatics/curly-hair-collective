@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 import { ClientShell } from "../components/ClientShell";
 import { PageHeader } from "../components/PageHeader";
 import { FooterSection } from "../sections/Footer";
@@ -63,14 +64,23 @@ export function MerchPageClient() {
                 <TiltCard key={item.id} className="group">
                   <div className="bg-white rounded-2xl overflow-hidden shadow-lg shadow-pink-200/30 magnetic-card h-full flex flex-col">
                     <div
-                      className={`h-48 bg-gradient-to-br ${item.gradient} relative overflow-hidden`}
+                      className={`h-56 relative overflow-hidden ${item.image ? "bg-pink-50" : `bg-gradient-to-br ${item.gradient}`}`}
                     >
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <SparkleIcon className="w-16 h-16 text-white/15" />
-                      </div>
+                      {item.image ? (
+                        <Image
+                          src={item.image}
+                          alt={item.name}
+                          fill
+                          className="object-cover group-hover:scale-105 transition-transform duration-500"
+                        />
+                      ) : (
+                        <div className="absolute inset-0 flex items-center justify-center">
+                          <SparkleIcon className="w-16 h-16 text-white/15" />
+                        </div>
+                      )}
                       {item.badge && (
-                        <div className="absolute top-3 right-3">
-                          <span className="bg-gold text-pink-900 text-xs font-bold px-3 py-1 rounded-full glow-gold">
+                        <div className="absolute top-3 right-3 z-10">
+                          <span className="bg-gold text-pink-900 text-xs font-bold px-3 py-1 rounded-full shadow-md">
                             {item.badge}
                           </span>
                         </div>

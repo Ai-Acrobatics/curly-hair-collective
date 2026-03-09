@@ -2,7 +2,9 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { ClientShell } from "../../components/ClientShell";
 import { FadeInUp } from "../../components/FramerAnimations";
+import { FooterSection } from "../../sections/Footer";
 import type { Guest } from "../../data/guests";
 import type { Episode } from "../../data/episodes";
 
@@ -14,6 +16,7 @@ export function GuestDetailClient({
   episodes: Episode[];
 }) {
   return (
+    <ClientShell>
     <main className="bg-pink-50 min-h-screen">
       {/* Hero */}
       <section
@@ -202,6 +205,9 @@ export function GuestDetailClient({
           </div>
         </div>
       </section>
+
+      <FooterSection />
     </main>
+    </ClientShell>
   );
 }

@@ -3,78 +3,131 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import { SparkleIcon } from "./Icons";
 
 export function LoadingScreen() {
   const [loading, setLoading] = useState(true);
+  const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 2000);
-    return () => clearTimeout(timer);
+    const interval = setInterval(() => {
+      setProgress((prev) => {
+        if (prev >= 100) {
+          clearInterval(interval);
+          return 100;
+        }
+        return prev + Math.random() * 15 + 5;
+      });
+    }, 200);
+
+    const timer = setTimeout(() => setLoading(false), 2200);
+    return () => {
+      clearTimeout(timer);
+      clearInterval(interval);
+    };
   }, []);
 
   return (
     <AnimatePresence>
       {loading && (
         <motion.div
-          className="fixed inset-0 z-[100] gradient-pink flex items-center justify-center"
-          exit={{ opacity: 0, scale: 1.1 }}
-          transition={{ duration: 0.6, ease: [0.23, 1, 0.32, 1] }}
+          className="fixed inset-0 z-[100] flex items-center justify-center overflow-hidden"
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.8, ease: [0.23, 1, 0.32, 1] }}
         >
-          <div className="text-center">
-            {/* Animated logo */}
+          {/* Animated mesh background */}
+          <div className="absolute inset-0 mesh-gradient" />
+
+          {/* Soft radial overlay */}
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_20%,rgba(157,23,77,0.4)_100%)]" />
+
+          {/* Floating orbs */}
+          <motion.div
+            className="absolute w-64 h-64 rounded-full bg-pink-400/20 blur-3xl"
+            animate={{
+              x: [0, 60, -30, 0],
+              y: [0, -40, 20, 0],
+              scale: [1, 1.2, 0.9, 1],
+            }}
+            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+            style={{ top: "15%", left: "20%" }}
+          />
+          <motion.div
+            className="absolute w-48 h-48 rounded-full bg-gold/10 blur-3xl"
+            animate={{
+              x: [0, -40, 30, 0],
+              y: [0, 30, -20, 0],
+              scale: [1, 0.8, 1.1, 1],
+            }}
+            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+            style={{ bottom: "20%", right: "15%" }}
+          />
+
+          <div className="relative text-center z-10">
+            {/* Logo with entrance animation */}
             <motion.div
-              animate={{
-                rotate: [0, 10, -10, 0],
-                scale: [1, 1.1, 1],
+              initial={{ opacity: 0, scale: 0.5, y: 20 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              transition={{
+                duration: 0.8,
+                ease: [0.23, 1, 0.32, 1],
               }}
-              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-              className="mb-6"
+              className="mb-8"
             >
-              <Image
-                src="/images/logo.png"
-                alt="Curlie Girlie Collective"
-                width={80}
-                height={80}
-                className="w-20 h-20 mx-auto"
-                priority
-              />
-            </motion.div>
-
-            {/* Brand name */}
-            <motion.h1
-              className="text-3xl font-black text-white tracking-tight"
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-            >
-              Curlie Girlie Collective
-            </motion.h1>
-
-            {/* Loading bar */}
-            <div className="mt-6 w-48 h-1 bg-white/20 rounded-full mx-auto overflow-hidden">
               <motion.div
-                className="h-full bg-gold rounded-full"
-                initial={{ width: "0%" }}
-                animate={{ width: "100%" }}
-                transition={{ duration: 1.8, ease: "easeInOut" }}
-              />
-            </div>
-
-            {/* Sparkles */}
-            <motion.div
-              className="absolute top-1/4 left-1/4"
-              animate={{ scale: [0, 1, 0], rotate: 360 }}
-              transition={{ duration: 2, repeat: Infinity, delay: 0.3 }}
-            >
-              <SparkleIcon className="w-4 h-4 text-gold/50" />
+                animate={{ rotate: [0, 5, -5, 0] }}
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+              >
+                <Image
+                  src="/images/logo.png"
+                  alt="Curlie Girlie Collective"
+                  width={320}
+                  height={80}
+                  className="h-16 md:h-20 w-auto mx-auto drop-shadow-2xl"
+                  priority
+                />
+              </motion.div>
             </motion.div>
-            <motion.div
-              className="absolute bottom-1/3 right-1/3"
-              animate={{ scale: [0, 1, 0], rotate: -360 }}
-              transition={{ duration: 2, repeat: Infinity, delay: 0.8 }}
+
+            {/* Tagline */}
+            <motion.p
+              className="text-white/50 text-sm tracking-[0.2em] uppercase mt-4 mb-10"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.5, duration: 0.6 }}
             >
-              <SparkleIcon className="w-6 h-6 text-white/30" />
+              Faith &middot; Hair &middot; Becoming
+            </motion.p>
+
+            {/* Premium loading bar */}
+            <motion.div
+              className="w-56 mx-auto"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.5 }}
+            >
+              <div className="h-[2px] bg-white/10 rounded-full overflow-hidden">
+                <motion.div
+                  className="h-full rounded-full"
+                  style={{
+                    background:
+                      "linear-gradient(90deg, #D4AF37, #F9A8D4, #D4AF37)",
+                    backgroundSize: "200% 100%",
+                    width: `${Math.min(progress, 100)}%`,
+                  }}
+                  animate={{
+                    backgroundPosition: ["0% 0%", "200% 0%"],
+                  }}
+                  transition={{
+                    duration: 1.5,
+                    repeat: Infinity,
+                    ease: "linear",
+                  }}
+                />
+              </div>
             </motion.div>
           </div>
         </motion.div>

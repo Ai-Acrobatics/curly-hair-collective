@@ -14,21 +14,17 @@ export function FooterSection() {
         <FadeInUp>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
             <div>
-              <Link href="/" className="flex items-center gap-2 mb-4">
+              <Link href="/" className="inline-block mb-4">
                 <Image
                   src="/images/logo.png"
                   alt="Curlie Girlie Collective"
-                  width={36}
+                  width={160}
                   height={36}
-                  className="w-9 h-9"
+                  className="h-8 w-auto brightness-0 invert opacity-80"
                 />
-                <span className="text-xl font-bold text-pink-200">
-                  Curlie Girlie Collective
-                </span>
               </Link>
               <p className="text-pink-300/60 text-sm leading-relaxed">
-                Celebrating curly hair culture through conversations, community,
-                and confidence.
+                Faith, hair, and becoming who God made you to be.
               </p>
             </div>
 

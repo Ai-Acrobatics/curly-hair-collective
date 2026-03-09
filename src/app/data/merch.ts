@@ -6,6 +6,7 @@ export interface MerchItem {
   price: number;
   category: "apparel" | "accessories" | "faith-essentials" | "lifestyle";
   gradient: string;
+  image?: string;
   badge?: string;
   sizes?: string[];
 }
@@ -20,6 +21,7 @@ export const merchItems: MerchItem[] = [
     price: 34.99,
     category: "apparel",
     gradient: "from-pink-400 via-pink-500 to-rose-500",
+    image: "/images/merch/gods-girl-tee.png",
     badge: "Best Seller",
     sizes: ["XS", "S", "M", "L", "XL", "2XL"],
   },
@@ -32,6 +34,7 @@ export const merchItems: MerchItem[] = [
     price: 64.99,
     category: "apparel",
     gradient: "from-pink-500 via-fuchsia-500 to-purple-500",
+    image: "/images/merch/powered-by-prayer-hoodie.png",
     sizes: ["S", "M", "L", "XL", "2XL"],
   },
   {
@@ -43,6 +46,7 @@ export const merchItems: MerchItem[] = [
     price: 24.99,
     category: "accessories",
     gradient: "from-rose-400 via-pink-400 to-pink-500",
+    image: "/images/merch/faith-over-fear-bonnet.png",
     badge: "New",
   },
   {
@@ -54,6 +58,7 @@ export const merchItems: MerchItem[] = [
     price: 28.99,
     category: "accessories",
     gradient: "from-fuchsia-400 via-pink-500 to-rose-500",
+    image: "/images/merch/curlie-girlie-cross-necklace.png",
     badge: "Coming Soon",
   },
   {
@@ -65,6 +70,7 @@ export const merchItems: MerchItem[] = [
     price: 19.99,
     category: "faith-essentials",
     gradient: "from-pink-300 via-pink-400 to-rose-400",
+    image: "/images/merch/scripture-affirmation-cards.png",
   },
   {
     id: 6,
@@ -75,6 +81,7 @@ export const merchItems: MerchItem[] = [
     price: 18.99,
     category: "lifestyle",
     gradient: "from-rose-500 via-pink-500 to-fuchsia-500",
+    image: "/images/merch/fearfully-made-mug.png",
   },
   {
     id: 7,
@@ -85,6 +92,7 @@ export const merchItems: MerchItem[] = [
     price: 24.99,
     category: "accessories",
     gradient: "from-pink-400 via-rose-500 to-red-400",
+    image: "/images/merch/pray-then-slay-cap.png",
   },
   {
     id: 8,
@@ -95,6 +103,7 @@ export const merchItems: MerchItem[] = [
     price: 22.99,
     category: "lifestyle",
     gradient: "from-pink-500 via-pink-600 to-rose-600",
+    image: "/images/merch/collective-tote.png",
   },
 ];
 

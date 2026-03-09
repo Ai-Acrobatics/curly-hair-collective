@@ -18,7 +18,7 @@ const navLinks = [
 export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const { scrollY } = useScroll();
-  const bgOpacity = useTransform(scrollY, [0, 100], [0, 0.85]);
+  const bgOpacity = useTransform(scrollY, [0, 100], [0, 0.92]);
   const borderOpacity = useTransform(scrollY, [0, 100], [0, 1]);
 
   return (
@@ -34,24 +34,22 @@ export function Navbar() {
           WebkitBackdropFilter: "blur(20px) saturate(180%)",
           borderBottom: useTransform(
             borderOpacity,
-            (v) => `1px solid rgba(255, 182, 211, ${v * 0.5})`
+            (v) => `1px solid rgba(0, 0, 0, ${v * 0.06})`
           ),
         }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <Link href="/" className="flex items-center gap-3">
+              <Link href="/" className="flex items-center">
                 <Image
                   src="/images/logo.png"
                   alt="Curlie Girlie Collective"
-                  width={40}
+                  width={180}
                   height={40}
-                  className="w-10 h-10"
+                  className="h-9 w-auto"
+                  priority
                 />
-                <span className="text-xl font-bold text-gradient-pink">
-                  Curlie Girlie Collective
-                </span>
               </Link>
             </motion.div>
 
@@ -65,10 +63,10 @@ export function Navbar() {
                 >
                   <Link
                     href={link.href}
-                    className="text-pink-700 hover:text-pink-500 transition-colors font-medium relative group text-sm"
+                    className="text-gray-700 hover:text-pink-900 transition-colors font-medium relative group text-sm"
                   >
                     {link.label}
-                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-pink-400 group-hover:w-full transition-all duration-300" />
+                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold group-hover:w-full transition-all duration-300" />
                   </Link>
                 </motion.div>
               ))}
@@ -79,7 +77,7 @@ export function Navbar() {
               >
                 <Link
                   href="/episodes"
-                  className="gradient-pink text-white px-5 py-2 rounded-full font-semibold shadow-lg shadow-pink-300/50 relative overflow-hidden text-sm"
+                  className="bg-pink-900 text-white px-5 py-2 rounded-full font-semibold shadow-md hover:bg-pink-800 transition-colors relative overflow-hidden text-sm"
                 >
                   <span className="relative z-10">Listen Now</span>
                 </Link>
@@ -90,13 +88,13 @@ export function Navbar() {
             <div className="lg:hidden flex items-center gap-3">
               <Link
                 href="/episodes"
-                className="gradient-pink text-white px-4 py-2 rounded-full text-sm font-semibold"
+                className="bg-pink-900 text-white px-4 py-2 rounded-full text-sm font-semibold"
               >
                 Listen
               </Link>
               <button
                 onClick={() => setMobileOpen(!mobileOpen)}
-                className="text-pink-700 p-2"
+                className="text-gray-700 p-2"
                 aria-label="Toggle menu"
               >
                 <svg
@@ -137,7 +135,7 @@ export function Navbar() {
             exit={{ opacity: 0 }}
           >
             <div
-              className="absolute inset-0 bg-pink-900/50 backdrop-blur-sm"
+              className="absolute inset-0 bg-black/30 backdrop-blur-sm"
               onClick={() => setMobileOpen(false)}
             />
             <motion.div
@@ -153,7 +151,7 @@ export function Navbar() {
                     key={link.label}
                     href={link.href}
                     onClick={() => setMobileOpen(false)}
-                    className="block py-3 px-4 text-pink-800 font-medium hover:bg-pink-50 rounded-xl transition-colors"
+                    className="block py-3 px-4 text-gray-800 font-medium hover:bg-pink-50 hover:text-pink-900 rounded-xl transition-colors"
                   >
                     {link.label}
                   </Link>

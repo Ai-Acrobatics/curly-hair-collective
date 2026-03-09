@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { ClientShell } from "../../components/ClientShell";
 import { PageHeader } from "../../components/PageHeader";
@@ -21,17 +22,27 @@ export function MerchDetailClient({ item }: { item: MerchItem }) {
       <section className="py-20 bg-pink-50">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            {/* Product Image Placeholder */}
+            {/* Product Image */}
             <FadeInUp>
               <div
-                className={`aspect-square rounded-3xl bg-gradient-to-br ${item.gradient} relative overflow-hidden gradient-border`}
+                className={`aspect-square rounded-3xl relative overflow-hidden gradient-border ${item.image ? "bg-pink-50" : `bg-gradient-to-br ${item.gradient}`}`}
               >
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <SparkleIcon className="w-24 h-24 text-white/15" />
-                </div>
+                {item.image ? (
+                  <Image
+                    src={item.image}
+                    alt={item.name}
+                    fill
+                    className="object-cover rounded-3xl"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
+                ) : (
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <SparkleIcon className="w-24 h-24 text-white/15" />
+                  </div>
+                )}
                 {item.badge && (
-                  <div className="absolute top-4 right-4">
-                    <span className="bg-gold text-pink-900 text-sm font-bold px-4 py-1.5 rounded-full glow-gold">
+                  <div className="absolute top-4 right-4 z-10">
+                    <span className="bg-gold text-pink-900 text-sm font-bold px-4 py-1.5 rounded-full shadow-lg">
                       {item.badge}
                     </span>
                   </div>

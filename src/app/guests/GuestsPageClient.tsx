@@ -2,18 +2,21 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { ClientShell } from "../components/ClientShell";
 import { PageHeader } from "../components/PageHeader";
+import { FooterSection } from "../sections/Footer";
 import { FadeInUp, StaggerContainer, StaggerItem } from "../components/FramerAnimations";
 import { guests } from "../data/guests";
 
 export function GuestsPageClient() {
   return (
+    <ClientShell>
     <main className="bg-pink-50 min-h-screen">
       <PageHeader
         badge="Our People"
         title="Meet Our"
         titleAccent="Guests"
-        subtitle="The incredible experts, advocates, and curl queens who bring their stories, science, and soul to every conversation."
+        subtitle="The pastors, survivors, therapists, and women of faith who bring their testimonies, expertise, and hearts to every conversation."
       />
 
       <section className="py-20">
@@ -96,8 +99,8 @@ export function GuestsPageClient() {
               Want to Be a Guest?
             </h2>
             <p className="text-pink-700/60 text-lg mb-8 max-w-2xl mx-auto">
-              We&apos;re always looking for passionate voices in the curly hair community.
-              If you have a story to tell, expertise to share, or a mission to champion — we want to hear from you.
+              We&apos;re always looking for women and men of faith with a heart for ministry, hair loss
+              journeys, and helping others find their identity in Christ. If God has given you a testimony — we want to hear it.
             </p>
             <Link
               href="/guests/apply"
@@ -111,6 +114,9 @@ export function GuestsPageClient() {
           </FadeInUp>
         </div>
       </section>
+
+      <FooterSection />
     </main>
+    </ClientShell>
   );
 }

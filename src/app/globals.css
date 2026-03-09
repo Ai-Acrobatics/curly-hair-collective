@@ -66,7 +66,7 @@ p, span, a, li, .font-body {
 
 /* Luxury Barbie Pink Gradient Utilities */
 .gradient-pink {
-  background: linear-gradient(135deg, #F472B6 0%, #EC4899 50%, #DB2777 100%);
+  background: linear-gradient(135deg, #F9A8D4 0%, #F472B6 50%, #EC4899 100%);
 }
 
 .gradient-pink-soft {
@@ -74,7 +74,7 @@ p, span, a, li, .font-body {
 }
 
 .gradient-hero {
-  background: linear-gradient(160deg, #DB2777 0%, #EC4899 30%, #F9A8D4 60%, #FDF2F8 100%);
+  background: linear-gradient(160deg, #EC4899 0%, #F472B6 30%, #FBCFE8 60%, #FDF2F8 100%);
 }
 
 /* ==========================================
@@ -84,11 +84,11 @@ p, span, a, li, .font-body {
 /* Animated mesh gradient background — luxury Web 3.0 */
 .mesh-gradient {
   background:
-    radial-gradient(ellipse at 20% 50%, rgba(244, 114, 182, 0.35) 0%, transparent 50%),
-    radial-gradient(ellipse at 80% 20%, rgba(219, 39, 119, 0.25) 0%, transparent 50%),
-    radial-gradient(ellipse at 40% 80%, rgba(212, 175, 55, 0.12) 0%, transparent 50%),
-    radial-gradient(ellipse at 70% 60%, rgba(190, 24, 93, 0.2) 0%, transparent 50%),
-    linear-gradient(160deg, #9D174D 0%, #DB2777 25%, #EC4899 50%, #F9A8D4 75%, #FDF2F8 100%);
+    radial-gradient(ellipse at 20% 50%, rgba(249, 168, 212, 0.3) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(244, 114, 182, 0.2) 0%, transparent 50%),
+    radial-gradient(ellipse at 40% 80%, rgba(212, 175, 55, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 70% 60%, rgba(236, 72, 153, 0.15) 0%, transparent 50%),
+    linear-gradient(160deg, #BE185D 0%, #EC4899 25%, #F472B6 50%, #FBCFE8 75%, #FDF2F8 100%);
   background-size: 200% 200%;
   animation: meshMove 12s ease-in-out infinite;
 }

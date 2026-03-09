@@ -69,38 +69,65 @@ export function LoadingScreen() {
           />
 
           <div className="relative text-center z-10">
-            {/* Logo with entrance animation */}
+            {/* Caricatures — Sabrina and Chanelle */}
             <motion.div
-              initial={{ opacity: 0, scale: 0.5, y: 20 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              transition={{
-                duration: 0.8,
-                ease: [0.23, 1, 0.32, 1],
-              }}
-              className="mb-8"
+              className="flex items-end justify-center gap-6 md:gap-10 mb-8"
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: [0.23, 1, 0.32, 1] }}
             >
               <motion.div
-                animate={{ rotate: [0, 5, -5, 0] }}
-                transition={{
-                  duration: 4,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
+                animate={{ y: [0, -8, 0] }}
+                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
               >
                 <Image
-                  src="/images/logo.png"
-                  alt="Curlie Girlie Collective"
-                  width={320}
-                  height={80}
-                  className="h-16 md:h-20 w-auto mx-auto drop-shadow-lg"
+                  src="/images/sabrina-cartoon.png"
+                  alt="Sabrina"
+                  width={200}
+                  height={280}
+                  className="h-40 md:h-56 lg:h-64 w-auto drop-shadow-xl"
+                  priority
+                />
+              </motion.div>
+              <motion.div
+                animate={{ y: [0, -8, 0] }}
+                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+              >
+                <Image
+                  src="/images/chanelle-cartoon.png"
+                  alt="Chanelle"
+                  width={200}
+                  height={280}
+                  className="h-40 md:h-56 lg:h-64 w-auto drop-shadow-xl"
                   priority
                 />
               </motion.div>
             </motion.div>
 
+            {/* Logo — large and prominent */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{
+                duration: 0.8,
+                delay: 0.2,
+                ease: [0.23, 1, 0.32, 1],
+              }}
+              className="mb-6"
+            >
+              <Image
+                src="/images/logo.png"
+                alt="Curlie Girlie Collective"
+                width={500}
+                height={120}
+                className="h-20 md:h-28 lg:h-32 w-auto mx-auto drop-shadow-lg"
+                priority
+              />
+            </motion.div>
+
             {/* Tagline */}
             <motion.p
-              className="text-gray-400 text-sm tracking-[0.2em] uppercase mt-4 mb-10"
+              className="text-gray-400 text-sm tracking-[0.2em] uppercase mb-10"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5, duration: 0.6 }}

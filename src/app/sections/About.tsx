@@ -146,7 +146,7 @@ export function AboutSection() {
             <FadeInUp delay={0.4}>
               <div className="mt-8 flex flex-wrap gap-3">
                 {[
-                  "Curly Hair Tips",
+                  "Curl Care Tips",
                   "Natural Beauty",
                   "Self-Love",
                   "Culture",

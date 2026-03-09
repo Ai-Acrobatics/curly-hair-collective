@@ -59,7 +59,7 @@ export function HeroSection() {
       {/* Rotating badge — top right */}
       <div className="absolute top-28 right-8 lg:right-16 hidden lg:block">
         <RotatingBadge
-          text="CURLY * COILY * WAVY * TEXTURED * "
+          text="FAITH * HAIR * IDENTITY * BECOMING * "
           className="w-28 h-28 text-white/30"
         />
       </div>
@@ -102,7 +102,7 @@ export function HeroSection() {
                 ease: [0.23, 1, 0.32, 1],
               }}
             >
-              Curly Hair
+              Curlie Girlie
             </motion.h1>
           </div>
           <div className="overflow-hidden mb-6">

@@ -54,6 +54,14 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://curliegirlie.com",
     siteName: "Curlie Girlie Collective",
+    images: [
+      {
+        url: "/images/og-share.png",
+        width: 1200,
+        height: 630,
+        alt: "Curlie Girlie Collective — Faith, Hair & Community Podcast",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
@@ -61,6 +69,7 @@ export const metadata: Metadata = {
     description:
       "Celebrating curly hair culture through conversations, community, and confidence.",
     creator: "@curliegirlie",
+    images: ["/images/og-share.png"],
   },
   robots: {
     index: true,

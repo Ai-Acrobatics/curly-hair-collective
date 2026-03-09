@@ -19,12 +19,21 @@ export const metadata: Metadata = {
       "Celebrating curly hair culture through faith-centered conversations, community, and confidence.",
     type: "website",
     url: "https://curliegirlie.com",
+    images: [
+      {
+        url: "https://curliegirliecollective.com/images/og-share.png",
+        width: 1200,
+        height: 630,
+        alt: "Curlie Girlie Collective — Faith, Hair & Community Podcast",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Curlie Girlie Collective | Faith, Hair & Community Podcast",
     description:
       "Celebrating curly hair culture through faith-centered conversations, community, and confidence.",
+    images: ["https://curliegirliecollective.com/images/og-share.png"],
   },
   alternates: {
     canonical: "https://curliegirlie.com",
